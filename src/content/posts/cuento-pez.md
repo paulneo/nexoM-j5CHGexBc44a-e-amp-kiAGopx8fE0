@@ -1,5 +1,5 @@
 ---
-title: La Pez Payaso que Creó un Jardín Submarino
+title: La pez payaso que creó un jardín submarino
 published: 2024-05-29
 description: 'la pez payaso, transforma su pasión por la jardinería en un espléndido jardín de coral'
 image: '/images/pez.webp'
