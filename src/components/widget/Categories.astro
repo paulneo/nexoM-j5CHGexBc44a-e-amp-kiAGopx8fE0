@@ -21,6 +21,7 @@ interface Props {
 const className = Astro.props.class
 const style = Astro.props.style
 
+console.log(categories)
 ---
 
 <WidgetLayout name={i18n(I18nKey.categories)} id="categories" isCollapsed={isCollapsed} collapsedHeight={COLLAPSED_HEIGHT}
@@ -32,7 +33,7 @@ const style = Astro.props.style
             badge={c.count}
             label=`View all posts in the ${c.name} category`
         >
-            {c.xname}
+            {c.name}
         </ButtonLink>
     )}
 </WidgetLayout>
