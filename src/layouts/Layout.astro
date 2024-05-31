@@ -4,15 +4,14 @@ import '@fontsource/roboto/400.css';
 import '@fontsource/roboto/500.css';
 import '@fontsource/roboto/700.css';
 import ImageWrapper from "@components/misc/ImageWrapper.astro";
-
 import {pathsEqual} from "@utils/url-utils";
 import ConfigCarrier from "@components/ConfigCarrier.astro";
 import {profileConfig, siteConfig} from "@/config";
-import {Favicon} from "../types/config";
+import { type Favicon } from "../types/config";
+import BaseHead from '@components/BaseHead.astro'
 import {defaultFavicons} from "../constants/icon";
 import {LIGHT_MODE, DARK_MODE, AUTO_MODE, DEFAULT_THEME} from "../constants/constants";
 import {url} from "../utils/url-utils";
-
 interface Props {
 	title: string;
 	banner: string;
@@ -73,20 +72,20 @@ const siteLang = siteConfig.lang.replace('_', '-')
 ---
 
 <!DOCTYPE html>
-<html lang={siteLang} isHome={isHomePage} pathname={testPathName} class="bg-[var(--page-bg)] transition text-[14px] md:text-[16px]">
+<html lang={siteLang} class="bg-[var(--page-bg)] transition text-[14px] md:text-[16px]">
 	<head>
-
 		<title>{pageTitle}</title>
+		<BaseHead></BaseHead>
 
 		<meta charset="UTF-8" />
 		<meta name="description" content={description || pageTitle}>
 		<meta name="viewport" content="width=device-width" />
 		<meta name="generator" content={Astro.generator} />
-		{favicons.map(favicon => (
+		{favicons.map(fav => (
 			<link rel="icon"
-				  href={favicon.src.startsWith('/') ? url(favicon.src) : favicon.src}
-				  sizes={favicon.sizes}
-				  media={favicon.theme && `(prefers-color-scheme: ${favicon.theme})`}
+				  href={fav.src.startsWith('/') ? url(fav.src) : fav.src}
+				  sizes={fav.sizes}
+				  media={fav.theme && `(prefers-color-scheme: ${fav.theme})`}
 			/>
 		))}
 		<!-- Set the theme before the page is rendered to avoid a flash -->

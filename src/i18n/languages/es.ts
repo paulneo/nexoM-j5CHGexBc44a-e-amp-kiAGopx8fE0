@@ -8,7 +8,7 @@ export const es: Translation = {
 
   [Key.tags]: 'Etiquetas',
   [Key.categories]: 'Categorías',
-  [Key.recentPosts]: 'Recent Posts',
+  [Key.recentPosts]: 'Recientes blogs',
 
   [Key.comments]: 'Comentarios',
 

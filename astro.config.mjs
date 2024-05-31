@@ -17,6 +17,7 @@ import svelte from "@astrojs/svelte"
 import swup from '@swup/astro';
 import sitemap from '@astrojs/sitemap';
 import {parseDirectiveNode} from "./src/plugins/remark-directive-rehype.js";
+import partytown from '@astrojs/partytown'
 
 const oklchToHex = (str) => {
   const DEFAULT_HUE = 250
@@ -58,6 +59,11 @@ export default defineConfig({
     }),
     svelte(),
     sitemap(),
+    partytown({
+			config: {
+			  forward: ["dataLayer.push"],
+			},
+		}),
   ],
   markdown: {
     remarkPlugins: [remarkMath, remarkReadingTime, remarkDirective, parseDirectiveNode],
