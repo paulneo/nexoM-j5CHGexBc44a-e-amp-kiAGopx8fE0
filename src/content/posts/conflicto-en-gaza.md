@@ -5,7 +5,7 @@ description: 'destacando las recientes tragedias y las respuestas internacionale
 image: '/images/guerra-gaza.webp'
 tags: [Crisis Humanitaria]
 category: 'Noticias'
-draft: true 
+draft: false 
 ---
 La Franja de Gaza se encuentra nuevamente en el centro de un conflicto devastador que ha exacerbado las ya duras condiciones de vida de sus habitantes. Recientes bombardeos han resultado en la muerte de más de 50 personas en un campo de refugiados en Rafah, con expectativas de que el número de víctimas aumente​ (Univision)​. La violencia ha escalado a tal punto que el número de palestinos muertos desde el inicio del conflicto supera ya los 9,000​​.
 

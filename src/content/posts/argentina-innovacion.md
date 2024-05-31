@@ -5,7 +5,7 @@ description: 'Javier Milei lidera una audaz iniciativa para posicionar a Argenti
 image: '/images/javier-milei.jpg'
 tags: [Tecnología]
 category: 'Noticias'
-draft: true 
+draft: false 
 ---
 En una audaz apuesta por el futuro tecnológico, Argentina se posiciona para convertirse en un centro de desarrollo de inteligencia artificial (IA), liderado por el presidente Javier Milei. Con el objetivo de transformar a la nación en un líder de innovación global, Milei ha intensificado el diálogo y la colaboración internacional, destacando su reciente participación en reuniones con figuras clave de Silicon Valley como Elon Musk y Sam Altman, y su presencia en importantes eventos tecnológicos.
 
