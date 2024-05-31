@@ -1,5 +1,5 @@
 ---
-title: El Búho que Iluminó las Estrellas
+title: El búho que iluminó las estrellas
 published: 2024-05-29
 description: 'Olmo, el búho erudito, guía a los animales de Viento Fresco en una jornada nocturna de descubrimiento estelar'
 image: '/images/buho.webp'
