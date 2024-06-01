@@ -5,7 +5,7 @@ description: 'Jennifer Lopez cancela su próxima gira musical, citando desconsue
 image: '/images/jenifer.jpg'
 tags: [Famosos]
 category: 'Entretenimiento'
-draft: true 
+draft: false 
 ---
 **Jennifer Lopez** ha cancelado su gira musical prevista para este año, un movimiento sorprendente que coincide con crecientes rumores sobre problemas en su matrimonio con **Ben Affleck**. La noticia ha resonado profundamente entre los fanáticos y seguidores de la pareja, quienes esperaban ver a la artista en escena después de un largo período sin giras.
 
