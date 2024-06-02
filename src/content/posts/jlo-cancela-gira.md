@@ -3,8 +3,8 @@ title: Jennifer Lopez cancela su gira un corazón roto y rumores de divorcio
 published: 2024-05-31
 description: 'Jennifer Lopez cancela su próxima gira musical, citando desconsuelo personal entre especulaciones de problemas conyugales con Ben Affleck'
 image: '/images/jenifer.jpg'
-tags: [Famosos]
-category: 'Entretenimiento'
+tags: [Entrenimiento]
+category: 'Noticias'
 draft: false 
 ---
 **Jennifer Lopez** ha cancelado su gira musical prevista para este año, un movimiento sorprendente que coincide con crecientes rumores sobre problemas en su matrimonio con **Ben Affleck**. La noticia ha resonado profundamente entre los fanáticos y seguidores de la pareja, quienes esperaban ver a la artista en escena después de un largo período sin giras.
