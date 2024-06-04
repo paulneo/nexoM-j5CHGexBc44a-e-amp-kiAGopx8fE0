@@ -3,8 +3,8 @@ title: Amor en la biblioteca
 published: 2024-05-30
 description: 'Ana y Carlos se conocen en una biblioteca, se enamoran, superan la distancia y finalmente se casan, demostrando que el amor verdadero supera cualquier obstáculo'
 image: '/images/amor-biblioteca.webp'
-tags: [Amor, Romanticas]
-category: 'Historias'
+tags: [Amor]
+category: 'Historias Románticas'
 draft: false 
 ---
 Ana era una ávida lectora que pasaba sus tardes en la vieja biblioteca del barrio. Un día, mientras buscaba un libro en la sección de novelas románticas, tropezó con alguien. Al levantar la vista, se encontró con los ojos verdes de Carlos, un joven que también amaba la lectura.

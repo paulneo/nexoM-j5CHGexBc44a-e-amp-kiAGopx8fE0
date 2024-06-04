@@ -4,7 +4,7 @@ published: 2024-06-03
 description: 'Isabel pierde a Alejandro en un naufragio y une fuerzas con Marco. Descubren un diario y enfrentan un espíritu marino. Una historia de amor, dolor y valentía grabada en las olas del mar'
 image: '/images/sombras-del-corazon.webp'
 tags: [Amor, Tristeza]
-category: 'Historias'
+category: 'Historias Románticas'
 draft: false 
 ---
 
