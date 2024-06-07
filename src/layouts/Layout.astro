@@ -75,14 +75,15 @@ const siteLang = siteConfig.lang.replace('_', '-')
 <html lang={siteLang} class="bg-[var(--page-bg)] transition text-[14px] md:text-[16px]">
 	<head>
 		<title>{pageTitle}</title>
-		<BaseHead></BaseHead>
+		<BaseHead title={pageTitle} description={description}></BaseHead>
 
 		<meta charset="UTF-8" />
+		<meta name="title" content={pageTitle} />
 		<meta name="description" content={description || pageTitle}>
 		<meta name="viewport" content="width=device-width" />
 		<meta name="generator" content={Astro.generator} />
 		{favicons.map(fav => (
-			<link rel="icon"
+			<link rel="icon" type="image/png+xml"
 				  href={fav.src.startsWith('/') ? url(fav.src) : fav.src}
 				  sizes={fav.sizes}
 				  media={fav.theme && `(prefers-color-scheme: ${fav.theme})`}
@@ -120,7 +121,7 @@ const siteLang = siteConfig.lang.replace('_', '-')
 		<ConfigCarrier></ConfigCarrier>
 		<GlobalStyles>
 		<div id="banner-wrapper" class="absolute w-full">
-			<ImageWrapper id="boxtest" alt="Banner image of the blog" class:list={["object-center object-cover h-full", {"hidden": !siteConfig.banner.enable}]}
+			<ImageWrapper id="boxtest" alt="Banner | Nexomundial" class:list={["object-center object-cover h-full", {"hidden": !siteConfig.banner.enable}]}
 					  src={siteConfig.banner.src}
 			>
 			</ImageWrapper>

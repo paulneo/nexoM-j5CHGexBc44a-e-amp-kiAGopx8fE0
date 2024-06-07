@@ -18,7 +18,7 @@ const len = page.data.length;
 
 ---
 
-<MainGridLayout>
+<MainGridLayout title={"Portal de Entretenimiento y Cultura Global"} description="Descubre en Nexo Mundial una fuente de inspiración global con cuentos, recetas, noticias y espectáculos que te conectan con culturas de todo el mundo. ¡Explora y disfruta contenido diverso y entretenido!">
   <PostPage page={page}></PostPage>
   {len > 0 && 
       <Pagination class="mx-auto onload-animation" page={page} style={`animation-delay: calc(var(--content-delay) + ${(len)*50}ms)`}></Pagination>

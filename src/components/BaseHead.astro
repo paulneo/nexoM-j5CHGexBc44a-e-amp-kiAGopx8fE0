@@ -1,5 +1,6 @@
 ---
 const isProd = import.meta.env.PROD;
+let { title, description } = Astro.props;
 
 ---
 
@@ -18,3 +19,10 @@ const isProd = import.meta.env.PROD;
 )}
 
 <link rel="sitemap" href="/sitemap-index.xml" />
+
+<meta property="og:url" content={Astro.url} />
+<meta property="article:publisher" content="https://www.facebook.com/nexomundial2/">
+<meta property="og:site_name" content="Nexomundial">
+<meta property="og:title" content={title} />
+<meta property="og:description" content={description} />
+<meta property="og:image" content={new URL('/favicon.png', Astro.url)} />

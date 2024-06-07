@@ -7,7 +7,7 @@ import type {
 import { LinkPreset } from './types/config'
 
 export const siteConfig: SiteConfig = {
-  title: 'Nexomundial',
+  title: 'Nexo Mundial',
   subtitle: 'Una diversión para todos',
   lang: 'es',         // 'en', 'zh_CN', 'zh_TW', 'ja'
   themeColor: {
@@ -20,7 +20,7 @@ export const siteConfig: SiteConfig = {
   },
   favicon: [    // Leave this array empty to use the default favicon
     {
-      src: 'favicon/demo.png',    // Path of the favicon, relative to the /public directory
+      src: 'favicon.png',    // Path of the favicon, relative to the /public directory
       // theme: 'light',              // (Optional) Either 'light' or 'dark', set only if you have different favicons for light and dark mode
       // sizes: '32x32',              // (Optional) Size of the favicon, set only if you have favicons of different sizes
     }
@@ -43,7 +43,7 @@ export const navBarConfig: NavBarConfig = {
 export const profileConfig: ProfileConfig = {
   avatar: 'assets/images/avatar.webp',  // Relative to the /src directory. Relative to the /public directory if it starts with '/'
   name: 'Nexo Mundial',
-  bio: 'Nexomundial tu portal al entretenimiento y la inspiración global. Explora cuentos, recetas, frases y espectáculos que te conectan con culturas del mundo.',
+  bio: 'Descubre en Nexo Mundial una fuente de inspiración global con cuentos, recetas, noticias y espectáculos que te conectan con culturas de todo el mundo. ¡Explora y disfruta contenido diverso y entretenido!',
   links: [
     {
       name: 'Facebook',
