@@ -4,7 +4,7 @@ published: 2024-06-03
 description: 'Disfruta de unos tacos vibrantes y saludables con frijoles negros sazonados, camote asado, rodajas de aguacate fresco y queso cotija, todo servido en tortillas de maíz'
 image: '/images/tacos-frijoles.webp'
 tags: [Recetas]
-category: 'Comida'
+category: 'Comidas'
 draft: false 
 ---
 ## Ingredientes:
