@@ -4,7 +4,7 @@ published: 2024-05-30
 description: 'Receta saludable para mantenerte en forma'
 image: '/images/receta.webp'
 tags: [Recetas]
-category: 'Comida'
+category: 'Comidas'
 draft: false 
 ---
 ## Desayuno: Smoothie de Espinacas y Plátano

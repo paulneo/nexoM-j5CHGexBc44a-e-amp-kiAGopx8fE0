@@ -4,7 +4,7 @@ published: 2024-06-03
 description: 'Disfruta de un plato saludable y colorido con pollo a la parrilla, camote asado y espárragos al vapor'
 image: '/images/pollo-asado.webp'
 tags: [Recetas]
-category: 'Comida'
+category: 'Comidas'
 draft: false 
 ---
 ## Ingredientes:

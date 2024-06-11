@@ -4,7 +4,7 @@ published: 2024-06-03
 description: 'Disfruta de un salteado vibrante y nutritivo de verduras con tofu. Este plato incluye pimientos, brócoli, guisantes y zanahorias'
 image: '/images/salteado-verduras.webp'
 tags: [Recetas]
-category: 'Comida'
+category: 'Comidas'
 draft: false 
 ---
 ## Ingredientes:

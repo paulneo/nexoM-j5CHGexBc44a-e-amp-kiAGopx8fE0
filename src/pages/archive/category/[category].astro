@@ -4,13 +4,14 @@ import MainGridLayout from "@layouts/MainGridLayout.astro";
 import ArchivePanel from "@components/ArchivePanel.astro";
 import {i18n} from "@i18n/translation";
 import I18nKey from "@i18n/i18nKey";
+import { getCollection } from "astro:content";
 
 export async function getStaticPaths() {
     const categories = await getCategoryList();
     return categories.map(category => {
         return {
             params: {
-                category: category.name
+                category: category.name,
             }
         }
     });
@@ -18,8 +19,10 @@ export async function getStaticPaths() {
 
 const { category } = Astro.params;
 
+const categoryItem = (await getCollection('categories')).find((el) => el.data.title === category)
+
 ---
 
-<MainGridLayout title={i18n(I18nKey.archive)} description={i18n(I18nKey.archive)}>
+<MainGridLayout title={category} description={categoryItem?.data?.description}>
     <ArchivePanel categories={[category]}></ArchivePanel>
 </MainGridLayout>

@@ -4,6 +4,7 @@ import MainGridLayout from "@layouts/MainGridLayout.astro";
 import ArchivePanel from "@components/ArchivePanel.astro";
 import {i18n} from "@i18n/translation";
 import I18nKey from "@i18n/i18nKey";
+import { getCollection } from "astro:content";
 
 
 export async function getStaticPaths() {
@@ -26,9 +27,10 @@ export async function getStaticPaths() {
 }
 
 const { tag } = Astro.params;
+const tagItem = (await getCollection('tags')).find((el) => el.data.title === tag)
 
 ---
 
-<MainGridLayout title={i18n(I18nKey.archive)} description={i18n(I18nKey.archive)}>
+<MainGridLayout title={tag} description={tagItem?.data?.description}>
     <ArchivePanel tags={[tag]}></ArchivePanel>
 </MainGridLayout>

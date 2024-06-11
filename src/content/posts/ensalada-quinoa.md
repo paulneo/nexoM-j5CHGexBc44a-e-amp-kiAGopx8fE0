@@ -4,7 +4,7 @@ published: 2024-06-03
 description: 'Disfruta de una ensalada fresca y saludable con quinoa, tomates cherry, pepino, cebolla roja, aceitunas Kalamata y queso feta, todo aderezado con una vinagreta ligera de limón'
 image: '/images/ensalada-quinoa.webp'
 tags: [Recetas]
-category: 'Comida'
+category: 'Comidas'
 draft: false 
 ---
 ## Ingredientes:

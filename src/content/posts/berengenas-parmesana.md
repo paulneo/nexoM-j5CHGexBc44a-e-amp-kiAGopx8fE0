@@ -4,7 +4,7 @@ published: 2024-06-03
 description: 'Disfruta de una deliciosa y saludable berenjena a la parmesana, con capas de berenjena horneada, salsa marinara y queso mozzarella'
 image: '/images/berenjena-parmesana.webp'
 tags: [Recetas]
-category: 'Comida'
+category: 'Comidas'
 draft: false 
 ---
 ## Ingredientes:

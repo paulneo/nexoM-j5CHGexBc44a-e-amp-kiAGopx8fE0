@@ -4,7 +4,7 @@ published: 2024-06-03
 description: 'Una ensalada fresca y nutritiva con camarones a la parrilla, aguacate cremoso, y vegetales variados'
 image: '/images/ensalada-camaron.webp'
 tags: [Recetas]
-category: 'Comida'
+category: 'Comidas'
 draft: false 
 ---
 ## Ingredientes:

@@ -4,7 +4,7 @@ published: 2024-06-01
 description: 'Real Madrid conquista su 15ª Champions League al vencer 2-0 a Borussia Dortmund en Wembley, con goles de Dani Carvajal y Vinícius Júnior'
 image: '/images/real-madrid.jpeg'
 tags: [Fútbol, Champions League]
-category: 'Deporte'
+category: 'Deportes'
 draft: false 
 ---
 **Real Madrid** ha logrado otra hazaña histórica al conquistar su decimoquinta **UEFA Champions League**, reafirmando su estatus como el club más exitoso en la historia del torneo. En un emocionante encuentro disputado en el icónico estadio de Wembley, el equipo blanco superó al Borussia Dortmund con un marcador de 2-0.

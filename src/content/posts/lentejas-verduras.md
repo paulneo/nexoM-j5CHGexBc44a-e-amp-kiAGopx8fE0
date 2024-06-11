@@ -4,7 +4,7 @@ published: 2024-06-03
 description: 'Disfruta de un estofado reconfortante y nutritivo con lentejas, zanahorias, apio, tomates y espinacas en un caldo sabroso'
 image: '/images/estofado-lentejas.webp'
 tags: [Recetas]
-category: 'Comida'
+category: 'Comidas'
 draft: false 
 ---
 ## Ingredientes:

@@ -4,7 +4,7 @@ published: 2024-06-03
 description: 'Disfruta de un curry vibrante y cremoso de garbanzos y espinacas, servido sobre arroz integral'
 image: '/images/garbanzo-espinaca.webp'
 tags: [Recetas]
-category: 'Comida'
+category: 'Comidas'
 draft: false 
 ---
 ## Ingredientes:

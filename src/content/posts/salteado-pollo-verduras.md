@@ -4,7 +4,7 @@ published: 2024-06-03
 description: 'Disfruta de un salteado vibrante y saludable de pollo y verduras, con pimientos, brócoli, guisantes y zanahorias'
 image: '/images/salteado-pollo.webp'
 tags: [Recetas]
-category: 'Comida'
+category: 'Comidas'
 draft: false 
 ---
 ## Ingredientes:

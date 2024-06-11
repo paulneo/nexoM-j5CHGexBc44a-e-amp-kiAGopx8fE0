@@ -4,7 +4,7 @@ published: 2024-06-03
 description: 'Disfruta de unos coloridos y nutritivos pimientos rellenos de quinoa, frijoles negros, maíz y tomates, decorados con aguacate y queso'
 image: '/images/pimiento-relleno.webp'
 tags: [Recetas]
-category: 'Comida'
+category: 'Comidas'
 draft: false 
 ---
 ## Ingredientes:
