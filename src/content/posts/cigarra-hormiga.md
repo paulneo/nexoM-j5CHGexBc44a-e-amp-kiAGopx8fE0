@@ -2,7 +2,7 @@
 title: La Cigarra y la Hormiga Una Lección sobre la Previsión
 published: 2024-07-04
 description: 'La clásica fábula de Esopo que enseña la importancia de la previsión y el trabajo duro a través de la historia de una despreocupada cigarra y una laboriosa hormiga.'
-image: '/images/cigarra-hormiga.jpg'
+image: '/images/cigarra-hormiga.webp'
 tags: [Fábula]
 category: 'Cuentos'
 draft: false 
