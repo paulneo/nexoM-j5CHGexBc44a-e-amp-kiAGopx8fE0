@@ -4,7 +4,7 @@ published: 2024-07-04
 description: 'Un poema que celebra la unidad y la amistad entre niños de diversas culturas en América, invitando a un niño indio de los llanos y otro de los bosques a jugar y cantar juntos.'
 image: '/images/indio.webp'
 tags: [Poesía]
-category: 'Poesía'
+category: "Poesias"
 draft: false
 ---
 

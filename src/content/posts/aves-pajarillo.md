@@ -4,7 +4,7 @@ published: 2024-07-04
 description: 'Exploración de dos aves distintas: el encantador Pajarillo Barranqueño, celebrado en una canción popular, y el misterioso tecolote, conocido por sus habilidades nocturnas excepcionales.'
 image: '/images/aves-pajarillo.webp'
 tags: [Poesía]
-category: 'Poesía'
+category: "Poesias"
 draft: false
 ---
 
