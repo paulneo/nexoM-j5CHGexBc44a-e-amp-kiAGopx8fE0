@@ -2,13 +2,13 @@ import Key from '../i18nKey'
 import type { Translation } from '../translation'
 
 export const es: Translation = {
-  [Key.home]: 'Blogs',
+  [Key.home]: 'Publicaciones',
   [Key.about]: 'Nosotros',
   [Key.archive]: 'Archivos',
 
   [Key.tags]: 'Etiquetas',
   [Key.categories]: 'Categorías',
-  [Key.recentPosts]: 'Recientes blogs',
+  [Key.recentPosts]: 'Recientes publicaciones',
 
   [Key.comments]: 'Comentarios',
 
@@ -21,7 +21,7 @@ export const es: Translation = {
   [Key.minuteCount]: 'minuto',
   [Key.minutesCount]: 'minutos',
   [Key.postCount]: 'blog',
-  [Key.postsCount]: 'blogs',
+  [Key.postsCount]: 'publicaciones',
 
   [Key.themeColor]: 'Tema',
 
