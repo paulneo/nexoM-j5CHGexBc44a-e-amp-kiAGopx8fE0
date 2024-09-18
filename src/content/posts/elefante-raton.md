@@ -1,6 +1,6 @@
 ---
 title: El elefante y el ratón
-published: 2024-09-17
+published: 2024-17-09
 description: 'Esta fábula de La Fontaine nos enseña sobre la importancia de la humildad y cómo las apariencias pueden engañarnos en el juicio propio y ajeno.'  
 image: '/images/elefante-raton.webp'
 tags: [Fábula]

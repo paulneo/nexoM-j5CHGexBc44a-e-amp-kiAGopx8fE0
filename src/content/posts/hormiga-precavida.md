@@ -1,6 +1,6 @@
 ---
 title: La hormiga precavida 
-published: 2024-09-17  
+published: 2024-17-09 
 description: 'Esta fábula narra la historia de una hormiga y una mosca, mostrando cómo la prudencia y el trabajo constante pueden ser más valiosos que la arrogancia y el lujo momentáneo.'  
 image: '/images/hormiga-precavida.webp'  
 tags: [Fábula]  
