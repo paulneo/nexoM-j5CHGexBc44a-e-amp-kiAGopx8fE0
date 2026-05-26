@@ -129,8 +129,13 @@ const tagsCollection = defineCollection({
   }),
 })
 
+// Drafts comparten schema con posts: cuando promote-draft.mjs mueve el
+// archivo a posts/, el frontmatter ya cumple las validaciones.
+const draftsCollection = postsCollection
+
 export const collections = {
   posts: postsCollection,
+  drafts: draftsCollection,
   authors: authorsCollection,
   glosario: glosarioCollection,
   categories: categoriesCollection,
