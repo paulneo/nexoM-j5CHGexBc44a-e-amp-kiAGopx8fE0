@@ -75,8 +75,27 @@ const faqJsonLd = faq.length > 0 ? {
         "acceptedAnswer": { "@type": "Answer", "text": a },
     })),
 } : null;
+
+const seoOverride = entry.data.seo as { canonical?: string; ogImage?: string; noindex?: boolean } | undefined;
+const ogImageRaw = seoOverride?.ogImage ?? (entry.data.image as string | undefined);
+const ogImageUrl = ogImageRaw && coverUsesCdn
+    ? img(entry.data.image as string, { width: 1200, height: 630, crop: 'fill' })
+    : ogImageRaw;
+const tagsList = (entry.data.tags as string[] | undefined) ?? [];
 ---
-<MainGridLayout banner={entry.data.image} title={entry.data.title} description={entry.data.description}>
+<MainGridLayout
+    banner={entry.data.image}
+    title={entry.data.title}
+    description={entry.data.description}
+    ogType="article"
+    ogImage={ogImageUrl}
+    canonical={seoOverride?.canonical}
+    publishedTime={entry.data.published}
+    modifiedTime={updatedAt ?? undefined}
+    author={profileConfig.name}
+    tags={tagsList}
+    noindex={seoOverride?.noindex || entry.data.draft}
+>
     <script slot="head" type="application/ld+json" set:html={JSON.stringify(jsonLd)}></script>
     {faqJsonLd && <script slot="head" type="application/ld+json" set:html={JSON.stringify(faqJsonLd)}></script>}
 

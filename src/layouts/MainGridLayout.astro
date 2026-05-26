@@ -12,15 +12,49 @@ interface Props {
     description?: string;
     showSidebar?: boolean;
     showBannerAd?: boolean;
+    ogType?: 'website' | 'article';
+    ogImage?: string;
+    canonical?: string;
+    publishedTime?: Date;
+    modifiedTime?: Date;
+    author?: string;
+    tags?: string[];
+    noindex?: boolean;
 }
 
 // Sidebar y banners de AdSense desactivados por defecto: el sitio aún no tiene tráfico
 // ni cuenta de AdSense aprobada. Reactivar pasando showSidebar/showBannerAd={true}
 // cuando tengas tu cliente AdSense y traffic real.
-const { title, banner, description, showSidebar = false, showBannerAd = false } = Astro.props
+const {
+    title,
+    banner,
+    description,
+    showSidebar = false,
+    showBannerAd = false,
+    ogType,
+    ogImage,
+    canonical,
+    publishedTime,
+    modifiedTime,
+    author,
+    tags,
+    noindex,
+} = Astro.props
 ---
 
-<Layout title={title} banner={banner} description={description}>
+<Layout
+    title={title}
+    banner={banner}
+    description={description}
+    ogType={ogType}
+    ogImage={ogImage}
+    canonical={canonical}
+    publishedTime={publishedTime}
+    modifiedTime={modifiedTime}
+    author={author}
+    tags={tags}
+    noindex={noindex}
+>
 <slot slot="head" name="head"></slot>
 <div class="min-h-screen flex flex-col">
     <div id="top-row" class="z-50 onload-animation">

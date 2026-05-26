@@ -14,9 +14,29 @@ interface Props {
 	title: string;
 	banner: string;
 	description?: string;
+	ogType?: 'website' | 'article';
+	ogImage?: string;
+	canonical?: string;
+	publishedTime?: Date;
+	modifiedTime?: Date;
+	author?: string;
+	tags?: string[];
+	noindex?: boolean;
 }
 
-let { title, banner, description } = Astro.props;
+let {
+	title,
+	banner,
+	description,
+	ogType = 'website',
+	ogImage,
+	canonical,
+	publishedTime,
+	modifiedTime,
+	author,
+	tags,
+	noindex,
+} = Astro.props;
 
 const isHomePage = pathsEqual(Astro.url.pathname, '/');
 
@@ -72,14 +92,19 @@ const siteLang = siteConfig.lang.replace('_', '-')
 <!DOCTYPE html>
 <html lang={siteLang} class="bg-[var(--page-bg)] transition text-[14px] md:text-[16px]">
 	<head>
-		<title>{pageTitle}</title>
-		<BaseHead title={pageTitle} description={description}></BaseHead>
+		<BaseHead
+			title={pageTitle}
+			description={description}
+			ogType={ogType}
+			ogImage={ogImage}
+			canonical={canonical}
+			publishedTime={publishedTime}
+			modifiedTime={modifiedTime}
+			author={author}
+			tags={tags}
+			noindex={noindex}
+		/>
 
-		<meta charset="UTF-8" />
-		<meta name="title" content={pageTitle} />
-		<meta name="description" content={description || pageTitle}>
-		<meta name="viewport" content="width=device-width" />
-		<meta name="generator" content={Astro.generator} />
 		{favicons.map(fav => (
 			<link rel="icon" type="image/png+xml"
 				  href={fav.src.startsWith('/') ? url(fav.src) : fav.src}
