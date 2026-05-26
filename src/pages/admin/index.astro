@@ -1,0 +1,36 @@
+---
+// Panel editorial Decap CMS — página independiente del layout del sitio.
+// El config.yml vive en /public/admin/config.yml (servido como estático).
+export const prerender = true;
+---
+<!doctype html>
+<html lang="es">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="robots" content="noindex,nofollow" />
+    <title>Nexo Mundial · Panel editorial</title>
+    <link rel="icon" type="image/png" href="/favicon.png" />
+  </head>
+  <body>
+    <!-- Netlify Identity widget (auth) -->
+    <script is:inline src="https://identity.netlify.com/v1/netlify-identity-widget.js"></script>
+
+    <!-- Decap CMS -->
+    <script is:inline src="https://unpkg.com/decap-cms@^3.0.0/dist/decap-cms.js"></script>
+
+    <script is:inline>
+      // Si el usuario llega aquí ya logueado, sigue al CMS.
+      // Si no, mostrarle el login.
+      if (window.netlifyIdentity) {
+        window.netlifyIdentity.on('init', user => {
+          if (!user) {
+            window.netlifyIdentity.on('login', () => {
+              document.location.href = '/admin/';
+            });
+          }
+        });
+      }
+    </script>
+  </body>
+</html>

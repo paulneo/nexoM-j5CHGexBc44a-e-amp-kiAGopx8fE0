@@ -1,0 +1,53 @@
+---
+import MainGridLayout from "../../layouts/MainGridLayout.astro";
+import { Icon } from 'astro-icon/components';
+import { getSortedPosts } from "../../utils/content-utils";
+import { CATEGORY_LIST } from "../../lib/categories";
+
+const posts = await getSortedPosts();
+const counts: Record<string, number> = {};
+for (const p of posts) {
+    const cat = p.data.category;
+    if (cat) counts[cat] = (counts[cat] ?? 0) + 1;
+}
+---
+
+<MainGridLayout
+    title="Categorías"
+    description="Todos los temas de Nexo Mundial: arquitectura, construcción, maquinaria pesada, ingeniería básica y glosario."
+>
+    <header class="mb-12 max-w-2xl">
+        <p class="text-[0.72rem] uppercase tracking-[0.18em] text-[var(--primary)] font-semibold mb-3">
+            Explora por tema
+        </p>
+        <h1 class="text-4xl md:text-5xl font-bold tracking-tight leading-[1.1] text-[var(--deep-text)] dark:text-white/95 mb-4">
+            Categorías
+        </h1>
+        <p class="text-lg text-black/60 dark:text-white/65 leading-relaxed">
+            Cinco silos temáticos donde organizamos el contenido. Cada uno reúne
+            artículos prácticos pensados para entender los conceptos del oficio.
+        </p>
+    </header>
+
+    <div class="grid grid-cols-1 md:grid-cols-2 gap-5">
+        {CATEGORY_LIST.map(cat => (
+            <a
+                href={`/categorias/${cat.slug}/`}
+                class={`group block rounded-2xl p-7 md:p-8 ${cat.bg} hover:scale-[1.01] transition`}
+            >
+                <div class={`${cat.text} mb-4`}>
+                    <Icon name={cat.icon} class="w-10 h-10 md:w-12 md:h-12 opacity-90"></Icon>
+                </div>
+                <h2 class={`text-xl md:text-2xl font-bold mb-2 tracking-tight ${cat.text}`}>
+                    {cat.label}
+                </h2>
+                <p class="text-sm md:text-base text-black/65 dark:text-white/65 leading-relaxed mb-3">
+                    {cat.description}
+                </p>
+                <span class={`text-xs uppercase tracking-[0.14em] font-semibold ${cat.text} opacity-80`}>
+                    {counts[cat.slug] ?? 0} {counts[cat.slug] === 1 ? 'artículo' : 'artículos'} →
+                </span>
+            </a>
+        ))}
+    </div>
+</MainGridLayout>

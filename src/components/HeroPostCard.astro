@@ -1,0 +1,122 @@
+---
+import path from "path";
+import { Icon } from 'astro-icon/components';
+import ImageWrapper from "./misc/ImageWrapper.astro";
+import { getDir } from "../utils/url-utils";
+import { getCategory, FORMATO_LABEL } from "../lib/categories";
+import { img, isCdnRef, imgSrcset } from "../lib/images";
+
+interface Props {
+    class?: string;
+    entry: any;
+    title: string;
+    url: string;
+    published: Date;
+    category: string;
+    image: string;
+    description: string;
+}
+
+const { entry, title, url, published, category, image, description } = Astro.props;
+const className = Astro.props.class;
+
+const hasCover = image !== undefined && image !== null && image !== '';
+const useCdn = hasCover && isCdnRef(image);
+const cdnUrl = useCdn ? img(image, { width: 1920, height: 800, crop: 'fill' }) : '';
+const cdnSrcset = useCdn ? imgSrcset(image, [800, 1200, 1600, 1920, 2400]) : '';
+const { remarkPluginFrontmatter } = await entry.render();
+
+const cat = getCategory(category);
+const formato = entry.data?.formato as string | undefined;
+const formatoLabel = formato ? FORMATO_LABEL[formato] ?? formato : '';
+
+const publishedFmt = new Date(published).toLocaleDateString('es', {
+    day: 'numeric', month: 'long', year: 'numeric',
+});
+---
+
+<article class:list={["group relative overflow-hidden rounded-3xl shadow-xl shadow-black/10 dark:shadow-black/40", className]}>
+    <a href={url} class="block">
+        <!-- Cover ratio cinemático -->
+        <div class={`relative aspect-[16/10] sm:aspect-[16/9] md:aspect-[2.4/1] overflow-hidden ${cat?.bg ?? 'bg-gradient-to-br from-gray-100 to-gray-200 dark:from-white/5 dark:to-white/10'}`}>
+            {useCdn ? (
+                <img
+                    src={cdnUrl}
+                    srcset={cdnSrcset}
+                    sizes="(max-width: 768px) 100vw, 90vw"
+                    alt={`Portada: ${title}`}
+                    loading="eager"
+                    decoding="async"
+                    fetchpriority="high"
+                    class="w-full h-full object-cover transition duration-[1200ms] ease-out group-hover:scale-[1.06]"
+                />
+            ) : hasCover ? (
+                <ImageWrapper
+                    src={image}
+                    basePath={path.join("content/posts/", getDir(entry.id))}
+                    alt={`Portada: ${title}`}
+                    class="w-full h-full object-cover transition duration-[1200ms] ease-out group-hover:scale-[1.06]"
+                />
+            ) : (
+                <div class="absolute inset-0 flex items-center justify-center transition duration-[1200ms] ease-out group-hover:scale-[1.06]">
+                    {cat?.icon && (
+                        <div class={cat.text}>
+                            <Icon name={cat.icon} class="w-32 h-32 md:w-44 md:h-44 lg:w-52 lg:h-52 opacity-50"></Icon>
+                        </div>
+                    )}
+                </div>
+            )}
+
+            <!-- Multi-stop gradient para legibilidad -->
+            <div class="absolute inset-0 bg-gradient-to-t from-black/90 via-black/50 to-transparent"></div>
+
+            <!-- Sutil border interior -->
+            <div class="absolute inset-0 ring-1 ring-inset ring-white/10"></div>
+
+            <!-- Texto del hero superpuesto -->
+            <div class="absolute inset-x-0 bottom-0 p-6 md:p-12 lg:p-16">
+                <div class="max-w-4xl">
+                    <!-- Kicker con backdrop blur premium -->
+                    {cat && (
+                        <div class="flex items-center gap-3 mb-4 md:mb-6">
+                            <span class="inline-flex items-center gap-1.5 text-[0.7rem] md:text-xs font-semibold uppercase tracking-[0.16em] px-3 py-1.5 rounded-full bg-white/15 backdrop-blur-md border border-white/20 text-white">
+                                <Icon name={cat.icon} class="w-3.5 h-3.5"></Icon>
+                                {cat.label}
+                            </span>
+                            {formatoLabel && (
+                                <span class="text-[0.7rem] md:text-xs uppercase tracking-[0.16em] text-white/70">
+                                    {formatoLabel}
+                                </span>
+                            )}
+                        </div>
+                    )}
+
+                    <h2 class="text-white font-bold tracking-[-0.025em] leading-[1.02] mb-4 md:mb-5 text-[1.7rem] sm:text-3xl md:text-5xl lg:text-6xl xl:text-7xl drop-shadow-[0_4px_12px_rgba(0,0,0,0.5)]">
+                        {title}
+                    </h2>
+
+                    {description && (
+                        <p class="hidden md:block text-white/90 text-base md:text-lg leading-relaxed max-w-2xl mb-5 line-clamp-2 drop-shadow-[0_2px_6px_rgba(0,0,0,0.4)]">
+                            {description}
+                        </p>
+                    )}
+
+                    <div class="flex flex-wrap items-center gap-x-3 gap-y-1 text-xs md:text-sm text-white/80">
+                        <time datetime={new Date(published).toISOString()}>{publishedFmt}</time>
+                        {remarkPluginFrontmatter?.minutes && (
+                            <>
+                                <span aria-hidden="true">·</span>
+                                <span>{remarkPluginFrontmatter.minutes} min de lectura</span>
+                            </>
+                        )}
+                        <span aria-hidden="true" class="hidden sm:inline">·</span>
+                        <span class="hidden sm:inline-flex items-center gap-1.5 font-semibold text-white">
+                            Leer artículo
+                            <Icon name="material-symbols:arrow-forward" class="w-4 h-4 transition group-hover:translate-x-1.5"></Icon>
+                        </span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </a>
+</article>

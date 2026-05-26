@@ -1,23 +1,146 @@
 ---
-
 import MainGridLayout from "../layouts/MainGridLayout.astro";
+import { Icon } from 'astro-icon/components';
+import { getCollection } from 'astro:content';
+import { CATEGORY_LIST } from "../lib/categories";
+import { profileConfig } from "../config";
 
-import { getEntry } from 'astro:content'
-import {i18n} from "../i18n/translation";
-import I18nKey from "../i18n/i18nKey";
-import Markdown from "@components/misc/Markdown.astro";
-
-const aboutPost = await getEntry('spec', 'about')
-
-const { Content } = await aboutPost.render()
-
+const authors = await getCollection('authors');
+const editor = authors.find(a => a.slug === 'jean-paul') ?? authors[0];
 ---
-<MainGridLayout title={i18n(I18nKey.about)} description={i18n(I18nKey.about)}>
-    <div class="flex w-full rounded-[var(--radius-large)] overflow-hidden relative min-h-32">
-        <div class="card-base z-10 px-9 py-6 relative w-full ">
-            <Markdown class="mt-2">
-                <Content />
-            </Markdown>
-        </div>
-    </div>
+
+<MainGridLayout
+    title="Sobre Nexo Mundial"
+    description="Biblioteca digital de conocimiento técnico práctico sobre arquitectura, construcción, maquinaria pesada e ingeniería básica."
+    showSidebar={false}
+>
+    <article class="max-w-3xl mx-auto">
+        <header class="mb-12">
+            <p class="text-[0.72rem] uppercase tracking-[0.18em] text-[var(--primary)] font-semibold mb-3">
+                Sobre el proyecto
+            </p>
+            <h1 class="text-4xl md:text-5xl font-bold tracking-tight leading-[1.1] text-[var(--deep-text)] dark:text-white/95 mb-4">
+                Nexo Mundial
+            </h1>
+            <p class="text-xl text-black/65 dark:text-white/70 leading-[1.5]">
+                Una biblioteca digital de conocimiento técnico práctico sobre arquitectura,
+                construcción, maquinaria pesada e ingeniería básica.
+            </p>
+        </header>
+
+        <!-- Misión -->
+        <section class="mb-12 prose-blog">
+            <h2>Por qué existe este sitio</h2>
+            <p>
+                Mucha información técnica está escrita por especialistas para especialistas.
+                Manuales densos, normativas con lenguaje legal, libros caros. Para alguien
+                que está empezando en el oficio, o para un curioso que quiere entender
+                cómo funcionan las cosas, esa información es difícil de aprovechar.
+            </p>
+            <p>
+                Nexo Mundial existe para tender un puente entre el conocimiento técnico y
+                el lector que quiere aprender. Tomamos conceptos del oficio —cimentaciones,
+                planos, maquinaria, materiales, estructuras— y los explicamos en lenguaje
+                claro, con ejemplos prácticos y sin tecnicismos innecesarios.
+            </p>
+        </section>
+
+        <!-- Categorías -->
+        <section class="mb-14">
+            <h2 class="text-2xl md:text-3xl font-bold tracking-tight mb-5 text-[var(--deep-text)] dark:text-white/95">
+                Sobre qué escribimos
+            </h2>
+            <div class="grid grid-cols-1 sm:grid-cols-2 gap-3">
+                {CATEGORY_LIST.map(cat => (
+                    <a
+                        href={`/categorias/${cat.slug}/`}
+                        class={`group flex items-start gap-4 p-4 rounded-xl ${cat.bg} hover:scale-[1.01] transition`}
+                    >
+                        <div class={`${cat.text} shrink-0 mt-1`}>
+                            <Icon name={cat.icon} class="w-7 h-7 opacity-90"></Icon>
+                        </div>
+                        <div>
+                            <p class={`font-bold ${cat.text} mb-1`}>{cat.label}</p>
+                            <p class="text-sm text-black/65 dark:text-white/65 leading-snug">{cat.description}</p>
+                        </div>
+                    </a>
+                ))}
+            </div>
+        </section>
+
+        <!-- Política IA -->
+        <section class="mb-12 prose-blog">
+            <h2>Cómo se escriben los artículos</h2>
+            <p>
+                Usamos inteligencia artificial como asistente de redacción: para
+                organizar ideas, generar borradores y proponer estructuras de artículo.
+                Pero <strong>la IA no publica nada por sí sola</strong>.
+            </p>
+            <p>
+                Cada artículo pasa por un proceso humano de edición y verificación
+                antes de salir. Cuando un texto fue redactado con asistencia de IA, lo
+                indicamos explícitamente con la nota editorial al inicio del artículo.
+                Las cifras técnicas, normativas y datos verificables se contrastan con
+                fuentes especializadas; lo que no podemos verificar, no lo publicamos.
+            </p>
+            <ul>
+                <li>Cero contenido publicado sin revisión humana.</li>
+                <li>Fuentes verificables cuando aplican.</li>
+                <li>Lenguaje claro: explicamos sin tecnicismos innecesarios.</li>
+                <li>Transparencia: si la IA ayudó, lo decimos.</li>
+            </ul>
+        </section>
+
+        <!-- Equipo editorial -->
+        <section class="mb-12 p-6 md:p-8 rounded-2xl bg-black/[0.025] dark:bg-white/[0.04] border border-black/[0.05] dark:border-white/[0.05]">
+            <p class="text-[0.72rem] uppercase tracking-[0.18em] text-[var(--primary)] font-semibold mb-3">
+                Equipo editorial
+            </p>
+            <h2 class="text-2xl font-bold tracking-tight mb-1 text-[var(--deep-text)] dark:text-white/95">
+                Equipo Nexo Mundial
+            </h2>
+            <p class="text-sm text-black/55 dark:text-white/55 mb-4">Edición y revisión de contenidos</p>
+            <p class="text-black/70 dark:text-white/70 leading-relaxed">
+                Detrás de Nexo Mundial hay un equipo editorial pequeño que selecciona los temas,
+                redacta con apoyo de herramientas de inteligencia artificial como asistente, y
+                revisa cada artículo antes de publicarlo. Verificamos cifras, contrastamos con
+                manuales y normativas técnicas cuando aplica, y reescribimos para que el lenguaje
+                sea claro sin perder precisión.
+            </p>
+        </section>
+
+        <!-- Redes sociales -->
+        <section class="mb-12">
+            <h2 class="text-[0.72rem] uppercase tracking-[0.16em] font-semibold text-black/55 dark:text-white/55 mb-4">
+                Síguenos
+            </h2>
+            <div class="flex flex-wrap gap-3">
+                {profileConfig.links.map(l => (
+                    <a
+                        href={l.url}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        class="inline-flex items-center gap-2 px-4 py-2.5 rounded-lg bg-black/[0.04] dark:bg-white/[0.06] text-black/70 dark:text-white/70 hover:bg-[var(--primary)] hover:text-white transition text-sm font-medium"
+                    >
+                        <Icon name={l.icon} class="w-4 h-4"></Icon>
+                        {l.name}
+                    </a>
+                ))}
+            </div>
+        </section>
+
+        <!-- CTA -->
+        <section class="mt-16 pt-10 border-t border-black/[0.08] dark:border-white/[0.1] text-center">
+            <p class="text-lg text-black/65 dark:text-white/65 mb-5">
+                ¿Listo para empezar a leer?
+            </p>
+            <a
+                href="/"
+                class="inline-flex items-center gap-2 px-6 py-3 rounded-lg bg-[var(--primary)] text-white font-medium hover:opacity-90 transition"
+            >
+                Ver últimos artículos
+                <Icon name="material-symbols:arrow-forward" class="w-4 h-4"></Icon>
+            </a>
+        </section>
+    </article>
 </MainGridLayout>

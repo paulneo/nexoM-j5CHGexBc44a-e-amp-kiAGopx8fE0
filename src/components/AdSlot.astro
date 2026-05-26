@@ -1,0 +1,97 @@
+---
+/**
+ * Placeholder dimensionado para AdSense.
+ *
+ * En desarrollo se ve como una caja punteada con label "AD · {slot}".
+ * En producción, reemplaza el contenido del <div data-ad-slot> por el
+ * código de AdSense (asegúrate de respetar las dimensiones por
+ * variante para evitar Cumulative Layout Shift).
+ *
+ * Variantes:
+ *   - banner-top:    728×90 desktop / 320×100 mobile (responsive)
+ *   - in-article:    336×280 (rectángulo medio, mejor CTR in-content)
+ *   - sidebar-sticky: 300×600 (rascacielos, sticky al hacer scroll)
+ *   - footer:        728×90 (banner bajo)
+ *   - inline:        responsive, nativo
+ *
+ * Uso:
+ *   <AdSlot variant="banner-top" />
+ *   <AdSlot variant="in-article" />
+ */
+
+interface Props {
+    variant: 'banner-top' | 'in-article' | 'sidebar-sticky' | 'footer' | 'inline'
+    class?: string
+}
+
+const { variant, class: className = '' } = Astro.props
+
+const SIZES: Record<Props['variant'], { label: string; classes: string; minH: string }> = {
+    'banner-top': {
+        label: 'AD · banner top',
+        classes: 'w-full max-w-[728px] mx-auto',
+        minH: 'min-h-[90px] md:min-h-[90px]',
+    },
+    'in-article': {
+        label: 'AD · in-article',
+        classes: 'w-full max-w-[336px] mx-auto',
+        minH: 'min-h-[280px]',
+    },
+    'sidebar-sticky': {
+        label: 'AD · sidebar',
+        classes: 'w-full max-w-[300px]',
+        minH: 'min-h-[600px]',
+    },
+    'footer': {
+        label: 'AD · footer',
+        classes: 'w-full max-w-[728px] mx-auto',
+        minH: 'min-h-[90px]',
+    },
+    'inline': {
+        label: 'AD · responsive',
+        classes: 'w-full',
+        minH: 'min-h-[120px]',
+    },
+}
+
+const cfg = SIZES[variant]
+const isProd = import.meta.env.PROD
+---
+
+<div
+    data-ad-slot={variant}
+    class:list={[
+        'ad-slot relative my-6',
+        cfg.classes,
+        cfg.minH,
+        className,
+    ]}
+    aria-label="Espacio publicitario"
+>
+    {!isProd && (
+        <!-- Placeholder visible solo en desarrollo -->
+        <div class="absolute inset-0 flex items-center justify-center rounded-lg border-2 border-dashed border-black/20 dark:border-white/20 bg-black/[0.02] dark:bg-white/[0.03]">
+            <div class="text-center">
+                <p class="text-[0.7rem] uppercase tracking-[0.2em] font-semibold text-black/40 dark:text-white/40">
+                    {cfg.label}
+                </p>
+                <p class="text-[0.65rem] text-black/30 dark:text-white/30 mt-1">
+                    AdSense · placeholder
+                </p>
+            </div>
+        </div>
+    )}
+
+    <!--
+      AdSense en producción:
+      Reemplaza este comentario por:
+
+      <ins class="adsbygoogle"
+           style="display:block"
+           data-ad-client="ca-pub-XXXXX"
+           data-ad-slot="XXXXX"
+           data-ad-format="auto"
+           data-full-width-responsive="true"></ins>
+      <script>(adsbygoogle = window.adsbygoogle || []).push({});</script>
+    -->
+</div>

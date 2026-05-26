@@ -1,18 +1,19 @@
 ---
 import { getCollection } from 'astro:content';
+import { Icon } from 'astro-icon/components';
 import MainGridLayout from "@layouts/MainGridLayout.astro";
 import ImageWrapper from "../../components/misc/ImageWrapper.astro";
-import {Icon} from "astro-icon/components";
-import PostMetadata from "../../components/PostMeta.astro";
-import {i18n} from "@i18n/translation";
-import I18nKey from "@i18n/i18nKey";
-import {getDir, getPostUrlBySlug} from "@utils/url-utils";
+import { getDir, getPostUrlBySlug } from "@utils/url-utils";
 import License from "@components/misc/License.astro";
-import {licenseConfig} from "src/config";
+import { licenseConfig, profileConfig } from "src/config";
 import Markdown from "@components/misc/Markdown.astro";
 import path from "path";
-import {profileConfig} from "../../config";
-import {formatDateToYYYYMMDD} from "../../utils/date-utils";
+import { formatDateToYYYYMMDD } from "../../utils/date-utils";
+import { getCategory, FORMATO_LABEL } from "../../lib/categories";
+import { img, isCdnRef, imgSrcset } from "../../lib/images";
+import PostTOC from "../../components/PostTOC.astro";
+import ReadingProgress from "../../components/ReadingProgress.astro";
+import RelatedPosts from "../../components/RelatedPosts.astro";
 
 export async function getStaticPaths() {
     const blogEntries = await getCollection('posts', ({ data }) => {
@@ -24,116 +25,302 @@ export async function getStaticPaths() {
 }
 
 const { entry } = Astro.props;
-const { Content } = await entry.render();
+const { Content, remarkPluginFrontmatter } = await entry.render();
 
-const { remarkPluginFrontmatter } = await entry.render();
+const cat = getCategory(entry.data.category);
+const formato = entry.data.formato as string | undefined;
+const formatoLabel = formato ? FORMATO_LABEL[formato] ?? formato : '';
+const nivel = entry.data.nivel as string | undefined;
 
-const jsonLd = {
+const aiAssisted = entry.data.aiAssisted as boolean | undefined;
+
+const publishedFmt = new Date(entry.data.published).toLocaleDateString('es', {
+    day: 'numeric', month: 'long', year: 'numeric',
+});
+const updatedAt = entry.data.updatedAt ? new Date(entry.data.updatedAt as Date) : null;
+const updatedFmt = updatedAt ? updatedAt.toLocaleDateString('es', {
+    day: 'numeric', month: 'long', year: 'numeric',
+}) : null;
+const sameDate = updatedAt && updatedAt.toDateString() === new Date(entry.data.published).toDateString();
+
+const faq = (entry.data.faq as { q: string; a: string }[] | undefined) ?? [];
+const sources = (entry.data.sources as { title: string; url?: string }[] | undefined) ?? [];
+
+const hasCover = !!entry.data.image;
+const coverUsesCdn = hasCover && isCdnRef(entry.data.image as string);
+const coverCdnUrl = coverUsesCdn ? img(entry.data.image as string, { width: 1600, height: 900, crop: 'fill' }) : '';
+const coverCdnSrcset = coverUsesCdn ? imgSrcset(entry.data.image as string, [800, 1200, 1600, 2000]) : '';
+
+const jsonLd: any = {
     "@context": "https://schema.org",
-    "@type": "BlogPosting",
+    "@type": "Article",
     "headline": entry.data.title,
     "description": entry.data.description || entry.data.title,
-    "keywords": entry.data.tags,
+    "keywords": (entry.data.tags || []).join(', '),
     "author": {
         "@type": "Person",
         "name": profileConfig.name,
-        "url": Astro.site
+        "url": Astro.site,
     },
     "datePublished": formatDateToYYYYMMDD(entry.data.published),
-    // TODO include cover image here
-}
+};
+if (updatedAt && !sameDate) jsonLd.dateModified = formatDateToYYYYMMDD(updatedAt);
 
+const faqJsonLd = faq.length > 0 ? {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": faq.map(({ q, a }) => ({
+        "@type": "Question",
+        "name": q,
+        "acceptedAnswer": { "@type": "Answer", "text": a },
+    })),
+} : null;
 ---
 <MainGridLayout banner={entry.data.image} title={entry.data.title} description={entry.data.description}>
     <script slot="head" type="application/ld+json" set:html={JSON.stringify(jsonLd)}></script>
-    <div class="flex w-full rounded-[var(--radius-large)] overflow-hidden relative mb-4">
-        <div id="post-container" class:list={["card-base z-10 px-6 md:px-9 pt-6 pb-4 relative w-full ",
-            {}
-        ]}>
-            <!-- word count and reading time -->
-            <div class="flex flex-row text-black/30 dark:text-white/30 gap-5 mb-3 transition onload-animation">
-                <div class="flex flex-row items-center">
-                    <div class="transition h-6 w-6 rounded-md bg-black/5 dark:bg-white/10 text-black/50 dark:text-white/50 flex items-center justify-center mr-2">
-                        <Icon name="material-symbols:notes-rounded"></Icon>
+    {faqJsonLd && <script slot="head" type="application/ld+json" set:html={JSON.stringify(faqJsonLd)}></script>}
+
+    <ReadingProgress target=".markdown-content" />
+
+    <div class="xl:flex xl:items-start xl:gap-12">
+        <PostTOC />
+        <article class="flex-1 min-w-0 max-w-3xl xl:max-w-none xl:flex-1 mx-auto xl:mx-0">
+        <!-- Breadcrumbs -->
+        <nav aria-label="Breadcrumb" class="mb-6 text-xs text-black/45 dark:text-white/45 onload-animation">
+            <ol class="flex flex-wrap items-center gap-1.5">
+                <li><a href="/" class="hover:text-[var(--primary)] transition">Inicio</a></li>
+                {cat && (
+                    <>
+                        <li class="opacity-40" aria-hidden="true">/</li>
+                        <li><a href={`/categorias/${cat.slug}/`} class="hover:text-[var(--primary)] transition">{cat.label}</a></li>
+                    </>
+                )}
+            </ol>
+        </nav>
+
+        <!-- Header -->
+        <header class="mb-8 onload-animation">
+            <!-- Kicker -->
+            {cat && (
+                <div class="flex items-center gap-2 mb-5">
+                    <a
+                        href={`/categorias/${cat.slug}/`}
+                        class={`inline-block text-[0.72rem] font-semibold uppercase tracking-[0.12em] px-2.5 py-1 rounded ${cat.chip}`}
+                    >
+                        {cat.label}
+                    </a>
+                    {formatoLabel && (
+                        <span class="text-[0.72rem] uppercase tracking-[0.12em] text-black/45 dark:text-white/45">
+                            {formatoLabel}
+                        </span>
+                    )}
+                </div>
+            )}
+
+            <h1
+                data-pagefind-body data-pagefind-weight="10" data-pagefind-meta="title"
+                class="text-3xl md:text-5xl font-bold tracking-tight leading-[1.1] text-[var(--deep-text)] dark:text-white/95 mb-5"
+            >
+                {entry.data.title}
+            </h1>
+
+            {entry.data.description && (
+                <p class="text-lg md:text-xl leading-[1.5] text-black/60 dark:text-white/60 mb-7">
+                    {entry.data.description}
+                </p>
+            )}
+
+            <!-- Meta -->
+            <div class="flex flex-wrap items-center gap-x-3 gap-y-1 text-sm text-black/55 dark:text-white/55 pb-6 border-b border-black/[0.08] dark:border-white/[0.1]">
+                <time datetime={new Date(entry.data.published).toISOString()}>{publishedFmt}</time>
+                {remarkPluginFrontmatter?.minutes && (
+                    <>
+                        <span aria-hidden="true">·</span>
+                        <span>{remarkPluginFrontmatter.minutes} min de lectura</span>
+                    </>
+                )}
+                {nivel && (
+                    <>
+                        <span aria-hidden="true">·</span>
+                        <span class="capitalize">Nivel {nivel}</span>
+                    </>
+                )}
+            </div>
+
+            {updatedFmt && updatedAt && !sameDate && (
+                <p class="mt-3 text-xs text-black/40 dark:text-white/40">
+                    Actualizado el <time datetime={updatedAt.toISOString()}>{updatedFmt}</time>
+                </p>
+            )}
+        </header>
+
+        <!-- Cover -->
+        <div class="mb-10 onload-animation">
+            {coverUsesCdn ? (
+                <img
+                    src={coverCdnUrl}
+                    srcset={coverCdnSrcset}
+                    sizes="(max-width: 768px) 100vw, 768px"
+                    alt={`Portada: ${entry.data.title}`}
+                    loading="eager"
+                    decoding="async"
+                    fetchpriority="high"
+                    class="rounded-2xl banner-container w-full"
+                />
+            ) : hasCover ? (
+                <ImageWrapper
+                    src={entry.data.image}
+                    basePath={path.join("content/posts/", getDir(entry.id))}
+                    class="rounded-2xl banner-container w-full"
+                />
+            ) : cat && (
+                <div class={`rounded-2xl ${cat.bg} aspect-[16/8] flex flex-col items-center justify-center`}>
+                    <div class={cat.text}>
+                        <Icon name={cat.icon} class="w-20 h-20 md:w-28 md:h-28 opacity-90"></Icon>
                     </div>
-                    <div class="text-sm">{remarkPluginFrontmatter.words} {" " + i18n(I18nKey.wordsCount)}</div>
+                    <span class={`mt-3 text-xs uppercase tracking-[0.18em] font-semibold ${cat.text} opacity-80`}>
+                        {cat.label}
+                    </span>
                 </div>
-                <div class="flex flex-row items-center">
-                    <div class="transition h-6 w-6 rounded-md bg-black/5 dark:bg-white/10 text-black/50 dark:text-white/50 flex items-center justify-center mr-2">
-                        <Icon name="material-symbols:schedule-outline-rounded"></Icon>
-                    </div>
-                    <div class="text-sm">{remarkPluginFrontmatter.minutes} {" " + i18n(I18nKey.minutesCount)}</div>
-                </div>
-            </div>
-
-            <!-- title -->
-            <div class="relative onload-animation">
-                <div
-                    data-pagefind-body data-pagefind-weight="10" data-pagefind-meta="title"
-                    class="transition w-full block font-bold mb-3
-                    text-3xl md:text-[2.5rem]/[2.75rem]
-                    text-black/90 dark:text-white/90
-                    md:before:w-1 before:h-5 before:rounded-md before:bg-[var(--primary)]
-                    before:absolute before:top-[0.75rem] before:left-[-1.125rem]
-                ">
-                    {entry.data.title}
-                </div>
-            </div>
-
-            <!-- metadata -->
-            <div class="onload-animation">
-                <PostMetadata
-                        class="mb-5"
-                        published={entry.data.published}
-                        tags={entry.data.tags}
-                        category={entry.data.category}
-                ></PostMetadata>
-                {!entry.data.image && <div class="border-[var(--line-divider)] border-dashed border-b-[1px] mb-5"></div>}
-            </div>
-
-            <!-- always show cover as long as it has one -->
-
-            {entry.data.image &&
-                <ImageWrapper src={entry.data.image} basePath={path.join("content/posts/", getDir(entry.id))} class="mb-8 rounded-xl banner-container onload-animation"/>
-            }
-
-
-            <Markdown class="mb-6 markdown-content onload-animation">
-                <Content />
-            </Markdown>
-
-            {licenseConfig.enable && <License title={entry.data.title} slug={entry.slug} pubDate={entry.data.published} class="mb-6 rounded-xl license-container onload-animation"></License>}
-
+            )}
         </div>
-    </div>
 
-    <div class="flex flex-col md:flex-row justify-between mb-4 gap-4 overflow-hidden w-full">
-        <a href={getPostUrlBySlug(entry.data.nextSlug)} class="w-full font-bold overflow-hidden active:scale-95">
-            {entry.data.nextSlug && <div class="btn-card rounded-2xl w-full h-[3.75rem] max-w-full px-4 flex items-center justify-start gap-4" >
-                <Icon name="material-symbols:chevron-left-rounded" size={32} class="text-[var(--primary)]" />
-                <div class="overflow-hidden transition overflow-ellipsis whitespace-nowrap max-w-[calc(100%_-_3rem)] text-black/75 dark:text-white/75">
-                    {entry.data.nextTitle}
+        <!-- Cuerpo -->
+        <Markdown class="markdown-content onload-animation prose-blog">
+            <Content />
+        </Markdown>
+
+        <!-- FAQs -->
+        {faq.length > 0 && (
+            <section class="mt-14 pt-10 border-t border-black/[0.08] dark:border-white/[0.1]">
+                <h2 class="text-2xl md:text-3xl font-bold tracking-tight mb-6 text-[var(--deep-text)] dark:text-white/95">
+                    Preguntas frecuentes
+                </h2>
+                <div class="space-y-3">
+                    {faq.map(({ q, a }) => (
+                        <details class="group rounded-lg border border-black/[0.08] dark:border-white/[0.1] overflow-hidden">
+                            <summary class="cursor-pointer list-none flex items-center justify-between gap-3 p-4 font-semibold text-black/85 dark:text-white/90 hover:bg-black/[0.02] dark:hover:bg-white/[0.03] transition">
+                                <span>{q}</span>
+                                <span class="text-[var(--primary)] group-open:rotate-45 transition-transform shrink-0 text-xl leading-none">+</span>
+                            </summary>
+                            <div class="px-4 pb-4 text-black/65 dark:text-white/65 leading-relaxed">
+                                {a}
+                            </div>
+                        </details>
+                    ))}
                 </div>
-            </div>}
-        </a>
+            </section>
+        )}
 
-        <a href={getPostUrlBySlug(entry.data.prevSlug)} class="w-full font-bold overflow-hidden active:scale-95">
-            {entry.data.prevSlug && <div class="btn-card rounded-2xl w-full h-[3.75rem] max-w-full px-4 flex items-center justify-end gap-4">
-                <div class="overflow-hidden transition overflow-ellipsis whitespace-nowrap max-w-[calc(100%_-_3rem)] text-black/75 dark:text-white/75">
-                    {entry.data.prevTitle}
-                </div>
-                <Icon name="material-symbols:chevron-right-rounded" size={32} class="text-[var(--primary)]" />
-            </div>}
-        </a>
+        <!-- Fuentes -->
+        {sources.length > 0 && (
+            <section class="mt-12 pt-8 border-t border-black/[0.08] dark:border-white/[0.1]">
+                <h2 class="text-[0.72rem] uppercase tracking-[0.16em] font-semibold text-black/55 dark:text-white/55 mb-4">
+                    Fuentes
+                </h2>
+                <ul class="text-sm text-black/65 dark:text-white/65 space-y-2 list-disc pl-5">
+                    {sources.map(s => (
+                        <li>
+                            {s.url ? (
+                                <a href={s.url} target="_blank" rel="noopener noreferrer" class="hover:text-[var(--primary)] transition underline decoration-dotted underline-offset-2">{s.title}</a>
+                            ) : s.title}
+                        </li>
+                    ))}
+                </ul>
+            </section>
+        )}
+
+        <!-- Volver a categoría -->
+        {cat && (
+            <div class="mt-14 pt-8 border-t border-black/[0.08] dark:border-white/[0.1]">
+                <a
+                    href={`/categorias/${cat.slug}/`}
+                    class={`inline-flex items-center gap-2 px-4 py-2.5 rounded-lg ${cat.bg} ${cat.text} font-medium hover:scale-[1.02] transition`}
+                >
+                    <Icon name={cat.icon} class="w-4 h-4"></Icon>
+                    Más artículos en {cat.label}
+                </a>
+            </div>
+        )}
+
+        {/* Disclaimer sutil de IA al final, solo si aiAssisted: true */}
+        {aiAssisted && (
+            <p class="mt-10 text-xs text-black/45 dark:text-white/45 leading-relaxed border-l-2 border-black/[0.1] dark:border-white/[0.15] pl-3">
+                Este artículo fue redactado con asistencia de inteligencia artificial y revisado por el equipo editorial antes de publicarse. <a href="/about/" class="text-[var(--primary)] hover:underline">Más sobre nuestra metodología →</a>
+            </p>
+        )}
+
+        {licenseConfig.enable && (
+            <div class="mt-10">
+                <License title={entry.data.title} slug={entry.slug} pubDate={entry.data.published} class="rounded-lg license-container onload-animation"></License>
+            </div>
+        )}
+
+        <!-- Posts relacionados -->
+        <RelatedPosts
+            currentSlug={entry.slug}
+            category={entry.data.category}
+            relatedSlugs={entry.data.related ?? []}
+            tags={entry.data.tags ?? []}
+            limit={3}
+        />
+        </article>
     </div>
-
 </MainGridLayout>
 
 <style is:global>
-#post-container :nth-child(1) { animation-delay: calc(var(--content-delay) + 0ms) }
-#post-container :nth-child(2) { animation-delay: calc(var(--content-delay) + 50ms) }
-#post-container :nth-child(3) { animation-delay: calc(var(--content-delay) + 100ms) }
-#post-container :nth-child(4) { animation-delay: calc(var(--content-delay) + 175ms) }
-#post-container :nth-child(5) { animation-delay: calc(var(--content-delay) + 250ms) }
-#post-container :nth-child(6) { animation-delay: calc(var(--content-delay) + 325ms) }
+.prose-blog {
+    @apply text-[1.06rem] md:text-[1.075rem] leading-[1.72];
+}
+.prose-blog p {
+    @apply my-5 text-black/80 dark:text-white/80;
+}
+.prose-blog h2 {
+    @apply text-2xl md:text-[1.7rem] tracking-tight font-bold mt-12 mb-4 text-[var(--deep-text)] dark:text-white/95;
+}
+.prose-blog h3 {
+    @apply text-xl md:text-[1.35rem] tracking-tight font-bold mt-9 mb-3 text-[var(--deep-text)] dark:text-white/95;
+}
+.prose-blog a:not(.anchor) {
+    @apply text-[var(--primary)] underline underline-offset-2 transition;
+    text-decoration-color: color-mix(in oklch, var(--primary) 40%, transparent);
+}
+.prose-blog a:not(.anchor):hover {
+    text-decoration-color: var(--primary);
+}
+.prose-blog strong {
+    @apply font-semibold text-black/95 dark:text-white/95;
+}
+.prose-blog ul, .prose-blog ol {
+    @apply my-5 pl-6 space-y-1.5;
+}
+.prose-blog ul { list-style-type: disc; }
+.prose-blog ol { list-style-type: decimal; }
+.prose-blog li::marker {
+    @apply text-[var(--primary)];
+}
+.prose-blog blockquote {
+    @apply border-l-4 border-[var(--primary)] pl-5 italic text-black/65 dark:text-white/65 my-6;
+}
+.prose-blog table {
+    @apply w-full my-6 text-sm border-collapse;
+}
+.prose-blog table th {
+    @apply text-left font-semibold py-2.5 px-3 border-b-2 border-black/15 dark:border-white/15 bg-black/[0.02] dark:bg-white/[0.03];
+}
+.prose-blog table td {
+    @apply py-2.5 px-3 border-b border-black/[0.06] dark:border-white/[0.06];
+}
+.prose-blog code:not(pre code) {
+    @apply px-1.5 py-0.5 rounded bg-black/[0.05] dark:bg-white/[0.08] text-[0.92em] font-mono;
+}
+.prose-blog pre {
+    @apply my-6 p-4 rounded-lg text-sm overflow-x-auto;
+}
+.prose-blog img {
+    @apply rounded-lg my-6;
+}
+.prose-blog hr {
+    @apply my-10 border-black/[0.1] dark:border-white/[0.1];
+}
 </style>

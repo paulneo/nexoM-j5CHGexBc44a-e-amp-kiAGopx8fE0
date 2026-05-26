@@ -1,0 +1,87 @@
+---
+import MainGridLayout from "../../layouts/MainGridLayout.astro";
+import { Icon } from 'astro-icon/components';
+import { getCollection } from 'astro:content';
+
+const entries = await getCollection('glosario');
+entries.sort((a, b) => a.data.term.localeCompare(b.data.term, 'es'));
+
+// Agrupar por inicial.
+const groups: Record<string, typeof entries> = {};
+for (const e of entries) {
+    const letter = e.data.term[0].toUpperCase();
+    if (!groups[letter]) groups[letter] = [];
+    groups[letter].push(e);
+}
+const letters = Object.keys(groups).sort();
+---
+
+<MainGridLayout
+    title="Glosario"
+    description="Diccionario de términos de arquitectura, construcción, maquinaria pesada e ingeniería básica. Definiciones cortas y precisas."
+    showSidebar={false}
+>
+    <header class="mb-10 max-w-2xl">
+        <p class="text-[0.72rem] uppercase tracking-[0.18em] text-[var(--primary)] font-semibold mb-3 flex items-center gap-2">
+            <Icon name="material-symbols:menu-book" class="w-4 h-4"></Icon>
+            Diccionario técnico
+        </p>
+        <h1 class="text-4xl md:text-5xl font-bold tracking-tight leading-[1.1] text-[var(--deep-text)] dark:text-white/95 mb-4">
+            Glosario
+        </h1>
+        <p class="text-lg text-black/60 dark:text-white/65 leading-relaxed">
+            Términos técnicos del oficio explicados de forma corta y clara.
+            {entries.length > 0 && <> Actualmente {entries.length} {entries.length === 1 ? 'definición' : 'definiciones'}.</>}
+        </p>
+    </header>
+
+    {letters.length > 0 ? (
+        <>
+            <!-- Jump nav A-Z -->
+            <nav class="flex flex-wrap gap-1.5 mb-12 pb-6 border-b border-black/[0.08] dark:border-white/[0.1]">
+                {letters.map(l => (
+                    <a
+                        href={`#letra-${l}`}
+                        class="inline-flex items-center justify-center w-9 h-9 rounded-md text-sm font-semibold bg-black/[0.04] dark:bg-white/[0.06] text-black/70 dark:text-white/70 hover:bg-[var(--primary)] hover:text-white transition"
+                    >
+                        {l}
+                    </a>
+                ))}
+            </nav>
+
+            <!-- Definiciones por letra -->
+            <div class="space-y-12">
+                {letters.map(letter => (
+                    <section id={`letra-${letter}`} class="scroll-mt-24">
+                        <h2 class="text-3xl font-bold text-[var(--primary)] mb-5 pb-3 border-b-2 border-[var(--primary)]/20">
+                            {letter}
+                        </h2>
+                        <div class="grid grid-cols-1 md:grid-cols-2 gap-x-8 gap-y-6">
+                            {groups[letter].map(e => (
+                                <article class="group">
+                                    <h3 class="font-bold text-lg tracking-tight text-[var(--deep-text)] dark:text-white/95 group-hover:text-[var(--primary)] transition mb-1.5">
+                                        {e.data.term}
+                                    </h3>
+                                    {e.data.aliases && e.data.aliases.length > 0 && (
+                                        <p class="text-xs text-black/40 dark:text-white/40 italic mb-1.5">
+                                            También: {e.data.aliases.join(', ')}
+                                        </p>
+                                    )}
+                                    <p class="text-[0.95rem] text-black/65 dark:text-white/65 leading-relaxed">
+                                        {e.data.short}
+                                    </p>
+                                </article>
+                            ))}
+                        </div>
+                    </section>
+                ))}
+            </div>
+        </>
+    ) : (
+        <div class="py-16 text-center">
+            <p class="text-black/50 dark:text-white/50">
+                Pronto añadiremos las primeras definiciones.
+            </p>
+        </div>
+    )}
+</MainGridLayout>

@@ -21,3 +21,10 @@ pnpm-debug.log*
 .DS_Store
 
 .vercel
+
+# agent/editor internals
+.atl/
+.claude/
+
+# unused lockfile (project uses pnpm)
+bun.lock

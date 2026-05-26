@@ -1,8 +1,6 @@
 ---
 import GlobalStyles from "@components/GlobalStyles.astro";
-import '@fontsource/roboto/400.css';
-import '@fontsource/roboto/500.css';
-import '@fontsource/roboto/700.css';
+import '@fontsource-variable/inter';
 import ImageWrapper from "@components/misc/ImageWrapper.astro";
 import {pathsEqual} from "@utils/url-utils";
 import ConfigCarrier from "@components/ConfigCarrier.astro";
@@ -114,20 +112,36 @@ const siteLang = siteConfig.lang.replace('_', '-')
 
 		<link rel="alternate" type="application/rss+xml" title={profileConfig.name} href={`${Astro.site}rss.xml`}/>
 
+		<!-- Netlify Identity widget (necesario para que el redirect post-login al panel /admin/ funcione) -->
+		<script is:inline src="https://identity.netlify.com/v1/netlify-identity-widget.js"></script>
+
 		<style define:vars={{ configHue }}></style>  <!-- defines global css variables. This will be applied to <html> <body> and some other elements idk why -->
 
 	</head>
 	<body class=" min-h-screen transition " class:list={[{"is-home": isHomePage, "enable-banner": enableBanner}]}>
 		<ConfigCarrier></ConfigCarrier>
 		<GlobalStyles>
-		<div id="banner-wrapper" class="absolute w-full">
-			<ImageWrapper id="boxtest" alt="Banner | Nexomundial" class:list={["object-center object-cover h-full", {"hidden": !siteConfig.banner.enable}]}
-					  src={siteConfig.banner.src}
-			>
-			</ImageWrapper>
-		</div>
+		{siteConfig.banner.enable && siteConfig.banner.src && (
+			<div id="banner-wrapper" class="absolute w-full">
+				<ImageWrapper id="boxtest" alt="Banner | Nexomundial" class="object-center object-cover h-full"
+						  src={siteConfig.banner.src}
+				/>
+			</div>
+		)}
 		<slot />
 		</GlobalStyles>
+		<!-- Redirección post-login del Identity widget al panel admin -->
+		<script is:inline>
+			if (window.netlifyIdentity) {
+				window.netlifyIdentity.on('init', user => {
+					if (!user) {
+						window.netlifyIdentity.on('login', () => {
+							document.location.href = '/admin/';
+						});
+					}
+				});
+			}
+		</script>
 	</body>
 </html>
 <style is:global>
@@ -283,12 +297,34 @@ function initCustomScrollbar() {
 	});
 }
 
+function initRevealOnScroll() {
+	const els = document.querySelectorAll<HTMLElement>('.reveal:not(.is-revealed)');
+	if (!els.length) return;
+
+	if (!('IntersectionObserver' in window)) {
+		els.forEach(el => el.classList.add('is-revealed'));
+		return;
+	}
+
+	const observer = new IntersectionObserver((entries) => {
+		entries.forEach(entry => {
+			if (entry.isIntersecting) {
+				entry.target.classList.add('is-revealed');
+				observer.unobserve(entry.target);
+			}
+		});
+	}, { threshold: 0.05, rootMargin: '0px 0px -10% 0px' });
+
+	els.forEach(el => observer.observe(el));
+}
+
 function init() {
 	// disableAnimation()()		// TODO
 	setBannerHeight();
 	loadTheme();
 	loadHue();
 	initCustomScrollbar();
+	initRevealOnScroll();
 }
 
 /* Load settings when entering the site */

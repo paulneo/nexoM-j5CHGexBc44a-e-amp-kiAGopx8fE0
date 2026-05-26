@@ -1,0 +1,104 @@
+---
+import MainGridLayout from "../../layouts/MainGridLayout.astro";
+import PostCard from "../../components/PostCard.astro";
+import { Icon } from 'astro-icon/components';
+import { getSortedPosts } from "../../utils/content-utils";
+import { getPostUrlBySlug } from "../../utils/url-utils";
+import { CATEGORIES, CATEGORY_LIST, getCategory } from "../../lib/categories";
+
+export async function getStaticPaths() {
+    return CATEGORY_LIST.map(cat => ({
+        params: { slug: cat.slug },
+    }));
+}
+
+const { slug } = Astro.params;
+const cat = getCategory(slug);
+
+if (!cat) {
+    return Astro.redirect('/categorias/');
+}
+
+const allPosts = await getSortedPosts();
+const posts = allPosts.filter(p => p.data.category === slug);
+
+const otherCats = CATEGORY_LIST.filter(c => c.slug !== slug);
+---
+
+<MainGridLayout
+    title={cat.label}
+    description={cat.description}
+>
+    <!-- Header -->
+    <header class={`mb-12 -mx-4 md:-mx-6 lg:-mx-8 px-4 md:px-6 lg:px-8 py-12 md:py-16 ${cat.bg}`}>
+        <div class="max-w-3xl">
+            <div class={`${cat.text} mb-4`}>
+                <Icon name={cat.icon} class="w-12 h-12 md:w-14 md:h-14 opacity-90"></Icon>
+            </div>
+            <p class={`text-[0.72rem] uppercase tracking-[0.18em] font-semibold mb-3 ${cat.text}`}>
+                Categoría
+            </p>
+            <h1 class={`text-4xl md:text-5xl font-bold tracking-tight leading-[1.1] mb-4 ${cat.text}`}>
+                {cat.label}
+            </h1>
+            <p class="text-lg text-black/70 dark:text-white/80 leading-relaxed max-w-2xl">
+                {cat.description}
+            </p>
+            <p class={`mt-5 text-sm font-medium ${cat.text} opacity-80`}>
+                {posts.length} {posts.length === 1 ? 'artículo publicado' : 'artículos publicados'}
+            </p>
+        </div>
+    </header>
+
+    <!-- Posts grid -->
+    {posts.length > 0 ? (
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-x-7 gap-y-10 mb-16">
+            {posts.map(entry => (
+                <PostCard
+                    entry={entry}
+                    title={entry.data.title}
+                    tags={entry.data.tags}
+                    category={entry.data.category}
+                    published={entry.data.published}
+                    url={getPostUrlBySlug(entry.slug)}
+                    image={entry.data.image}
+                    description={entry.data.description}
+                    draft={entry.data.draft}
+                    size="sm"
+                    class="onload-animation"
+                />
+            ))}
+        </div>
+    ) : (
+        <div class="py-16 text-center mb-16">
+            <p class="text-black/50 dark:text-white/50">
+                Pronto publicaremos artículos en esta categoría.
+            </p>
+            <a href="/" class="inline-block mt-4 text-[var(--primary)] hover:opacity-70 transition">
+                Volver a inicio →
+            </a>
+        </div>
+    )}
+
+    <!-- Otras categorías -->
+    <section class="border-t border-black/[0.08] dark:border-white/[0.1] pt-10">
+        <h2 class="text-[0.75rem] uppercase tracking-[0.18em] font-semibold text-black/55 dark:text-white/55 mb-5">
+            Otras categorías
+        </h2>
+        <div class="grid grid-cols-2 md:grid-cols-4 gap-3">
+            {otherCats.map(c => (
+                <a
+                    href={`/categorias/${c.slug}/`}
+                    class={`flex flex-col items-center justify-center rounded-xl p-4 ${c.bg} hover:scale-[1.02] transition aspect-[4/3]`}
+                >
+                    <div class={c.text}>
+                        <Icon name={c.icon} class="w-7 h-7 mb-2 opacity-90"></Icon>
+                    </div>
+                    <span class={`text-xs font-semibold text-center ${c.text}`}>
+                        {c.short}
+                    </span>
+                </a>
+            ))}
+        </div>
+    </section>
+</MainGridLayout>
