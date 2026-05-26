@@ -286,6 +286,7 @@ function loadHue() {
 
 function setBannerHeight() {
 	const banner = document.getElementById('banner-wrapper');
+	if (!banner) return;
 	if (document.documentElement.hasAttribute('isHome')) {
 		banner.classList.remove('banner-else');
 		banner.classList.add('banner-home');
