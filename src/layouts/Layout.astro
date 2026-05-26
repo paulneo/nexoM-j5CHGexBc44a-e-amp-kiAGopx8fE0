@@ -7,6 +7,7 @@ import ConfigCarrier from "@components/ConfigCarrier.astro";
 import {profileConfig, siteConfig} from "@/config";
 import { type Favicon } from "../types/config";
 import BaseHead from '@components/BaseHead.astro'
+import CookieConsent from '@components/CookieConsent.astro'
 import {defaultFavicons} from "../constants/icon";
 import {LIGHT_MODE, DARK_MODE, AUTO_MODE, DEFAULT_THEME} from "../constants/constants";
 import {url} from "../utils/url-utils";
@@ -155,6 +156,7 @@ const siteLang = siteConfig.lang.replace('_', '-')
 		)}
 		<slot />
 		</GlobalStyles>
+		<CookieConsent />
 		<!-- Redirección post-login del Identity widget al panel admin -->
 		<script is:inline>
 			if (window.netlifyIdentity) {
