@@ -1,39 +1,43 @@
 ---
-title: "Qué es un encofrado y qué tipos existen"
+title: Qué es un encofrado y qué tipos existen
 published: 2026-05-26
 updatedAt: 2026-05-26
 draft: false
-description: "El encofrado es el molde temporal que da forma al hormigón hasta que endurece. Tipos por material y por elemento, sistemas modernos, tiempos de desencofrado y errores comunes."
+featured: false
+description: El encofrado es el molde temporal que da forma al hormigón hasta que endurece. Tipos por material y por elemento, sistemas modernos, tiempos de desencofrado y errores comunes.
 category: construccion
-tags: [encofrado, hormigon, construccion]
 formato: concepto
 nivel: basico
-featured: false
+tags:
+  - encofrado
+  - hormigon
+  - construccion
+image: /_uploads/que-es-un-encofrado-y-tipos.webp
 author: jean-paul
-reviewedBy: jean-paul
 aiAssisted: true
 faq:
-  - q: "¿Cuándo se puede retirar el encofrado?"
-    a: "Depende del elemento y de la temperatura ambiente. Como referencia general, costados de columnas y vigas pueden retirarse a las 24-48 horas; fondos de vigas y losas, entre 7 y 21 días según el cálculo; muros, a las 12-24 horas. Los tiempos exactos los define el proyecto estructural y la velocidad de fraguado del hormigón."
-  - q: "¿Cuál es la diferencia entre encofrado y cimbra?"
-    a: "El encofrado es el molde que contiene el hormigón fresco y le da forma. La cimbra es la estructura provisional que soporta el peso del encofrado y del hormigón hasta que el elemento alcanza resistencia suficiente para autosostenerse. En losas, vigas y elementos horizontales conviven los dos: el encofrado abajo del hormigón y la cimbra sosteniendo todo desde el piso inferior."
-  - q: "¿Se puede reutilizar el encofrado?"
-    a: "Sí, y conviene económicamente. El encofrado de madera fenólica soporta entre 5 y 20 usos según el cuidado. El metálico y de aluminio aguantan cientos de usos. La reutilización exige limpieza inmediata tras cada desencofre, aplicación de desencofrante en cada uso y revisión de deformaciones antes de volver a montar."
-  - q: "¿Qué es el desencofrante?"
-    a: "Es un producto (aceite mineral, ceras o emulsiones) que se aplica al encofrado antes de hormigonar para evitar que el hormigón se adhiera a la superficie. Sin desencofrante, retirar el molde daña el hormigón fresco, deja huellas en la cara vista y reduce la vida útil del encofrado."
-  - q: "¿Qué tipo de encofrado usar para una vivienda pequeña?"
-    a: "Para una obra residencial puntual de uno o dos pisos lo habitual es encofrado de madera (tablero fenólico sobre cuartones) por su costo bajo y su flexibilidad para ajustarse a geometrías irregulares. Si se construyen varias viviendas iguales, vale la pena alquilar o invertir en encofrado metálico modular por su rapidez de montaje."
+  - q: ¿Cuándo se puede retirar el encofrado?
+    a: Depende del elemento y de la temperatura ambiente. Como referencia general, costados de columnas y vigas pueden retirarse a las 24-48 horas; fondos de vigas y losas, entre 7 y 21 días según el cálculo; muros, a las 12-24 horas. Los tiempos exactos los define el proyecto estructural y la velocidad de fraguado del hormigón.
+  - q: ¿Cuál es la diferencia entre encofrado y cimbra?
+    a: 'El encofrado es el molde que contiene el hormigón fresco y le da forma. La cimbra es la estructura provisional que soporta el peso del encofrado y del hormigón hasta que el elemento alcanza resistencia suficiente para autosostenerse. En losas, vigas y elementos horizontales conviven los dos: el encofrado abajo del hormigón y la cimbra sosteniendo todo desde el piso inferior.'
+  - q: ¿Se puede reutilizar el encofrado?
+    a: Sí, y conviene económicamente. El encofrado de madera fenólica soporta entre 5 y 20 usos según el cuidado. El metálico y de aluminio aguantan cientos de usos. La reutilización exige limpieza inmediata tras cada desencofre, aplicación de desencofrante en cada uso y revisión de deformaciones antes de volver a montar.
+  - q: ¿Qué es el desencofrante?
+    a: Es un producto (aceite mineral, ceras o emulsiones) que se aplica al encofrado antes de hormigonar para evitar que el hormigón se adhiera a la superficie. Sin desencofrante, retirar el molde daña el hormigón fresco, deja huellas en la cara vista y reduce la vida útil del encofrado.
+  - q: ¿Qué tipo de encofrado usar para una vivienda pequeña?
+    a: Para una obra residencial puntual de uno o dos pisos lo habitual es encofrado de madera (tablero fenólico sobre cuartones) por su costo bajo y su flexibilidad para ajustarse a geometrías irregulares. Si se construyen varias viviendas iguales, vale la pena alquilar o invertir en encofrado metálico modular por su rapidez de montaje.
 sources:
-  - title: "Concrete Formwork Systems"
-    author: "Awad S. Hanna"
-  - title: "Construcción de estructuras de hormigón armado"
-    author: "José Calavera"
-  - title: "ACI 347 — Guide to Formwork for Concrete"
-    author: "American Concrete Institute"
+  - title: Manual de encofrados y cimbras
+    author: Peri / Doka — manuales técnicos
+  - title: Construcción de estructuras de hormigón armado
+    author: José Calavera
+  - title: ACI 347 — Guide to Formwork for Concrete
+    author: American Concrete Institute
 related:
   - que-es-el-hormigon-armado
   - que-es-una-zapata-de-cimentacion
   - tipos-de-cimentacion-en-construccion
+reviewedBy: jean-paul
 ---
 
 Un **encofrado** es el molde temporal que contiene al hormigón fresco
