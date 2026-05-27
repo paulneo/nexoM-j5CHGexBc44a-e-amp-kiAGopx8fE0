@@ -37,32 +37,18 @@ backend:
 publish_mode: editorial_workflow
 
 # ─── Imágenes ─────────────────────────────────────────────────────────
-# Por defecto Decap sube al repo. Pero como usamos Cloudinary, todas las
-# imágenes van directo al CDN — el repo NO se llena. Decap guarda solo
-# el public_id en el frontmatter (con output_filename_only).
+# Las imágenes subidas vía el CMS se guardan directamente en el repo,
+# bajo public/images/posts/, y Vercel las sirve desde su CDN edge.
+# Sveltia escribe el path absoluto en el campo `image` del frontmatter
+# (ej: /images/posts/excavadora.webp) y el sitio las renderiza sin
+# pasos extra.
 #
-# Para que funcione necesitas:
-#   1. Tu Cloudinary cloud_name (ya está abajo: dvgtbgwa6).
-#   2. Tu Cloudinary API Key — sácala de:
-#        cloudinary.com/console → Settings → Access Keys
-#      Es PÚBLICA, no es secreta. Reemplaza el placeholder de abajo.
-media_library:
-  name: cloudinary
-  output_filename_only: true
-  config:
-    cloud_name: dvgtbgwa6
-    api_key: REEMPLAZAR_CON_TU_API_KEY_DE_CLOUDINARY
-    # upload_preset opcional — recomendado si quieres permitir uploads
-    # sin firma. Crea uno unsigned llamado "nexo_mundial" en:
-    #   cloudinary.com/console → Settings → Upload → Upload presets
-    # upload_preset: nexo_mundial
-    default_transformations:
-      - - fetch_format: auto
-          quality: auto
+# Si en el futuro querés mover a Cloudinary para optimización automática
+# (resize, WebP/AVIF, srcset), volvé a poner el bloque media_library con
+# tu API key real (cloudinary.com/console → Settings → Access Keys).
 
-# Fallback si alguien sube imagen sin Cloudinary (raro): va al repo.
-media_folder: src/content/_uploads
-public_folder: /_uploads
+media_folder: public/images/posts
+public_folder: /images/posts
 
 # ─── Colecciones ──────────────────────────────────────────────────────
 
@@ -125,7 +111,7 @@ collections:
           - { label: 'Intermedio', value: 'intermedio' }
           - { label: 'Avanzado', value: 'avanzado' }
       - { name: tags, label: 'Tags', widget: list, default: [], hint: 'Etiquetas en kebab-case (ej: cimentacion, hormigon-armado)' }
-      - { name: image, label: 'Imagen de portada', widget: image, required: false, hint: 'Sube a Cloudinary. Si la dejas vacía, se usa un fallback con el icono de la categoría.' }
+      - { name: image, label: 'Imagen de portada', widget: image, required: false, hint: 'Arrastra la imagen aquí (ideal WebP o JPG, 16:9, máx 500KB). Se guarda en /images/posts/ del repo. Si dejas vacío se usa un fallback con el ícono de la categoría.' }
       - name: author
         label: 'Autor'
         widget: select
