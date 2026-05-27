@@ -1,39 +1,44 @@
 ---
-title: "Bulldozer vs motoniveladora: cuándo usar cada una"
+title: 'Bulldozer vs motoniveladora: cuándo usar cada una'
 published: 2026-05-26
 updatedAt: 2026-05-26
 draft: false
-description: "Las dos parecen tractores con hoja, pero su función es distinta: bulldozer empuja, motoniveladora termina. Comparativa con tabla y casos de uso."
+featured: false
+description: 'Las dos parecen tractores con hoja, pero su función es distinta: bulldozer empuja, motoniveladora termina. Comparativa con tabla y casos de uso.'
 category: maquinaria-pesada
-tags: [bulldozer, motoniveladora, movimiento-tierras, maquinaria-pesada]
 formato: comparativa
 nivel: basico
-featured: false
+tags:
+  - bulldozer
+  - motoniveladora
+  - movimiento-tierras
+  - maquinaria-pesada
+image: /_uploads/bulldozer-vs-motoniveladora.webp
 author: jean-paul
-reviewedBy: jean-paul
 aiAssisted: true
 faq:
-  - q: "¿Cuál es más cara, una bulldozer o una motoniveladora?"
-    a: "El precio depende mucho del tamaño, pero a igual rango, una motoniveladora suele costar entre un 10% y un 30% más que una bulldozer comparable. El motivo es la complejidad mecánica: la motoniveladora tiene una hoja con muchos más movimientos (giro, inclinación, traslación, articulación), tren delantero direccional y sistemas de control de pendiente más sofisticados."
-  - q: "¿Una bulldozer puede nivelar?"
-    a: "Puede dar un acabado grueso, pero no preciso. La hoja del bulldozer es fija, ancha y montada al frente sobre orugas; no permite el ajuste fino que requiere una nivelación con tolerancias bajas. Para superficies que reciben pavimento, hormigón o estructuras, la motoniveladora es imprescindible."
-  - q: "¿Una motoniveladora puede empujar grandes volúmenes?"
-    a: "No es su función. La hoja de la motoniveladora está pensada para extender y nivelar, no para arrancar y empujar grandes masas de terreno. Empujar volumen con ella sobrecarga su transmisión y reduce su vida útil rápidamente. Para mover volumen, bulldozer o pala cargadora."
-  - q: "¿Cuál se usa en construcción de carreteras?"
-    a: "Las dos, en distintos momentos. El bulldozer abre la traza y mueve la masa de terreno; la motoniveladora termina la superficie con la precisión necesaria para que reciba la base granular y el asfalto. En carreteras grandes, son máquinas complementarias, no rivales."
-  - q: "¿Qué experiencia necesita el operador de cada una?"
-    a: "Las dos exigen formación y certificación, pero la motoniveladora tiene una curva de aprendizaje más larga. Manejar las ocho o más palancas que controlan la hoja, mantener pendientes de centímetros y trabajar con sistemas de guiado por GPS son habilidades que toman años. Un buen operador de motoniveladora es un activo escaso y bien pagado en cualquier empresa de obra civil."
+  - q: ¿Cuál es más cara, una bulldozer o una motoniveladora?
+    a: 'El precio depende mucho del tamaño, pero a igual rango, una motoniveladora suele costar entre un 10% y un 30% más que una bulldozer comparable. El motivo es la complejidad mecánica: la motoniveladora tiene una hoja con muchos más movimientos (giro, inclinación, traslación, articulación), tren delantero direccional y sistemas de control de pendiente más sofisticados.'
+  - q: ¿Una bulldozer puede nivelar?
+    a: Puede dar un acabado grueso, pero no preciso. La hoja del bulldozer es fija, ancha y montada al frente sobre orugas; no permite el ajuste fino que requiere una nivelación con tolerancias bajas. Para superficies que reciben pavimento, hormigón o estructuras, la motoniveladora es imprescindible.
+  - q: ¿Una motoniveladora puede empujar grandes volúmenes?
+    a: No es su función. La hoja de la motoniveladora está pensada para extender y nivelar, no para arrancar y empujar grandes masas de terreno. Empujar volumen con ella sobrecarga su transmisión y reduce su vida útil rápidamente. Para mover volumen, bulldozer o pala cargadora.
+  - q: ¿Cuál se usa en construcción de carreteras?
+    a: Las dos, en distintos momentos. El bulldozer abre la traza y mueve la masa de terreno; la motoniveladora termina la superficie con la precisión necesaria para que reciba la base granular y el asfalto. En carreteras grandes, son máquinas complementarias, no rivales.
+  - q: ¿Qué experiencia necesita el operador de cada una?
+    a: Las dos exigen formación y certificación, pero la motoniveladora tiene una curva de aprendizaje más larga. Manejar las ocho o más palancas que controlan la hoja, mantener pendientes de centímetros y trabajar con sistemas de guiado por GPS son habilidades que toman años. Un buen operador de motoniveladora es un activo escaso y bien pagado en cualquier empresa de obra civil.
 sources:
-  - title: "Caterpillar Performance Handbook"
-    author: "Caterpillar Inc."
-  - title: "Manual de movimiento de tierras"
-    author: "Komatsu — manuales técnicos"
-  - title: "Heavy Equipment Operations Manual"
-    author: "Associated General Contractors of America"
+  - title: Caterpillar Performance Handbook
+    author: Caterpillar Inc.
+  - title: Manual de movimiento de tierras
+    author: Komatsu — manuales técnicos
+  - title: Heavy Equipment Operations Manual
+    author: Associated General Contractors of America
 related:
   - tipos-de-maquinaria-pesada-en-construccion
   - que-es-una-excavadora
   - errores-comunes-al-operar-maquinaria-pesada
+reviewedBy: jean-paul
 ---
 
 A simple vista parecen primas: las dos son grandes, amarillas, con una
