@@ -129,6 +129,7 @@ const siteLocale = localeMap[siteConfig.lang] ?? siteConfig.lang.replace('-', '_
 
 {isProd && (
   <>
+    <script is:inline async src="https://www.googletagmanager.com/gtag/js?id=G-M7K3WMX98Z"></script>
     <script is:inline>
       window.dataLayer = window.dataLayer || [];
       function gtag(){dataLayer.push(arguments);}
@@ -140,9 +141,6 @@ const siteLocale = localeMap[siteConfig.lang] ?? siteConfig.lang.replace('-', '_
         ad_personalization: 'denied',
         wait_for_update: 500,
       });
-    </script>
-    <script type="text/partytown" async src="https://www.googletagmanager.com/gtag/js?id=G-M7K3WMX98Z"></script>
-    <script type="text/partytown">
       gtag('js', new Date());
       gtag('config', 'G-M7K3WMX98Z');
     </script>
