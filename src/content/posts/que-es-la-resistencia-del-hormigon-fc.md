@@ -12,7 +12,7 @@ tags:
   - hormigon
   - ensayos
   - resistencia
-image: /_uploads/que-es-la-resistencia-del-hormigon-fc.webp
+image: /images/posts/que-es-la-resistencia-del-hormigon-fc.webp
 author: jean-paul
 aiAssisted: true
 faq:

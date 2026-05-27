@@ -12,7 +12,7 @@ tags:
   - glosario
   - terminos-construccion
   - construccion
-image: /_uploads/glosario-tecnico-construccion-30-terminos.webp
+image: /images/posts/glosario-tecnico-construccion-30-terminos.webp
 author: jean-paul
 aiAssisted: true
 faq:

@@ -12,7 +12,7 @@ tags:
   - hormigon
   - calculo
   - obra
-image: /_uploads/como-se-calcula-el-cubicaje-de-hormigon.webp
+image: /images/posts/como-se-calcula-el-cubicaje-de-hormigon.webp
 author: jean-paul
 aiAssisted: false
 faq:

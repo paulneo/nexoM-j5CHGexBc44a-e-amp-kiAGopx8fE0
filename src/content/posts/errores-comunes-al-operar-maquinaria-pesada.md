@@ -12,7 +12,7 @@ tags:
   - maquinaria-pesada
   - seguridad
   - operacion
-image: /_uploads/errores-comunes-al-operar-maquinaria-pesada.webp
+image: /images/posts/errores-comunes-al-operar-maquinaria-pesada.webp
 author: jean-paul
 aiAssisted: false
 faq:

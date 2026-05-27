@@ -12,7 +12,7 @@ tags:
   - estructuras
   - materiales
   - construccion
-image: /_uploads/tipos-de-estructuras-en-construccion.webp
+image: /images/posts/tipos-de-estructuras-en-construccion.webp
 author: jean-paul
 aiAssisted: true
 faq:
