@@ -1,27 +1,31 @@
 ---
-title: "Tipos de suelo en ingeniería civil: guía práctica"
+title: 'Tipos de suelo en ingeniería civil: guía práctica'
 published: 2026-05-01
 updatedAt: 2026-05-01
 draft: false
-description: "Arena, arcilla, limo, grava, roca. Cada tipo de suelo se comporta distinto bajo una construcción. Te explicamos los principales y por qué importan."
+featured: false
+description: Arena, arcilla, limo, grava, roca. Cada tipo de suelo se comporta distinto bajo una construcción. Te explicamos los principales y por qué importan.
 category: ingenieria-basica
-tags: [suelos, geotecnia, cimentacion]
 formato: guia
 nivel: basico
-featured: false
+tags:
+  - suelos
+  - geotecnia
+  - cimentacion
+image: /_uploads/tipos-de-suelo-en-ingenieria-civil.webp
 author: jean-paul
-reviewedBy: jean-paul
 aiAssisted: false
 faq:
-  - q: "¿Cómo sé qué tipo de suelo tengo en mi terreno?"
-    a: "Solo con un estudio de suelos hecho por un ingeniero geotécnico se puede saber con certeza. Implica hacer sondeos en el terreno, extraer muestras y ensayarlas en laboratorio. Mirar a ojo el suelo superficial NO es suficiente: lo que importa es lo que hay 1, 2 o 5 metros más abajo."
-  - q: "¿Cuál es el peor suelo para construir?"
-    a: "Los suelos arcillosos blandos saturados de agua (turbas, fangos, arcillas expansivas) son los más problemáticos: tienen baja capacidad portante, se asientan mucho, cambian de volumen con la humedad y son susceptibles de licuación en sismo. Construir sobre ellos requiere cimentaciones especiales y a veces tratamiento previo del terreno."
-  - q: "¿Qué es la capacidad portante?"
-    a: "Es la carga máxima por unidad de superficie que un suelo puede soportar sin fallar ni asentarse excesivamente. Se mide en kg/cm² o tn/m². Una arcilla blanda tiene 0.5-1 kg/cm²; una arena densa 3-5 kg/cm²; una roca puede tener 50+ kg/cm²."
+  - q: ¿Cómo sé qué tipo de suelo tengo en mi terreno?
+    a: 'Solo con un estudio de suelos hecho por un ingeniero geotécnico se puede saber con certeza. Implica hacer sondeos en el terreno, extraer muestras y ensayarlas en laboratorio. Mirar a ojo el suelo superficial NO es suficiente: lo que importa es lo que hay 1, 2 o 5 metros más abajo.'
+  - q: ¿Cuál es el peor suelo para construir?
+    a: 'Los suelos arcillosos blandos saturados de agua (turbas, fangos, arcillas expansivas) son los más problemáticos: tienen baja capacidad portante, se asientan mucho, cambian de volumen con la humedad y son susceptibles de licuación en sismo. Construir sobre ellos requiere cimentaciones especiales y a veces tratamiento previo del terreno.'
+  - q: ¿Qué es la capacidad portante?
+    a: Es la carga máxima por unidad de superficie que un suelo puede soportar sin fallar ni asentarse excesivamente. Se mide en kg/cm² o tn/m². Una arcilla blanda tiene 0.5-1 kg/cm²; una arena densa 3-5 kg/cm²; una roca puede tener 50+ kg/cm².
 related:
   - tipos-de-cimentacion-en-construccion
   - diferencia-entre-viga-y-columna
+reviewedBy: jean-paul
 ---
 
 El **suelo** es el cimiento literal de cualquier obra. Antes de proyectar
