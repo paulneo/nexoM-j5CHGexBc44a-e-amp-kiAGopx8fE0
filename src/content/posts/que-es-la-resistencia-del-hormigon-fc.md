@@ -1,39 +1,43 @@
 ---
-title: "Qué es la resistencia del hormigón (f'c)"
+title: Qué es la resistencia del hormigón (f'c)
 published: 2026-05-26
 updatedAt: 2026-05-26
 draft: false
-description: "f'c es la resistencia característica del hormigón a compresión a 28 días. Qué significa, cómo se mide, qué valores se usan y qué factores la afectan en obra."
+featured: false
+description: f'c es la resistencia característica del hormigón a compresión a 28 días. Qué significa, cómo se mide, qué valores se usan y qué factores la afectan en obra.
 category: ingenieria-basica
-tags: [hormigon, ensayos, resistencia]
 formato: concepto
 nivel: basico
-featured: false
+tags:
+  - hormigon
+  - ensayos
+  - resistencia
+image: /_uploads/que-es-la-resistencia-del-hormigon-fc.webp
 author: jean-paul
-reviewedBy: jean-paul
 aiAssisted: true
 faq:
-  - q: "¿Cuál es la diferencia entre f'c y fck?"
-    a: "Son notaciones distintas para el mismo concepto. f'c es la convención americana (ACI), basada en probetas cilíndricas. fck es la convención europea (Eurocódigo), también sobre cilindros estándar. Algunas normas europeas también dan resistencia sobre probeta cúbica (fck,cube). Para un mismo hormigón, la resistencia cúbica es aproximadamente 1.25 veces la cilíndrica."
-  - q: "¿En qué unidades se expresa f'c?"
-    a: "En kg/cm² (sistema tradicional latinoamericano) o en MPa (sistema internacional SI). La conversión aproximada es 1 MPa ≈ 10.2 kg/cm². Un hormigón H21 en sistema SI equivale a 210 kg/cm² en sistema tradicional. Los planos modernos en Latam suelen indicar las dos."
-  - q: "¿Por qué se mide a los 28 días?"
-    a: "Porque a los 28 días el hormigón ha desarrollado entre el 85% y el 95% de su resistencia final, y porque ese plazo es lo suficientemente corto como para tomar decisiones de obra y suficientemente largo como para que el resultado sea representativo. La resistencia sigue creciendo lentamente después, pero el aporte adicional ya no se considera en el cálculo estructural."
-  - q: "¿Qué valor de f'c se usa para una casa común?"
-    a: "Para vivienda unifamiliar de uno o dos pisos suele bastar f'c = 210 kg/cm² (21 MPa) para columnas y vigas, y 175 kg/cm² (17.5 MPa) para zapatas y elementos secundarios. En edificios de más pisos o zonas sísmicas se usan 280 kg/cm² (28 MPa) en estructura y hasta 350 kg/cm² (35 MPa) en elementos críticos. Lo define el cálculo estructural, no la costumbre del barrio."
-  - q: "¿Qué pasa si el hormigón no alcanza la resistencia especificada?"
-    a: "El ingeniero estructural debe evaluar si el déficit compromete la seguridad. Las opciones van desde aceptar el elemento (si la diferencia es pequeña y hay margen en el cálculo), reforzarlo (fibras de carbono, perfiles externos) o demolerlo y rehacerlo. Aceptar un hormigón fuera de especificación sin verificación es ilegal en obras formales y peligroso siempre."
+  - q: ¿Cuál es la diferencia entre f'c y fck?
+    a: Son notaciones distintas para el mismo concepto. f'c es la convención americana (ACI), basada en probetas cilíndricas. fck es la convención europea (Eurocódigo), también sobre cilindros estándar. Algunas normas europeas también dan resistencia sobre probeta cúbica (fck,cube). Para un mismo hormigón, la resistencia cúbica es aproximadamente 1.25 veces la cilíndrica.
+  - q: ¿En qué unidades se expresa f'c?
+    a: En kg/cm² (sistema tradicional latinoamericano) o en MPa (sistema internacional SI). La conversión aproximada es 1 MPa ≈ 10.2 kg/cm². Un hormigón H21 en sistema SI equivale a 210 kg/cm² en sistema tradicional. Los planos modernos en Latam suelen indicar las dos.
+  - q: ¿Por qué se mide a los 28 días?
+    a: Porque a los 28 días el hormigón ha desarrollado entre el 85% y el 95% de su resistencia final, y porque ese plazo es lo suficientemente corto como para tomar decisiones de obra y suficientemente largo como para que el resultado sea representativo. La resistencia sigue creciendo lentamente después, pero el aporte adicional ya no se considera en el cálculo estructural.
+  - q: ¿Qué valor de f'c se usa para una casa común?
+    a: Para vivienda unifamiliar de uno o dos pisos suele bastar f'c = 210 kg/cm² (21 MPa) para columnas y vigas, y 175 kg/cm² (17.5 MPa) para zapatas y elementos secundarios. En edificios de más pisos o zonas sísmicas se usan 280 kg/cm² (28 MPa) en estructura y hasta 350 kg/cm² (35 MPa) en elementos críticos. Lo define el cálculo estructural, no la costumbre del barrio.
+  - q: ¿Qué pasa si el hormigón no alcanza la resistencia especificada?
+    a: El ingeniero estructural debe evaluar si el déficit compromete la seguridad. Las opciones van desde aceptar el elemento (si la diferencia es pequeña y hay margen en el cálculo), reforzarlo (fibras de carbono, perfiles externos) o demolerlo y rehacerlo. Aceptar un hormigón fuera de especificación sin verificación es ilegal en obras formales y peligroso siempre.
 sources:
-  - title: "Tecnología del concreto"
-    author: "Adam M. Neville"
-  - title: "ACI 318 — Requisitos de Reglamento para Concreto Estructural"
-    author: "American Concrete Institute"
-  - title: "Eurocódigo 2 — Proyecto de estructuras de hormigón"
-    author: "Comité Europeo de Normalización"
+  - title: Tecnología del concreto
+    author: Adam M. Neville
+  - title: ACI 318 — Requisitos de Reglamento para Concreto Estructural
+    author: American Concrete Institute
+  - title: Eurocódigo 2 — Proyecto de estructuras de hormigón
+    author: Comité Europeo de Normalización
 related:
   - que-es-el-hormigon-armado
   - como-se-calcula-el-cubicaje-de-hormigon
   - tipos-de-estructuras-en-construccion
+reviewedBy: jean-paul
 ---
 
 La **resistencia del hormigón** — escrita como **f'c** en la convención
