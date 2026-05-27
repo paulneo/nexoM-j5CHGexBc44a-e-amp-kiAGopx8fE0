@@ -1,35 +1,39 @@
 ---
-title: "Glosario técnico de construcción: 30 términos básicos"
+title: 'Glosario técnico de construcción: 30 términos básicos'
 published: 2026-05-26
 updatedAt: 2026-05-26
 draft: false
-description: "30 términos esenciales de construcción explicados claro: materiales, cimentación, estructura, ejecución y planos. Vocabulario mínimo para una obra."
+featured: false
+description: '30 términos esenciales de construcción explicados claro: materiales, cimentación, estructura, ejecución y planos. Vocabulario mínimo para una obra.'
 category: glosario-y-guias
-tags: [glosario, terminos-construccion, construccion]
 formato: glosario
 nivel: basico
-featured: false
+tags:
+  - glosario
+  - terminos-construccion
+  - construccion
+image: /_uploads/glosario-tecnico-construccion-30-terminos.webp
 author: jean-paul
-reviewedBy: jean-paul
 aiAssisted: true
 faq:
-  - q: "¿Por qué los términos de construcción cambian entre países?"
-    a: "Porque cada país tiene tradiciones constructivas, escuelas técnicas y normativas distintas que dejaron sus propias palabras. Una vigueta en España no se llama igual que en México; un encofrado en Argentina puede ser un cajón en Perú. La mayoría de términos técnicos del cálculo estructural sí son universales (gracias a normas internacionales tipo ACI o Eurocódigo); los términos de obra y oficio cambian mucho."
-  - q: "¿Qué glosario oficial existe?"
-    a: "No hay un glosario único universal. Las normas de cada país (NSR-10, CIRSOC, NTC, NTE) tienen sus definiciones; el ACI publica un diccionario técnico en inglés y español; FEMA y la ASTM también. Para términos generales de obra, los manuales de las constructoras grandes (Caterpillar, Komatsu, Sika, Holcim) suelen tener glosarios bien hechos."
-  - q: "¿Estos 30 términos son suficientes para entender una obra?"
-    a: "Son una base. Te permiten leer un plano básico, entender qué se habla en una reunión de obra simple y conversar con un constructor sin sentirte perdido. Para profundizar en cálculo estructural, instalaciones o construcción especializada hace falta vocabulario adicional propio de cada disciplina."
+  - q: ¿Por qué los términos de construcción cambian entre países?
+    a: Porque cada país tiene tradiciones constructivas, escuelas técnicas y normativas distintas que dejaron sus propias palabras. Una vigueta en España no se llama igual que en México; un encofrado en Argentina puede ser un cajón en Perú. La mayoría de términos técnicos del cálculo estructural sí son universales (gracias a normas internacionales tipo ACI o Eurocódigo); los términos de obra y oficio cambian mucho.
+  - q: ¿Qué glosario oficial existe?
+    a: No hay un glosario único universal. Las normas de cada país (NSR-10, CIRSOC, NTC, NTE) tienen sus definiciones; el ACI publica un diccionario técnico en inglés y español; FEMA y la ASTM también. Para términos generales de obra, los manuales de las constructoras grandes (Caterpillar, Komatsu, Sika, Holcim) suelen tener glosarios bien hechos.
+  - q: ¿Estos 30 términos son suficientes para entender una obra?
+    a: Son una base. Te permiten leer un plano básico, entender qué se habla en una reunión de obra simple y conversar con un constructor sin sentirte perdido. Para profundizar en cálculo estructural, instalaciones o construcción especializada hace falta vocabulario adicional propio de cada disciplina.
 sources:
-  - title: "ACI Concrete Terminology — Glossary"
-    author: "American Concrete Institute"
-  - title: "Diccionario técnico de arquitectura y construcción"
-    author: "Vicente López Chao"
-  - title: "Means Illustrated Construction Dictionary"
-    author: "RSMeans / Kornelis Smit (editor)"
+  - title: ACI Concrete Terminology — Glossary
+    author: American Concrete Institute
+  - title: Diccionario técnico de arquitectura y construcción
+    author: Vicente López Chao
+  - title: Manual del constructor
+    author: CEMEX / Holcim / Sika — manuales técnicos
 related:
   - que-es-el-hormigon-armado
   - tipos-de-cimentacion-en-construccion
   - diferencia-entre-viga-y-columna
+reviewedBy: jean-paul
 ---
 
 Entrar en obra sin vocabulario técnico es como entrar a un quirófano sin
