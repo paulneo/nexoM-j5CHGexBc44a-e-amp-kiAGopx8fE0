@@ -1,27 +1,31 @@
 ---
-title: "Qué es el hormigón armado y cómo funciona"
+title: Qué es el hormigón armado y cómo funciona
 published: 2026-05-06
 updatedAt: 2026-05-06
 draft: false
-description: "El material más usado en construcción del mundo, explicado simple. Cómo trabajan juntos el hormigón y el acero, y por qué la combinación es tan potente."
+featured: false
+description: El material más usado en construcción del mundo, explicado simple. Cómo trabajan juntos el hormigón y el acero, y por qué la combinación es tan potente.
 category: construccion
-tags: [hormigon, estructuras, materiales]
 formato: concepto
 nivel: basico
-featured: false
+tags:
+  - hormigon
+  - estructuras
+  - materiales
+image: /_uploads/que-es-el-hormigon-armado.webp
 author: jean-paul
-reviewedBy: jean-paul
 aiAssisted: false
 faq:
-  - q: "¿Cuál es la diferencia entre hormigón y hormigón armado?"
-    a: "El hormigón sin armar resiste compresión pero falla a tracción (se rompe). El hormigón armado lleva barras de acero embebidas que toman la tracción. Esa combinación lo hace adecuado para vigas, losas y todo elemento estructural sometido a flexión."
-  - q: "¿Por qué se llama 'armado'?"
-    a: "Por las barras de acero internas, que se llaman 'armaduras' o 'refuerzos'. La estructura de barras dentro del hormigón se diseña como un esqueleto que da resistencia donde el hormigón solo no podría."
-  - q: "¿Cuánto dura una estructura de hormigón armado?"
-    a: "Bien construida y en condiciones normales, entre 50 y 100 años. Lo que falla con el tiempo no es el hormigón, sino el acero cuando se oxida por humedad o cloruros que penetran a través de fisuras o por recubrimiento insuficiente."
+  - q: ¿Cuál es la diferencia entre hormigón y hormigón armado?
+    a: El hormigón sin armar resiste compresión pero falla a tracción (se rompe). El hormigón armado lleva barras de acero embebidas que toman la tracción. Esa combinación lo hace adecuado para vigas, losas y todo elemento estructural sometido a flexión.
+  - q: ¿Por qué se llama 'armado'?
+    a: Por las barras de acero internas, que se llaman 'armaduras' o 'refuerzos'. La estructura de barras dentro del hormigón se diseña como un esqueleto que da resistencia donde el hormigón solo no podría.
+  - q: ¿Cuánto dura una estructura de hormigón armado?
+    a: Bien construida y en condiciones normales, entre 50 y 100 años. Lo que falla con el tiempo no es el hormigón, sino el acero cuando se oxida por humedad o cloruros que penetran a través de fisuras o por recubrimiento insuficiente.
 related:
   - tipos-de-cimentacion-en-construccion
   - diferencia-entre-viga-y-columna
+reviewedBy: jean-paul
 ---
 
 El **hormigón armado** es el material estructural más usado en el mundo. Casi
