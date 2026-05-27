@@ -1,27 +1,31 @@
 ---
-title: "Tipos de planos arquitectónicos: guía visual"
+title: 'Tipos de planos arquitectónicos: guía visual'
 published: 2026-05-05
 updatedAt: 2026-05-05
 draft: false
-description: "Planta, alzado, sección, detalle, instalaciones. Para qué sirve cada tipo de plano y cómo identificarlos al ver un proyecto arquitectónico."
+featured: false
+description: Planta, alzado, sección, detalle, instalaciones. Para qué sirve cada tipo de plano y cómo identificarlos al ver un proyecto arquitectónico.
 category: arquitectura
-tags: [planos, proyecto-arquitectonico, dibujo-tecnico]
 formato: guia
 nivel: basico
-featured: false
+tags:
+  - planos
+  - proyecto-arquitectonico
+  - dibujo-tecnico
+image: /_uploads/tipos-de-planos-arquitectonicos.webp
 author: jean-paul
-reviewedBy: jean-paul
 aiAssisted: false
 faq:
-  - q: "¿Cuántos planos lleva un proyecto arquitectónico?"
-    a: "Un proyecto residencial básico lleva entre 8 y 15 planos: ubicación, plantas (una por piso), alzados (4 lados), 1-2 secciones, planta de cimientos, planta de cubierta, instalaciones (eléctrica, sanitaria) y detalles constructivos. En obras grandes pueden ser cientos."
-  - q: "¿Qué escala se usa en planos arquitectónicos?"
-    a: "En residencial es habitual 1:50 o 1:75 para plantas y alzados. Para detalles constructivos se usa 1:20, 1:10 o 1:5. Para planos de ubicación o urbanismo, 1:200 o 1:500. Cuanto más grande es la obra, más pequeña es la escala."
-  - q: "¿Quién firma los planos?"
-    a: "Un arquitecto colegiado o un ingeniero según el tipo de obra y la legislación local. La firma profesional es la que da validez legal al plano para tramitar permisos de construcción."
+  - q: ¿Cuántos planos lleva un proyecto arquitectónico?
+    a: 'Un proyecto residencial básico lleva entre 8 y 15 planos: ubicación, plantas (una por piso), alzados (4 lados), 1-2 secciones, planta de cimientos, planta de cubierta, instalaciones (eléctrica, sanitaria) y detalles constructivos. En obras grandes pueden ser cientos.'
+  - q: ¿Qué escala se usa en planos arquitectónicos?
+    a: En residencial es habitual 1:50 o 1:75 para plantas y alzados. Para detalles constructivos se usa 1:20, 1:10 o 1:5. Para planos de ubicación o urbanismo, 1:200 o 1:500. Cuanto más grande es la obra, más pequeña es la escala.
+  - q: ¿Quién firma los planos?
+    a: Un arquitecto colegiado o un ingeniero según el tipo de obra y la legislación local. La firma profesional es la que da validez legal al plano para tramitar permisos de construcción.
 related:
   - que-es-un-plano-arquitectonico
   - diferencia-entre-arquitectura-y-construccion
+reviewedBy: jean-paul
 ---
 
 Un proyecto arquitectónico no es un solo plano: es un **conjunto de planos**
@@ -115,7 +119,7 @@ Cada plano lleva una **carátula** (recuadro inferior derecho) con
 información estándar:
 
 | Campo | Para qué sirve |
-|---|---|
+| --- | --- |
 | Nombre del proyecto | Identificación |
 | Número de plano | Orden dentro del juego |
 | Tipo de plano | Planta / alzado / sección / detalle |
