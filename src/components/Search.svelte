@@ -65,14 +65,16 @@ $: search(keywordMobile, false)
 </script>
 
 <!-- search bar for desktop view -->
-<div id="search-bar" class="hidden lg:flex transition-all items-center h-11 mr-2 rounded-lg
+<div id="search-bar" class="hidden lg:flex relative items-center h-11 mr-2 w-full rounded-lg
       bg-black/[0.04] hover:bg-black/[0.06] focus-within:bg-black/[0.06]
       dark:bg-white/5 dark:hover:bg-white/10 dark:focus-within:bg-white/10
+      focus-within:ring-2 focus-within:ring-[var(--primary)]/30 transition
 ">
     <slot name="search-icon"></slot>
     <input placeholder="Buscar" bind:value={keywordDesktop} on:focus={() => search(keywordDesktop, true)}
-           class="transition-all pl-10 text-sm bg-transparent outline-0
-         h-full w-40 active:w-60 focus:w-60
+           class="flex-1 min-w-0 pl-10 pr-3 text-sm bg-transparent
+         h-full w-full
+         outline-none focus:outline-none focus-visible:outline-none ring-0 focus:ring-0
          text-black/85 dark:text-white/90
          placeholder:text-black/45 dark:placeholder:text-white/45"
     >
