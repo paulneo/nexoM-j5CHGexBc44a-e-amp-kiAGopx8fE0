@@ -1,39 +1,43 @@
 ---
-title: "Qué es una zapata de cimentación"
+title: Qué es una zapata de cimentación
 published: 2026-05-26
 updatedAt: 2026-05-26
 draft: false
-description: "La zapata es el elemento de cimentación más común en edificación: qué es, cómo funciona, qué tipos hay y cuándo se usa cada uno."
+featured: false
+description: 'La zapata es el elemento de cimentación más común en edificación: qué es, cómo funciona, qué tipos hay y cuándo se usa cada uno.'
 category: construccion
-tags: [cimentacion, zapata, hormigon-armado]
 formato: concepto
 nivel: basico
-featured: false
+tags:
+  - cimentacion
+  - zapata
+  - hormigon-armado
+image: /_uploads/que-es-una-zapata-de-cimentacion.webp
 author: jean-paul
-reviewedBy: jean-paul
 aiAssisted: true
 faq:
-  - q: "¿Cuál es la diferencia entre zapata y losa de cimentación?"
-    a: "Una zapata sostiene una columna o un muro de forma aislada, ocupando solo el área necesaria bajo ese apoyo. Una losa de cimentación es una placa continua que cubre toda la huella del edificio, conectando todos los apoyos. Se usa losa cuando el terreno es débil o cuando las zapatas individuales se solapan por estar muy juntas."
-  - q: "¿De qué material se hace una zapata?"
-    a: "Casi siempre de hormigón armado: hormigón resistente a compresión más una armadura de acero en la parte inferior que resiste la tracción producida por la flexión. En casos puntuales y antiguos se usaba mampostería de piedra o ladrillo, pero hoy el hormigón armado es el estándar."
-  - q: "¿Qué tan profunda debe ir una zapata?"
-    a: "Como regla práctica, la zapata debe apoyarse en un estrato resistente y por debajo del nivel de helada o erosión. En clima templado el mínimo suele ser 60-80 cm; en zonas frías puede bajar a 1.5 m o más. La profundidad final la define el estudio geotécnico, no una regla general."
-  - q: "¿Una zapata necesita estudio de suelo?"
-    a: "Sí, salvo en obras muy pequeñas donde el reglamento local lo permita. El estudio geotécnico determina la capacidad portante del terreno, la profundidad del estrato resistente y si hay nivel freático o suelos problemáticos. Diseñar una zapata sin estudio es jugar a la lotería con la estabilidad del edificio."
-  - q: "¿Qué pasa si una zapata es insuficiente?"
-    a: "Aparecen asentamientos diferenciales: el edificio se hunde más en una zona que en otra. Eso genera grietas en muros, fisuras en losas y, en casos graves, daño estructural progresivo. Reparar una cimentación insuficiente exige recalce, una intervención cara y compleja que se evita haciendo bien el diseño desde el inicio."
+  - q: ¿Cuál es la diferencia entre zapata y losa de cimentación?
+    a: Una zapata sostiene una columna o un muro de forma aislada, ocupando solo el área necesaria bajo ese apoyo. Una losa de cimentación es una placa continua que cubre toda la huella del edificio, conectando todos los apoyos. Se usa losa cuando el terreno es débil o cuando las zapatas individuales se solapan por estar muy juntas.
+  - q: ¿De qué material se hace una zapata?
+    a: 'Casi siempre de hormigón armado: hormigón resistente a compresión más una armadura de acero en la parte inferior que resiste la tracción producida por la flexión. En casos puntuales y antiguos se usaba mampostería de piedra o ladrillo, pero hoy el hormigón armado es el estándar.'
+  - q: ¿Qué tan profunda debe ir una zapata?
+    a: Como regla práctica, la zapata debe apoyarse en un estrato resistente y por debajo del nivel de helada o erosión. En clima templado el mínimo suele ser 60-80 cm; en zonas frías puede bajar a 1.5 m o más. La profundidad final la define el estudio geotécnico, no una regla general.
+  - q: ¿Una zapata necesita estudio de suelo?
+    a: Sí, salvo en obras muy pequeñas donde el reglamento local lo permita. El estudio geotécnico determina la capacidad portante del terreno, la profundidad del estrato resistente y si hay nivel freático o suelos problemáticos. Diseñar una zapata sin estudio es jugar a la lotería con la estabilidad del edificio.
+  - q: ¿Qué pasa si una zapata es insuficiente?
+    a: 'Aparecen asentamientos diferenciales: el edificio se hunde más en una zona que en otra. Eso genera grietas en muros, fisuras en losas y, en casos graves, daño estructural progresivo. Reparar una cimentación insuficiente exige recalce, una intervención cara y compleja que se evita haciendo bien el diseño desde el inicio.'
 sources:
-  - title: "Diseño de estructuras de concreto armado"
-    author: "Teodoro E. Harmsen"
-  - title: "Foundation Analysis and Design"
-    author: "Joseph E. Bowles"
-  - title: "ACI 318 — Requisitos de Reglamento para Concreto Estructural"
-    author: "American Concrete Institute"
+  - title: Diseño de estructuras de concreto armado
+    author: Teodoro E. Harmsen
+  - title: Foundation Analysis and Design
+    author: Joseph E. Bowles
+  - title: ACI 318 — Requisitos de Reglamento para Concreto Estructural
+    author: American Concrete Institute
 related:
   - tipos-de-cimentacion-en-construccion
   - que-es-el-hormigon-armado
   - tipos-de-suelo-en-ingenieria-civil
+reviewedBy: jean-paul
 ---
 
 Una **zapata** es un elemento estructural de cimentación que recibe la
