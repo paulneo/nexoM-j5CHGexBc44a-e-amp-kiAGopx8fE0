@@ -1,39 +1,43 @@
 ---
-title: "Diferencia entre arquitectura y construcción"
+title: Diferencia entre arquitectura y construcción
 published: 2026-05-26
 updatedAt: 2026-05-26
 draft: false
-description: "Arquitectura diseña, construcción ejecuta. Pero la diferencia real es más profunda: roles, formación, responsabilidades y cómo se relacionan en una obra."
+featured: false
+description: 'Arquitectura diseña, construcción ejecuta. Pero la diferencia real es más profunda: roles, formación, responsabilidades y cómo se relacionan en una obra.'
 category: arquitectura
-tags: [arquitectura, construccion, profesiones]
 formato: comparativa
 nivel: basico
-featured: false
+tags:
+  - arquitectura
+  - construccion
+  - profesiones
+image: /_uploads/iferencia-entre-arquitectura-y-construccion.webp
 author: jean-paul
-reviewedBy: jean-paul
 aiAssisted: true
 faq:
-  - q: "¿Un arquitecto puede dirigir una obra?"
-    a: "Sí. En la mayoría de países, el arquitecto está habilitado para dirigir obras de edificación. Para obras civiles de gran envergadura (puentes, túneles, presas) suele requerirse un ingeniero civil. La frontera exacta la define el colegio profesional y la normativa local."
-  - q: "¿Qué hace un ingeniero civil y qué un arquitecto?"
-    a: "El arquitecto se ocupa de la concepción del edificio: programa, distribución espacial, forma, función y normativa urbana. El ingeniero civil se ocupa del cálculo estructural, de las instalaciones y de la infraestructura. En proyectos medianos y grandes los dos colaboran; en obras pequeñas a veces el arquitecto cubre las dos funciones."
-  - q: "¿Se puede construir sin arquitecto?"
-    a: "Legalmente depende del país y del tamaño de obra. En la mayoría de jurisdicciones, las obras de cierto tamaño requieren proyecto firmado por arquitecto o ingeniero habilitado para obtener permiso municipal. Una ampliación menor o una construcción rural puede no exigirlo, pero igual conviene una asesoría para evitar errores caros."
-  - q: "¿Quién es el constructor en una obra?"
-    a: "El constructor (o contratista) es la empresa o profesional que ejecuta la obra: contrata personal, compra materiales, organiza tiempos y entrega la obra terminada según el proyecto. Es una figura distinta al arquitecto proyectista y al director de obra, aunque en obras chicas estas funciones pueden confundirse en una sola persona."
-  - q: "¿Cuál profesión gana más, arquitecto o ingeniero?"
-    a: "Depende del país, del sector (público o privado) y de la especialización. En general, ingeniero estructural o civil de obra grande tiende a ganar más que arquitecto generalista. Pero un arquitecto con cartera propia y proyectos de alto presupuesto puede ganar más que un ingeniero asalariado. El nivel depende más del rol y la experiencia que del título."
+  - q: ¿Un arquitecto puede dirigir una obra?
+    a: Sí. En la mayoría de países, el arquitecto está habilitado para dirigir obras de edificación. Para obras civiles de gran envergadura (puentes, túneles, presas) suele requerirse un ingeniero civil. La frontera exacta la define el colegio profesional y la normativa local.
+  - q: ¿Qué hace un ingeniero civil y qué un arquitecto?
+    a: 'El arquitecto se ocupa de la concepción del edificio: programa, distribución espacial, forma, función y normativa urbana. El ingeniero civil se ocupa del cálculo estructural, de las instalaciones y de la infraestructura. En proyectos medianos y grandes los dos colaboran; en obras pequeñas a veces el arquitecto cubre las dos funciones.'
+  - q: ¿Se puede construir sin arquitecto?
+    a: Legalmente depende del país y del tamaño de obra. En la mayoría de jurisdicciones, las obras de cierto tamaño requieren proyecto firmado por arquitecto o ingeniero habilitado para obtener permiso municipal. Una ampliación menor o una construcción rural puede no exigirlo, pero igual conviene una asesoría para evitar errores caros.
+  - q: ¿Quién es el constructor en una obra?
+    a: 'El constructor (o contratista) es la empresa o profesional que ejecuta la obra: contrata personal, compra materiales, organiza tiempos y entrega la obra terminada según el proyecto. Es una figura distinta al arquitecto proyectista y al director de obra, aunque en obras chicas estas funciones pueden confundirse en una sola persona.'
+  - q: ¿Cuál profesión gana más, arquitecto o ingeniero?
+    a: Depende del país, del sector (público o privado) y de la especialización. En general, ingeniero estructural o civil de obra grande tiende a ganar más que arquitecto generalista. Pero un arquitecto con cartera propia y proyectos de alto presupuesto puede ganar más que un ingeniero asalariado. El nivel depende más del rol y la experiencia que del título.
 sources:
-  - title: "Manual del arquitecto"
-    author: "Ernst Neufert"
-  - title: "Project Management for Construction"
-    author: "Chris Hendrickson"
-  - title: "Reglamentos de los colegios profesionales (por país)"
-    author: "Consejos de Arquitectos / Colegios de Ingenieros"
+  - title: Manual del arquitecto
+    author: Ernst Neufert
+  - title: Project Management for Construction
+    author: Chris Hendrickson
+  - title: Reglamentos de los colegios profesionales (por país)
+    author: Consejos de Arquitectos / Colegios de Ingenieros
 related:
   - tipos-de-planos-arquitectonicos
   - que-es-un-plano-arquitectonico
   - tipos-de-estructuras-en-construccion
+reviewedBy: jean-paul
 ---
 
 **Arquitectura** y **construcción** son palabras que se usan a veces como
