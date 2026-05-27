@@ -1,39 +1,46 @@
 ---
-title: "Mantenimiento básico de maquinaria pesada"
+title: Mantenimiento básico de maquinaria pesada
 published: 2026-05-26
 updatedAt: 2026-05-26
 draft: false
-description: "Cómo se mantiene una excavadora, bulldozer o motoniveladora: tipos de mantenimiento, checklist diario, periodicidad por sistema y errores que acortan la vida útil."
+featured: false
+description: 'Cómo se mantiene una excavadora, bulldozer o motoniveladora: tipos de mantenimiento, checklist diario, periodicidad por sistema y errores que acortan la vida útil.'
 category: maquinaria-pesada
-tags: [mantenimiento, maquinaria-pesada, operacion]
 formato: guia
 nivel: basico
-featured: false
+tags:
+  - mantenimiento
+  - maquinaria-pesada
+  - operacion
+image: /_uploads/mantenimiento-basico-de-maquinaria-pesada.webp
 author: jean-paul
-reviewedBy: jean-paul
 aiAssisted: true
 faq:
-  - q: "¿Cuánto cuesta el mantenimiento de una máquina pesada por año?"
-    a: "Como referencia, el mantenimiento típico anual de una excavadora mediana ronda el 8-15% del costo del equipo nuevo, cuando se hace bien. Eso incluye aceites, filtros, lubricación, repuestos menores y mano de obra. Mal mantenida, el costo aparente baja en el primer año pero se dispara en los siguientes con reparaciones mayores que pueden costar 5 a 10 veces más."
-  - q: "¿Quién hace el mantenimiento, el operador o un técnico?"
-    a: "Las dos cosas. El operador hace el mantenimiento diario (inspección visual, niveles de aceite y refrigerante, engrase de puntos críticos, limpieza). El mantenimiento periódico mayor (cambios de aceite, filtros, ajustes, revisiones del sistema hidráulico) lo hace un técnico especializado, sea propio del taller o de servicio externo del fabricante."
-  - q: "¿Qué pasa si no se hace mantenimiento preventivo?"
-    a: "La máquina falla antes y peor. Una bomba hidráulica que se rompe por aceite sucio puede costar de 5.000 a 30.000 USD según el modelo; el filtro que la habría evitado cuesta menos de 100. Los componentes mayores (motor, transmisión, sistema hidráulico) tienen vida útil esperada de decenas de miles de horas si se mantienen bien, y se reducen drásticamente si no."
-  - q: "¿Las máquinas usadas se pueden mantener bien?"
-    a: "Sí, pero el primer mantenimiento al comprar una usada debe ser exhaustivo: cambio de todos los aceites y filtros, revisión del sistema hidráulico, prueba de presiones, inspección del tren de rodaje. El historial de mantenimiento del vendedor es uno de los datos más valiosos al comprar usada. Sin historial, asumí que necesita una puesta a punto completa."
-  - q: "¿Cada cuánto se cambia el aceite del motor?"
-    a: "Los intervalos típicos son de 250 a 500 horas de operación, según el fabricante y las condiciones de trabajo. En obras con mucha tierra fina, alta temperatura o trabajos pesados, hay que reducir el intervalo. El manual del operador es la referencia oficial; análisis de aceite periódico permite ajustar los intervalos a la realidad de cada máquina."
+  - q: ¿Cuánto cuesta el mantenimiento de una máquina pesada por año?
+    a: Como referencia, el mantenimiento típico anual de una excavadora mediana ronda el 8-15% del costo del equipo nuevo, cuando se hace bien. Eso incluye aceites, filtros, lubricación, repuestos menores y mano de obra. Mal mantenida, el costo aparente baja en el primer año pero se dispara en los siguientes con reparaciones mayores que pueden costar 5 a 10 veces más.
+  - q: ¿Quién hace el mantenimiento, el operador o un técnico?
+    a: Las dos cosas. El operador hace el mantenimiento diario (inspección visual, niveles de aceite y refrigerante, engrase de puntos críticos, limpieza). El mantenimiento periódico mayor (cambios de aceite, filtros, ajustes, revisiones del sistema hidráulico) lo hace un técnico especializado, sea propio del taller o de servicio externo del fabricante.
+  - q: ¿Qué pasa si no se hace mantenimiento preventivo?
+    a: La máquina falla antes y peor. Una bomba hidráulica que se rompe por aceite sucio puede costar de 5.000 a 30.000 USD según el modelo; el filtro que la habría evitado cuesta menos de 100. Los componentes mayores (motor, transmisión, sistema hidráulico) tienen vida útil esperada de decenas de miles de horas si se mantienen bien, y se reducen drásticamente si no.
+  - q: ¿Las máquinas usadas se pueden mantener bien?
+    a: 'Sí, pero el primer mantenimiento al comprar una usada debe ser exhaustivo: cambio de todos los aceites y filtros, revisión del sistema hidráulico, prueba de presiones, inspección del tren de rodaje. El historial de mantenimiento del vendedor es uno de los datos más valiosos al comprar usada. Sin historial, asumí que necesita una puesta a punto completa.'
+  - q: ¿Cada cuánto se cambia el aceite del motor?
+    a: Los intervalos típicos son de 250 a 500 horas de operación, según el fabricante y las condiciones de trabajo. En obras con mucha tierra fina, alta temperatura o trabajos pesados, hay que reducir el intervalo. El manual del operador es la referencia oficial; análisis de aceite periódico permite ajustar los intervalos a la realidad de cada máquina.
 sources:
-  - title: "Manual del operador (Caterpillar, Komatsu, JCB, Volvo CE)"
-    author: "Fabricantes de equipo"
-  - title: "Equipment Management Reliability Engineering"
-    author: "Mark Wright"
-  - title: "Maintenance Engineering Handbook"
-    author: "Lindley R. Higgins"
+  - title: Manual del operador (Caterpillar, Komatsu, JCB, Volvo CE)
+    url: ''
+    author: Fabricantes de equipo
+  - title: Equipment Management Reliability Engineering
+    url: ''
+    author: Mark Wright
+  - title: Maintenance Engineering Handbook
+    url: ''
+    author: Lindley R. Higgins
 related:
   - tipos-de-maquinaria-pesada-en-construccion
   - errores-comunes-al-operar-maquinaria-pesada
   - que-es-una-excavadora
+reviewedBy: jean-paul
 ---
 
 Una máquina pesada bien mantenida trabaja **15.000 a 20.000 horas** antes
@@ -74,8 +81,8 @@ predictivo cuando vale la inversión, correctivo lo mínimo posible.
 
 ## Mantenimiento diario: el checklist del operador
 
-Antes de arrancar la máquina cada día, el operador hace una **inspección
-pre-arranque** que toma 10-15 minutos. Es la rutina que más impacto
+Antes de arrancar la máquina cada día, el operador hace una **inspección**
+**pre-arranque** que toma 10-15 minutos. Es la rutina que más impacto
 tiene sobre la vida útil.
 
 - **Niveles**: aceite del motor, refrigerante, aceite hidráulico,
@@ -109,7 +116,7 @@ Los intervalos típicos para una excavadora o cargadora son orientativos
 y deben confirmarse contra el manual de cada modelo:
 
 | Intervalo (horas) | Tareas principales |
-|---|---|
+| --- | --- |
 | 50 | Engrase de puntos secundarios, ajustes de tensión, revisión visual completa |
 | 250 | Cambio de aceite y filtro del motor, filtros de combustible, revisión hidráulica |
 | 500 | Cambio de filtros hidráulicos, revisión de mangueras, ajuste de válvulas |
@@ -195,8 +202,8 @@ equipo de obra:
   movible. La máquina cede aunque parezca aguantar.
 
 :::warning
-La mayoría de las fallas mayores de maquinaria pesada **no son
-accidentes**: son consecuencias previsibles de mantenimientos saltados.
+La mayoría de las fallas mayores de maquinaria pesada \*\*no son
+accidentes\*\*: son consecuencias previsibles de mantenimientos saltados.
 Un compresor del aire acondicionado se quema, un radiador se obstruye,
 un filtro nunca cambiado satura — y el motor que valía 80.000 dólares
 se funde en una jornada caliente. La inversión en mantenimiento
