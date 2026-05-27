@@ -24,11 +24,10 @@ faq:
   - q: "¿Conviene comprar o alquilar maquinaria pesada?"
     a: "Para empresas que mantienen alta utilización (más del 60-70% del tiempo) comprar tiende a ser rentable. Para obras puntuales o constructoras pequeñas el alquiler con o sin operador es la opción habitual: trasladás el costo de mantenimiento, depreciación y seguro al propietario del equipo y solo pagás las horas de uso real."
 sources:
-  - title: "Equipos para construcción — Manual del operador"
+  - title: "Caterpillar Performance Handbook"
     author: "Caterpillar Inc."
-  - title: "Mecánica de suelos en la ingeniería práctica"
-    author: "Karl Terzaghi, Ralph B. Peck"
-    year: 1948
+  - title: "Construction Equipment Management"
+    author: "Douglas D. Gransberg, Calin M. Popescu, Richard C. Ryan"
   - title: "Heavy Equipment Operations Manual"
     author: "Associated General Contractors of America"
 related:

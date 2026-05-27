@@ -24,8 +24,8 @@ sources:
     author: "American Concrete Institute"
   - title: "Diccionario técnico de arquitectura y construcción"
     author: "Vicente López Chao"
-  - title: "Manual del constructor"
-    author: "CEMEX / Holcim / Sika — manuales técnicos"
+  - title: "Means Illustrated Construction Dictionary"
+    author: "RSMeans / Kornelis Smit (editor)"
 related:
   - que-es-el-hormigon-armado
   - tipos-de-cimentacion-en-construccion

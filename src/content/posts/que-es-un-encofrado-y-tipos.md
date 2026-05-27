@@ -24,8 +24,8 @@ faq:
   - q: "¿Qué tipo de encofrado usar para una vivienda pequeña?"
     a: "Para una obra residencial puntual de uno o dos pisos lo habitual es encofrado de madera (tablero fenólico sobre cuartones) por su costo bajo y su flexibilidad para ajustarse a geometrías irregulares. Si se construyen varias viviendas iguales, vale la pena alquilar o invertir en encofrado metálico modular por su rapidez de montaje."
 sources:
-  - title: "Manual de encofrados y cimbras"
-    author: "Peri / Doka — manuales técnicos"
+  - title: "Concrete Formwork Systems"
+    author: "Awad S. Hanna"
   - title: "Construcción de estructuras de hormigón armado"
     author: "José Calavera"
   - title: "ACI 347 — Guide to Formwork for Concrete"

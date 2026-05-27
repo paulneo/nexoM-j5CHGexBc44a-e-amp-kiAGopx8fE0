@@ -2,9 +2,13 @@
 /**
  * Crea un nuevo post o borrador con el frontmatter completo de Nexo Mundial.
  *
+ * Por default los posts nuevos arrancan como BORRADOR (draft: true). El editor
+ * sube la imagen vía el CMS y cambia el toggle a false cuando el post está
+ * listo para publicarse. Para forzar un post publicado de una pasá --published.
+ *
  * Uso:
  *   npm run new-post -- "Tipos de cimentación en construcción"
- *   npm run new-post -- "Qué es una excavadora" --draft
+ *   npm run new-post -- "Qué es una excavadora" --published
  *   npm run new-post -- "..." --category construccion --formato guia --nivel basico
  */
 
@@ -64,8 +68,8 @@ if (positional.length === 0) {
   console.error(`Error: falta el título del post.
 
 Uso:
-  npm run new-post -- "Título del artículo"
-  npm run new-post -- "Título" --draft
+  npm run new-post -- "Título del artículo"            # arranca como borrador
+  npm run new-post -- "Título" --published             # arranca publicado
   npm run new-post -- "Título" --category construccion --formato guia --nivel basico
 
 Categorías válidas: ${VALID_CATEGORIES.join(', ')}
@@ -76,7 +80,8 @@ Niveles válidos:    ${VALID_NIVELES.join(', ')}`)
 
 const title = positional.join(' ')
 const slug = flags.slug || slugify(title)
-const isDraft = Boolean(flags.draft)
+// Default: borrador. Flag --published lo invierte para publicar de una.
+const isDraft = !flags.published
 const category = flags.category || ''
 const formato = flags.formato || 'guia'
 const nivel = flags.nivel || 'basico'
