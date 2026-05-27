@@ -35,12 +35,24 @@ const mobileLinks = [
     ]}
 >
     <div class="max-w-[var(--page-width)] h-16 md:h-[4.5rem] mx-auto flex items-center gap-4 lg:gap-6 px-4 md:px-6">
-        <!-- Logo -->
-        <a href={url('/')} class="flex items-center gap-2.5 transition hover:opacity-80 active:opacity-60 shrink-0">
-            <span class="inline-flex items-center justify-center w-9 h-9 md:w-10 md:h-10 rounded-md bg-[var(--primary)] text-white font-bold text-base md:text-lg shadow-sm">N</span>
-            <span class="text-base md:text-lg tracking-[-0.015em] font-bold text-[var(--deep-text)] dark:text-white/90">
-                {siteConfig.title}
-            </span>
+        <!-- Logo (swap entre light/dark según modo) -->
+        <a href={url('/')} aria-label={siteConfig.title} class="flex items-center transition hover:opacity-80 active:opacity-60 shrink-0">
+            <img
+                src="/logo-light.png"
+                alt={siteConfig.title}
+                width="2172"
+                height="724"
+                class="block dark:hidden h-8 md:h-9 w-auto"
+                fetchpriority="high"
+            />
+            <img
+                src="/logo-dark.png"
+                alt={siteConfig.title}
+                width="2172"
+                height="724"
+                class="hidden dark:block h-8 md:h-9 w-auto"
+                fetchpriority="high"
+            />
         </a>
 
         <!-- Buscador inline (desktop) -->

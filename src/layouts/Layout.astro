@@ -106,13 +106,13 @@ const siteLang = siteConfig.lang.replace('_', '-')
 			noindex={noindex}
 		/>
 
-		{favicons.map(fav => (
-			<link rel="icon" type="image/png+xml"
-				  href={fav.src.startsWith('/') ? url(fav.src) : fav.src}
-				  sizes={fav.sizes}
-				  media={fav.theme && `(prefers-color-scheme: ${fav.theme})`}
-			/>
-		))}
+		<!-- Favicons (set moderno: SVG escalable + PNG fallback + ICO legacy + PWA) -->
+		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+		<link rel="icon" type="image/png" sizes="96x96" href="/favicon-96x96.png" />
+		<link rel="icon" type="image/x-icon" href="/favicon.ico" />
+		<link rel="apple-touch-icon" href="/apple-touch-icon.png" />
+		<link rel="manifest" href="/site.webmanifest" />
+		<meta name="theme-color" content="#0E7C66" />
 		<!-- Set the theme before the page is rendered to avoid a flash -->
 		<script define:vars={{DEFAULT_THEME: DEFAULT_THEME, LIGHT_MODE: LIGHT_MODE, DARK_MODE: DARK_MODE, AUTO_MODE: AUTO_MODE}}>
 			const theme = localStorage.getItem('theme') || DEFAULT_THEME;
