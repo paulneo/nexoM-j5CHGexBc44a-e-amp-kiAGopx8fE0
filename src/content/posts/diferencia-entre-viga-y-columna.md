@@ -1,27 +1,31 @@
 ---
-title: "Diferencia entre viga y columna en construcción"
+title: Diferencia entre viga y columna en construcción
 published: 2026-05-02
 updatedAt: 2026-05-02
 draft: false
-description: "Vigas y columnas son los dos elementos básicos de una estructura. Trabajan distinto, fallan distinto y se calculan distinto. Te explicamos por qué."
+featured: false
+description: Vigas y columnas son los dos elementos básicos de una estructura. Trabajan distinto, fallan distinto y se calculan distinto. Te explicamos por qué.
 category: ingenieria-basica
-tags: [viga, columna, estructuras]
 formato: comparativa
 nivel: basico
-featured: false
+tags:
+  - viga
+  - columna
+  - estructuras
+image: /_uploads/diferencia-entre-viga-y-columna.webp
 author: jean-paul
-reviewedBy: jean-paul
 aiAssisted: false
 faq:
-  - q: "¿Una columna puede convertirse en viga?"
-    a: "No, son elementos distintos por su función estructural y por cómo se diseñan. Algunos elementos como las vigas-columna existen y trabajan a flexión y compresión combinadas, pero esos casos los calcula un ingeniero estructural y no son la regla."
-  - q: "¿Por qué las columnas son cuadradas y las vigas rectangulares?"
-    a: "Las columnas suelen ser cuadradas o circulares porque la compresión actúa por igual en todas las direcciones; una sección simétrica resiste mejor el pandeo. Las vigas son rectangulares (más altas que anchas) porque la flexión actúa en una dirección dominante y el canto vertical es lo que da resistencia."
-  - q: "¿Qué pasa si una columna falla?"
-    a: "Es uno de los fallos estructurales más graves: una columna que cede deja sin apoyo a las vigas y losas que sostiene, y puede provocar el colapso parcial o total del edificio. Por eso las columnas se diseñan con factor de seguridad muy alto y se inspeccionan en cualquier intervención estructural."
+  - q: ¿Una columna puede convertirse en viga?
+    a: No, son elementos distintos por su función estructural y por cómo se diseñan. Algunos elementos como las vigas-columna existen y trabajan a flexión y compresión combinadas, pero esos casos los calcula un ingeniero estructural y no son la regla.
+  - q: ¿Por qué las columnas son cuadradas y las vigas rectangulares?
+    a: Las columnas suelen ser cuadradas o circulares porque la compresión actúa por igual en todas las direcciones; una sección simétrica resiste mejor el pandeo. Las vigas son rectangulares (más altas que anchas) porque la flexión actúa en una dirección dominante y el canto vertical es lo que da resistencia.
+  - q: ¿Qué pasa si una columna falla?
+    a: 'Es uno de los fallos estructurales más graves: una columna que cede deja sin apoyo a las vigas y losas que sostiene, y puede provocar el colapso parcial o total del edificio. Por eso las columnas se diseñan con factor de seguridad muy alto y se inspeccionan en cualquier intervención estructural.'
 related:
   - que-es-el-hormigon-armado
   - tipos-de-cimentacion-en-construccion
+reviewedBy: jean-paul
 ---
 
 **Vigas** y **columnas** son los dos elementos estructurales más básicos
