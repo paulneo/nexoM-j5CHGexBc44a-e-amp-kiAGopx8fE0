@@ -1,32 +1,36 @@
 ---
-title: "Diferencia entre retroexcavadora y cargador frontal"
+title: Diferencia entre retroexcavadora y cargador frontal
 published: 2026-05-03
 updatedAt: 2026-05-03
 draft: false
-description: "Dos máquinas que parecen iguales pero hacen cosas distintas. Te explicamos en qué se diferencian, cuándo usar cada una y cuál te conviene contratar."
+featured: false
+description: Dos máquinas que parecen iguales pero hacen cosas distintas. Te explicamos en qué se diferencian, cuándo usar cada una y cuál te conviene contratar.
 category: maquinaria-pesada
-tags: [retroexcavadora, cargador-frontal, comparativa]
 formato: comparativa
 nivel: basico
-featured: false
+tags:
+  - retroexcavadora
+  - cargador-frontal
+  - comparativa
+image: /_uploads/diferencia-retroexcavadora-cargador-frontal.webp
 author: jean-paul
-reviewedBy: jean-paul
 aiAssisted: false
 faq:
-  - q: "¿Cuál es más versátil, la retro o el cargador frontal?"
-    a: "La retroexcavadora, sin duda. Combina dos funciones (excavar y cargar) en una sola máquina. El cargador frontal solo carga, pero lo hace mejor que la retro porque tiene más potencia y mayor capacidad de cucharón."
-  - q: "¿Cuál consume menos combustible?"
-    a: "Depende del trabajo, pero en términos generales la retroexcavadora suele consumir menos porque su motor es más pequeño. El cargador frontal, al ser una máquina más grande y orientada a producción, consume más combustible por hora pero mueve más material en el mismo tiempo."
-  - q: "¿Una retroexcavadora puede sustituir a un cargador frontal?"
-    a: "Para obras pequeñas y medianas, sí. Pero si el trabajo es mover grandes volúmenes de tierra o cargar camiones de forma continua, el cargador frontal es mucho más eficiente. La regla práctica: si el trabajo dura más de 1-2 días moviendo solo material, contrata cargador frontal."
+  - q: ¿Cuál es más versátil, la retro o el cargador frontal?
+    a: La retroexcavadora, sin duda. Combina dos funciones (excavar y cargar) en una sola máquina. El cargador frontal solo carga, pero lo hace mejor que la retro porque tiene más potencia y mayor capacidad de cucharón.
+  - q: ¿Cuál consume menos combustible?
+    a: Depende del trabajo, pero en términos generales la retroexcavadora suele consumir menos porque su motor es más pequeño. El cargador frontal, al ser una máquina más grande y orientada a producción, consume más combustible por hora pero mueve más material en el mismo tiempo.
+  - q: ¿Una retroexcavadora puede sustituir a un cargador frontal?
+    a: 'Para obras pequeñas y medianas, sí. Pero si el trabajo es mover grandes volúmenes de tierra o cargar camiones de forma continua, el cargador frontal es mucho más eficiente. La regla práctica: si el trabajo dura más de 1-2 días moviendo solo material, contrata cargador frontal.'
 related:
   - que-es-una-excavadora
   - errores-comunes-al-operar-maquinaria-pesada
+reviewedBy: jean-paul
 ---
 
 A simple vista parecen primas hermanas: las dos tienen ruedas grandes, una
-cabina y un brazo amarillo. Pero **una retroexcavadora y un cargador
-frontal son máquinas distintas**, hechas para trabajos distintos. Confundir
+cabina y un brazo amarillo. Pero \*\*una retroexcavadora y un cargador
+frontal son máquinas distintas\*\*, hechas para trabajos distintos. Confundir
 una con otra es uno de los errores más caros en obra.
 
 ## Diferencia clave: una hace dos cosas, la otra una sola
@@ -42,7 +46,7 @@ a otro y cargarlos a un camión.
 ## Comparativa lado a lado
 
 | Característica | Retroexcavadora | Cargador frontal |
-|---|---|---|
+| --- | --- | --- |
 | Funciones | Excava + carga | Solo carga |
 | Cucharón frontal | Sí, mediano (0.7 - 1.2 m³) | Sí, grande (1.5 - 4 m³) |
 | Brazo excavador | Sí, atrás | No |
