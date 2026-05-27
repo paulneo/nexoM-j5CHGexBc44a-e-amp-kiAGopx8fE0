@@ -1,27 +1,31 @@
 ---
-title: "Cómo se calcula el cubicaje de hormigón en obra"
+title: Cómo se calcula el cubicaje de hormigón en obra
 published: 2026-04-30
 updatedAt: 2026-04-30
 draft: false
-description: "El cubicaje es la cantidad de hormigón en metros cúbicos que necesita una pieza estructural. Te explicamos la fórmula, ejemplos prácticos y los desperdicios típicos."
+featured: false
+description: El cubicaje es la cantidad de hormigón en metros cúbicos que necesita una pieza estructural. Te explicamos la fórmula, ejemplos prácticos y los desperdicios típicos.
 category: glosario-y-guias
-tags: [hormigon, calculo, obra]
 formato: tutorial
 nivel: basico
-featured: false
+tags:
+  - hormigon
+  - calculo
+  - obra
+image: /_uploads/como-se-calcula-el-cubicaje-de-hormigon.webp
 author: jean-paul
-reviewedBy: jean-paul
 aiAssisted: false
 faq:
-  - q: "¿Cuánto desperdicio de hormigón hay que considerar?"
-    a: "Entre 5% y 10% sobre el cubicaje teórico, dependiendo del tipo de obra. En cimentaciones sobre terreno irregular o con encofrados rústicos, hasta 10%. En losas con encofrados industriales, 5% suele alcanzar."
-  - q: "¿Cómo pido el hormigón a la planta?"
+  - q: ¿Cuánto desperdicio de hormigón hay que considerar?
+    a: Entre 5% y 10% sobre el cubicaje teórico, dependiendo del tipo de obra. En cimentaciones sobre terreno irregular o con encofrados rústicos, hasta 10%. En losas con encofrados industriales, 5% suele alcanzar.
+  - q: ¿Cómo pido el hormigón a la planta?
     a: "En metros cúbicos (m³) y especificando la resistencia (f'c) requerida y el revenimiento (slump). Ejemplo: '5 m³ de hormigón f'c=210 kg/cm², revenimiento 10 cm'. La planta calcula la dosificación y manda el camión-mezclador."
-  - q: "¿Qué pasa si me sobra hormigón?"
-    a: "Si sobra y no se puede usar antes del fraguado (1.5-2 horas desde la mezcla), se desperdicia. Por eso es crítico calcular bien y pedir un poco menos del cubicaje teórico (con margen) — es preferible pedir un viaje extra pequeño que tirar 2 m³."
+  - q: ¿Qué pasa si me sobra hormigón?
+    a: Si sobra y no se puede usar antes del fraguado (1.5-2 horas desde la mezcla), se desperdicia. Por eso es crítico calcular bien y pedir un poco menos del cubicaje teórico (con margen) — es preferible pedir un viaje extra pequeño que tirar 2 m³.
 related:
   - que-es-el-hormigon-armado
   - tipos-de-cimentacion-en-construccion
+reviewedBy: jean-paul
 ---
 
 El **cubicaje** es la cantidad de hormigón —medida en metros cúbicos
