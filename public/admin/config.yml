@@ -1,0 +1,218 @@
+# ════════════════════════════════════════════════════════════════════════
+# Sveltia CMS — Configuración del panel editorial de Nexo Mundial
+# ════════════════════════════════════════════════════════════════════════
+#
+# Documentación: https://github.com/sveltia/sveltia-cms
+# Test localmente: pnpm dev → http://localhost:4321/admin/ (requiere
+# correr `npx @sveltia/cms-proxy-server` en otra terminal para Local
+# Backend, o `local_backend: true` aquí abajo.)
+
+# ─── Backend ──────────────────────────────────────────────────────────
+# GitHub OAuth via Sveltia's hosted gateway (api.sveltia.dev). Funciona
+# en cualquier host estático (Vercel, Netlify, Cloudflare Pages, etc.)
+# sin requerir Netlify Identity ni infra propia. El login lo hace el
+# usuario con su cuenta de GitHub.
+backend:
+  name: github
+  repo: paulneo/nexoM-j5CHGexBc44a-e-amp-kiAGopx8fE0
+  branch: main
+  base_url: https://api.sveltia.dev
+  auth_endpoint: /oauth/authorize
+  commit_messages:
+    create: 'editorial: nuevo post "{{slug}}"'
+    update: 'editorial: actualizado "{{slug}}"'
+    delete: 'editorial: eliminado "{{slug}}"'
+    uploadMedia: 'editorial: subida imagen "{{path}}"'
+    deleteMedia: 'editorial: eliminada imagen "{{path}}"'
+
+# Activa "Editorial Workflow": cada cambio pasa por draft → review → ready
+# antes de publicarse, no se hace push directo a main.
+publish_mode: editorial_workflow
+
+# ─── Imágenes ─────────────────────────────────────────────────────────
+# Por defecto Decap sube al repo. Pero como usamos Cloudinary, todas las
+# imágenes van directo al CDN — el repo NO se llena. Decap guarda solo
+# el public_id en el frontmatter (con output_filename_only).
+#
+# Para que funcione necesitas:
+#   1. Tu Cloudinary cloud_name (ya está abajo: dvgtbgwa6).
+#   2. Tu Cloudinary API Key — sácala de:
+#        cloudinary.com/console → Settings → Access Keys
+#      Es PÚBLICA, no es secreta. Reemplaza el placeholder de abajo.
+media_library:
+  name: cloudinary
+  output_filename_only: true
+  config:
+    cloud_name: dvgtbgwa6
+    api_key: REEMPLAZAR_CON_TU_API_KEY_DE_CLOUDINARY
+    # upload_preset opcional — recomendado si quieres permitir uploads
+    # sin firma. Crea uno unsigned llamado "nexo_mundial" en:
+    #   cloudinary.com/console → Settings → Upload → Upload presets
+    # upload_preset: nexo_mundial
+    default_transformations:
+      - - fetch_format: auto
+          quality: auto
+
+# Fallback si alguien sube imagen sin Cloudinary (raro): va al repo.
+media_folder: src/content/_uploads
+public_folder: /_uploads
+
+# ─── Colecciones ──────────────────────────────────────────────────────
+
+collections:
+  # ━━━ POSTS ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+  - name: posts
+    label: 'Artículos'
+    label_singular: 'Artículo'
+    folder: src/content/posts
+    create: true
+    delete: true
+    format: yaml-frontmatter
+    slug: '{{slug}}'
+    identifier_field: title
+    summary: '{{title}} — {{category}} · {{commit_date}}'
+    sortable_fields: [published, title, category]
+    view_filters:
+      - label: Borradores
+        field: draft
+        pattern: true
+      - label: Publicados
+        field: draft
+        pattern: false
+      - label: Destacado en home
+        field: featured
+        pattern: true
+    fields:
+      - { name: title, label: 'Título', widget: string, hint: '10–80 caracteres', pattern: ['^.{10,80}$', 'Debe tener entre 10 y 80 caracteres'] }
+      - { name: published, label: 'Fecha de publicación', widget: datetime, date_format: 'YYYY-MM-DD', time_format: false, picker_utc: false }
+      - { name: updatedAt, label: 'Última actualización', widget: datetime, date_format: 'YYYY-MM-DD', time_format: false, required: false }
+      - { name: draft, label: 'Borrador (no se publica)', widget: boolean, default: true }
+      - { name: featured, label: 'Destacado en home (hero)', widget: boolean, default: false }
+      - { name: description, label: 'Descripción (meta)', widget: text, hint: '50–180 caracteres. Aparece en Google y al compartir.', pattern: ['^.{50,180}$', 'Entre 50 y 180 caracteres'] }
+      - name: category
+        label: 'Categoría'
+        widget: select
+        options:
+          - { label: 'Arquitectura', value: 'arquitectura' }
+          - { label: 'Construcción', value: 'construccion' }
+          - { label: 'Maquinaria pesada', value: 'maquinaria-pesada' }
+          - { label: 'Ingeniería básica', value: 'ingenieria-basica' }
+          - { label: 'Glosario y guías', value: 'glosario-y-guias' }
+      - name: formato
+        label: 'Formato'
+        widget: select
+        default: 'guia'
+        options:
+          - { label: 'Guía', value: 'guia' }
+          - { label: 'Concepto', value: 'concepto' }
+          - { label: 'Comparativa', value: 'comparativa' }
+          - { label: 'Tutorial', value: 'tutorial' }
+          - { label: 'Resumen', value: 'resumen' }
+          - { label: 'Glosario', value: 'glosario' }
+      - name: nivel
+        label: 'Nivel'
+        widget: select
+        default: 'basico'
+        options:
+          - { label: 'Básico', value: 'basico' }
+          - { label: 'Intermedio', value: 'intermedio' }
+          - { label: 'Avanzado', value: 'avanzado' }
+      - { name: tags, label: 'Tags', widget: list, default: [], hint: 'Etiquetas en kebab-case (ej: cimentacion, hormigon-armado)' }
+      - { name: image, label: 'Imagen de portada', widget: image, required: false, hint: 'Sube a Cloudinary. Si la dejas vacía, se usa un fallback con el icono de la categoría.' }
+      - name: author
+        label: 'Autor'
+        widget: select
+        default: 'jean-paul'
+        options:
+          - { label: 'Equipo Nexo Mundial', value: 'jean-paul' }
+      - { name: aiAssisted, label: 'Asistido por IA (muestra disclaimer al final)', widget: boolean, default: false }
+      - name: faq
+        label: 'Preguntas frecuentes (FAQ)'
+        widget: list
+        required: false
+        summary: '{{fields.q}}'
+        fields:
+          - { name: q, label: 'Pregunta', widget: string }
+          - { name: a, label: 'Respuesta', widget: text }
+      - name: sources
+        label: 'Fuentes citadas'
+        widget: list
+        required: false
+        summary: '{{fields.title}}'
+        fields:
+          - { name: title, label: 'Título de la fuente', widget: string }
+          - { name: url, label: 'URL (opcional)', widget: string, required: false }
+      - { name: related, label: 'Slugs de posts relacionados', widget: list, required: false, hint: 'Ej: tipos-de-cimentacion-en-construccion (sin /posts/)' }
+      - { name: body, label: 'Cuerpo del artículo', widget: markdown, hint: 'Markdown: ## H2, ### H3, **negrita**, *cursiva*, [link](url), - listas, etc.' }
+
+  # ━━━ GLOSARIO ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+  - name: glosario
+    label: 'Glosario'
+    label_singular: 'Definición'
+    folder: src/content/glosario
+    create: true
+    delete: true
+    format: yaml-frontmatter
+    slug: '{{slug}}'
+    identifier_field: term
+    summary: '{{term}}'
+    sortable_fields: [term]
+    fields:
+      - { name: term, label: 'Término', widget: string }
+      - { name: aliases, label: 'Sinónimos o alias', widget: list, default: [], required: false }
+      - name: category
+        label: 'Categoría relacionada'
+        widget: select
+        required: false
+        options:
+          - { label: 'Arquitectura', value: 'arquitectura' }
+          - { label: 'Construcción', value: 'construccion' }
+          - { label: 'Maquinaria pesada', value: 'maquinaria-pesada' }
+          - { label: 'Ingeniería básica', value: 'ingenieria-basica' }
+      - { name: short, label: 'Definición corta', widget: text, hint: '20–220 caracteres. Aparece en el listado del glosario.' }
+      - { name: related, label: 'Términos relacionados (slugs)', widget: list, required: false }
+      - { name: updatedAt, label: 'Última actualización', widget: datetime, date_format: 'YYYY-MM-DD', time_format: false, required: false }
+      - { name: body, label: 'Explicación extendida (opcional)', widget: markdown, required: false }
+
+  # ━━━ CATEGORÍAS (solo edición, no crear/borrar) ━━━━━━━━━━━━━━━━━━━━
+  - name: categories
+    label: 'Categorías'
+    label_singular: 'Categoría'
+    folder: src/content/categories
+    create: false
+    delete: false
+    format: yaml-frontmatter
+    slug: '{{slug}}'
+    identifier_field: title
+    fields:
+      - { name: title, label: 'Nombre', widget: string }
+      - { name: description, label: 'Descripción', widget: text }
+      - { name: icon, label: 'Icono (Iconify name)', widget: string, required: false }
+      - { name: order, label: 'Orden en el listado', widget: number, default: 99, value_type: int }
+      - { name: body, label: 'Texto largo (opcional)', widget: markdown, required: false }
+
+  # ━━━ AUTORES ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+  - name: authors
+    label: 'Autores'
+    label_singular: 'Autor'
+    folder: src/content/authors
+    create: true
+    delete: false
+    format: yaml-frontmatter
+    slug: '{{slug}}'
+    identifier_field: name
+    fields:
+      - { name: name, label: 'Nombre', widget: string }
+      - { name: role, label: 'Rol', widget: string, required: false }
+      - { name: bio, label: 'Bio (40–500 caracteres)', widget: text }
+      - { name: email, label: 'Email', widget: string, required: false }
+      - name: social
+        label: 'Redes sociales'
+        widget: object
+        required: false
+        collapsed: true
+        fields:
+          - { name: twitter, label: 'Twitter URL', widget: string, required: false }
+          - { name: linkedin, label: 'LinkedIn URL', widget: string, required: false }
+          - { name: web, label: 'Web', widget: string, required: false }
+      - { name: body, label: 'Texto del autor', widget: markdown, required: false }

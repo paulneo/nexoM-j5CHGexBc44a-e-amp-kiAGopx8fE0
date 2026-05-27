@@ -1,0 +1,79 @@
+---
+// Cookie consent banner con Google Consent Mode v2.
+// Aparece si no hay preferencia guardada en localStorage.
+// Botones "Aceptar" / "Rechazar" actualizan el consent vía gtag().
+---
+
+<div
+    id="cookie-consent"
+    role="dialog"
+    aria-live="polite"
+    aria-label="Aviso de cookies"
+    class="hidden fixed bottom-0 inset-x-0 z-[100] p-3 md:p-5"
+>
+    <div class="max-w-[var(--page-width)] mx-auto bg-white dark:bg-[#161616] border border-black/[0.08] dark:border-white/[0.1] rounded-xl shadow-xl p-5 md:p-6 flex flex-col md:flex-row md:items-center gap-4">
+        <div class="flex-1 text-sm text-black/75 dark:text-white/75 leading-relaxed">
+            Usamos cookies propias y de terceros (incluyendo Google Analytics y Google
+            AdSense) para analizar el uso del sitio y mostrar anuncios relevantes.
+            Podés aceptar o rechazar las cookies no esenciales. Más detalles en nuestra
+            <a href="/privacidad/" class="text-[var(--primary)] hover:underline">política de privacidad</a>.
+        </div>
+        <div class="flex flex-wrap gap-2 shrink-0">
+            <button
+                type="button"
+                data-cookie-action="reject"
+                class="px-4 py-2 text-sm font-medium rounded-lg bg-black/[0.05] dark:bg-white/[0.08] text-black/75 dark:text-white/80 hover:bg-black/[0.1] dark:hover:bg-white/[0.12] transition"
+            >
+                Rechazar
+            </button>
+            <button
+                type="button"
+                data-cookie-action="accept"
+                class="px-4 py-2 text-sm font-medium rounded-lg bg-[var(--primary)] text-white hover:opacity-90 transition"
+            >
+                Aceptar
+            </button>
+        </div>
+    </div>
+</div>
+
+<script is:inline>
+(function () {
+    const STORAGE_KEY = 'nexom_cookie_consent_v1';
+    const banner = document.getElementById('cookie-consent');
+    if (!banner) return;
+
+    const applyConsent = (granted) => {
+        if (typeof window.gtag !== 'function') {
+            window.dataLayer = window.dataLayer || [];
+            window.gtag = function () { window.dataLayer.push(arguments); };
+        }
+        const state = granted ? 'granted' : 'denied';
+        window.gtag('consent', 'update', {
+            ad_storage: state,
+            analytics_storage: state,
+            ad_user_data: state,
+            ad_personalization: state,
+        });
+    };
+
+    const saved = localStorage.getItem(STORAGE_KEY);
+    if (saved === 'accepted') {
+        applyConsent(true);
+    } else if (saved === 'rejected') {
+        applyConsent(false);
+    } else {
+        banner.classList.remove('hidden');
+    }
+
+    banner.addEventListener('click', (e) => {
+        const target = e.target instanceof HTMLElement ? e.target.closest('[data-cookie-action]') : null;
+        if (!target) return;
+        const action = target.getAttribute('data-cookie-action');
+        const accepted = action === 'accept';
+        localStorage.setItem(STORAGE_KEY, accepted ? 'accepted' : 'rejected');
+        applyConsent(accepted);
+        banner.classList.add('hidden');
+    });
+})();
+</script>

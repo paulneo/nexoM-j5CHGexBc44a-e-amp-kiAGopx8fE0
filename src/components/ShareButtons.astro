@@ -1,0 +1,120 @@
+---
+import { Icon } from 'astro-icon/components'
+
+interface Props {
+  title: string
+  url: string
+  variant?: 'inline' | 'compact'
+}
+
+const { title, url, variant = 'inline' } = Astro.props
+
+const encodedUrl = encodeURIComponent(url)
+const encodedTitle = encodeURIComponent(title)
+const encodedShare = encodeURIComponent(`${title} ${url}`)
+
+const networks = [
+  {
+    name: 'WhatsApp',
+    href: `https://wa.me/?text=${encodedShare}`,
+    icon: 'fa6-brands:whatsapp',
+    hover: 'hover:bg-[#25D366] hover:text-white hover:border-[#25D366]',
+  },
+  {
+    name: 'LinkedIn',
+    href: `https://www.linkedin.com/sharing/share-offsite/?url=${encodedUrl}`,
+    icon: 'fa6-brands:linkedin-in',
+    hover: 'hover:bg-[#0A66C2] hover:text-white hover:border-[#0A66C2]',
+  },
+  {
+    name: 'X',
+    href: `https://x.com/intent/tweet?text=${encodedTitle}&url=${encodedUrl}`,
+    icon: 'fa6-brands:x-twitter',
+    hover: 'hover:bg-black hover:text-white hover:border-black dark:hover:bg-white dark:hover:text-black dark:hover:border-white',
+  },
+  {
+    name: 'Facebook',
+    href: `https://www.facebook.com/sharer/sharer.php?u=${encodedUrl}`,
+    icon: 'fa6-brands:facebook-f',
+    hover: 'hover:bg-[#1877F2] hover:text-white hover:border-[#1877F2]',
+  },
+  {
+    name: 'Email',
+    href: `mailto:?subject=${encodedTitle}&body=${encodedShare}`,
+    icon: 'material-symbols:mail-outline',
+    hover: 'hover:bg-[var(--primary)] hover:text-white hover:border-[var(--primary)]',
+  },
+]
+---
+
+<section class:list={["share-buttons", variant === 'compact' ? 'mt-8' : 'mt-12 pt-8 border-t border-black/[0.08] dark:border-white/[0.1]']}>
+  {variant === 'inline' && (
+    <p class="text-[0.72rem] uppercase tracking-[0.16em] font-semibold text-black/55 dark:text-white/55 mb-4">
+      Compartir este artículo
+    </p>
+  )}
+  <div class="flex flex-wrap items-center gap-2.5">
+    {networks.map((n) => (
+      <a
+        href={n.href}
+        target="_blank"
+        rel="noopener noreferrer"
+        aria-label={`Compartir en ${n.name}`}
+        class:list={["inline-flex items-center justify-center w-10 h-10 rounded-full border border-black/[0.1] dark:border-white/[0.12] text-black/65 dark:text-white/70 transition-all duration-200", n.hover]}
+      >
+        <Icon name={n.icon} class="w-4 h-4" />
+      </a>
+    ))}
+    <button
+      type="button"
+      data-share-copy={url}
+      aria-label="Copiar enlace al portapapeles"
+      class="inline-flex items-center justify-center w-10 h-10 rounded-full border border-black/[0.1] dark:border-white/[0.12] text-black/65 dark:text-white/70 hover:bg-[var(--primary)] hover:text-white hover:border-[var(--primary)] transition-all duration-200"
+    >
+      <Icon name="material-symbols:link" class="w-4 h-4 share-icon-link" />
+      <Icon name="material-symbols:check" class="w-4 h-4 share-icon-check hidden" />
+    </button>
+    <span data-share-copy-feedback class="text-xs text-black/55 dark:text-white/55 opacity-0 transition-opacity duration-200 ml-1">
+      ¡Enlace copiado!
+    </span>
+  </div>
+</section>
+
+<script>
+  const wire = () => {
+    document.querySelectorAll<HTMLButtonElement>('[data-share-copy]').forEach((btn) => {
+      if (btn.dataset.shareWired === '1') return
+      btn.dataset.shareWired = '1'
+      btn.addEventListener('click', async () => {
+        const url = btn.getAttribute('data-share-copy') ?? window.location.href
+        try {
+          await navigator.clipboard.writeText(url)
+        } catch {
+          // Fallback antiguo: seleccionar y copiar via execCommand
+          const ta = document.createElement('textarea')
+          ta.value = url
+          ta.style.position = 'fixed'
+          ta.style.opacity = '0'
+          document.body.appendChild(ta)
+          ta.focus()
+          ta.select()
+          try { document.execCommand('copy') } catch {}
+          document.body.removeChild(ta)
+        }
+        const linkIcon = btn.querySelector('.share-icon-link')
+        const checkIcon = btn.querySelector('.share-icon-check')
+        const feedback = btn.parentElement?.querySelector<HTMLElement>('[data-share-copy-feedback]')
+        linkIcon?.classList.add('hidden')
+        checkIcon?.classList.remove('hidden')
+        feedback?.style.setProperty('opacity', '1')
+        setTimeout(() => {
+          linkIcon?.classList.remove('hidden')
+          checkIcon?.classList.add('hidden')
+          feedback?.style.setProperty('opacity', '0')
+        }, 1800)
+      })
+    })
+  }
+  wire()
+  document.addEventListener('astro:after-swap', wire)
+</script>

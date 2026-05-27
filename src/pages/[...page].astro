@@ -1,26 +1,157 @@
 ---
 import MainGridLayout from "../layouts/MainGridLayout.astro";
 import PostCard from "../components/PostCard.astro";
+import HeroPostCard from "../components/HeroPostCard.astro";
+import HomeHero from "../components/HomeHero.astro";
 import Pagination from "../components/control/Pagination.astro";
-import {getSortedPosts} from "../utils/content-utils";
-import {getPostUrlBySlug} from "../utils/url-utils";
-import {PAGE_SIZE} from "../constants/constants";
-import PostPage from "../components/PostPage.astro";
+import { getSortedPosts } from "../utils/content-utils";
+import { getPostUrlBySlug } from "../utils/url-utils";
+import { PAGE_SIZE } from "../constants/constants";
+import { CATEGORY_LIST } from "../lib/categories";
+import { Icon } from 'astro-icon/components';
+import { siteConfig } from "../config";
 
 export async function getStaticPaths({ paginate }) {
     const allBlogPosts = await getSortedPosts();
     return paginate(allBlogPosts, { pageSize: PAGE_SIZE });
 }
 
-const {page} = Astro.props;
+const { page } = Astro.props;
+const isFirstPage = page.currentPage === 1;
 
-const len = page.data.length;
+let heroEntry: any = null;
+let secondaryEntries: any[] = [];
+let restEntries: any[] = page.data;
+if (isFirstPage && page.data.length > 0) {
+    const featured = page.data.find((p: any) => p.data.featured === true);
+    heroEntry = featured ?? page.data[0];
+    const without = page.data.filter((p: any) => p !== heroEntry);
+    secondaryEntries = without.slice(0, 2);
+    restEntries = without.slice(2);
+}
 
+const renderCard = (entry: any, size: 'sm' | 'md' | 'lg' = 'sm') => ({
+    entry,
+    title: entry.data.title,
+    tags: entry.data.tags,
+    category: entry.data.category,
+    published: entry.data.published,
+    url: getPostUrlBySlug(entry.slug),
+    image: entry.data.image,
+    description: entry.data.description,
+    draft: entry.data.draft,
+    size,
+});
 ---
 
-<MainGridLayout title={"Portal de Entretenimiento y Cultura Global"} description="Descubre en Nexo Mundial una fuente de inspiración global con cuentos, recetas, noticias y espectáculos que te conectan con culturas de todo el mundo. ¡Explora y disfruta contenido diverso y entretenido!">
-  <PostPage page={page}></PostPage>
-  {len > 0 && 
-      <Pagination class="mx-auto onload-animation" page={page} style={`animation-delay: calc(var(--content-delay) + ${(len)*50}ms)`}></Pagination>
-  }
+<MainGridLayout title="Inicio" description={siteConfig.subtitle}>
+    {isFirstPage && <HomeHero />}
+
+    {isFirstPage && heroEntry && (
+        <section class="reveal mb-14 md:mb-20">
+            <div class="flex items-end justify-between mb-5 md:mb-7">
+                <div>
+                    <p class="text-[0.7rem] md:text-[0.74rem] uppercase tracking-[0.18em] font-semibold text-[var(--primary)] mb-1.5">Destacado</p>
+                    <h2 class="text-2xl md:text-3xl font-bold tracking-tight text-[var(--deep-text)] dark:text-white/95">Lo que estamos leyendo</h2>
+                </div>
+            </div>
+            <HeroPostCard
+                entry={heroEntry}
+                title={heroEntry.data.title}
+                category={heroEntry.data.category}
+                published={heroEntry.data.published}
+                url={getPostUrlBySlug(heroEntry.slug)}
+                image={heroEntry.data.image}
+                description={heroEntry.data.description}
+            />
+        </section>
+    )}
+
+    {isFirstPage && secondaryEntries.length > 0 && (
+        <section class="reveal mb-16 md:mb-20">
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-6 md:gap-7">
+                {secondaryEntries.map((entry: any) => (
+                    <PostCard {...renderCard(entry, 'md')} />
+                ))}
+            </div>
+        </section>
+    )}
+
+    {isFirstPage && (
+        <section class="reveal mb-16 md:mb-20">
+            <div class="flex items-end justify-between mb-6 pb-3 border-b border-black/[0.08] dark:border-white/[0.1]">
+                <div>
+                    <p class="text-[0.7rem] uppercase tracking-[0.18em] font-semibold text-[var(--primary)] mb-1.5">Temas</p>
+                    <h2 class="text-2xl md:text-3xl font-bold tracking-tight text-[var(--deep-text)] dark:text-white/95">Explora por categoría</h2>
+                </div>
+                <a href="/categorias/" class="text-sm text-black/55 dark:text-white/55 hover:text-[var(--primary)] transition flex items-center gap-1">
+                    Ver todas
+                    <Icon name="material-symbols:arrow-forward" class="w-3.5 h-3.5"></Icon>
+                </a>
+            </div>
+            <div class="grid grid-cols-2 md:grid-cols-5 gap-3 md:gap-4">
+                {CATEGORY_LIST.map((cat) => (
+                    <a
+                        href={`/categorias/${cat.slug}/`}
+                        class={`group relative overflow-hidden rounded-2xl aspect-square md:aspect-[4/3] hover:-translate-y-1 hover:shadow-lg hover:shadow-black/10 transition-all duration-300 ${cat.image ? 'bg-black/5 dark:bg-white/5' : cat.bg}`}
+                    >
+                        {cat.image && (
+                            <>
+                                <img
+                                    src={cat.image}
+                                    alt={cat.label}
+                                    loading="lazy"
+                                    decoding="async"
+                                    class="absolute inset-0 w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
+                                />
+                                <div class="absolute inset-0 bg-gradient-to-t from-black/75 via-black/30 to-transparent"></div>
+                            </>
+                        )}
+                        <div class:list={["absolute inset-0 flex flex-col p-4", cat.image ? 'justify-end' : 'items-center justify-center']}>
+                            {!cat.image && (
+                                <div class={cat.text}>
+                                    <Icon name={cat.icon} class="w-10 h-10 md:w-12 md:h-12 mb-2 opacity-90 group-hover:scale-110 transition-transform duration-300"></Icon>
+                                </div>
+                            )}
+                            <span class:list={["font-bold", cat.image ? 'text-white text-sm md:text-base drop-shadow-md' : `text-[0.78rem] md:text-sm text-center ${cat.text}`]}>
+                                {cat.short}
+                            </span>
+                        </div>
+                    </a>
+                ))}
+            </div>
+        </section>
+    )}
+
+    {restEntries.length > 0 ? (
+        <section id="ultimos" class="reveal scroll-mt-24">
+            <div class="flex items-end justify-between mb-7 pb-3 border-b border-black/[0.08] dark:border-white/[0.1]">
+                <div>
+                    <p class="text-[0.7rem] uppercase tracking-[0.18em] font-semibold text-[var(--primary)] mb-1.5">Feed</p>
+                    <h2 class="text-2xl md:text-3xl font-bold tracking-tight text-[var(--deep-text)] dark:text-white/95">
+                        {isFirstPage ? 'Últimos artículos' : `Página ${page.currentPage}`}
+                    </h2>
+                </div>
+                <span class="text-sm text-black/40 dark:text-white/40">
+                    {page.total} {page.total === 1 ? 'artículo' : 'artículos'}
+                </span>
+            </div>
+
+            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 md:gap-7">
+                {restEntries.map((entry: any) => (
+                    <PostCard {...renderCard(entry, 'sm')} />
+                ))}
+            </div>
+
+            <Pagination class="mx-auto mt-14" page={page} />
+        </section>
+    ) : (
+        !heroEntry && (
+            <div class="py-16 text-center">
+                <p class="text-black/50 dark:text-white/50">
+                    Pronto publicaremos los primeros artículos.
+                </p>
+            </div>
+        )
+    )}
 </MainGridLayout>

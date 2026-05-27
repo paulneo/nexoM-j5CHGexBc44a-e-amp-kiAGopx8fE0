@@ -1,0 +1,101 @@
+---
+/**
+ * Tabla de contenido del post — construida client-side desde los H2/H3
+ * del .markdown-content. Sticky en desktop (xl+), oculta en mobile.
+ *
+ * Usa los IDs que rehype-slug añade automáticamente a cada heading.
+ */
+---
+
+<aside class="toc-aside hidden xl:block w-[240px] shrink-0">
+    <div class="sticky top-[5.5rem] max-h-[calc(100vh-7rem)] overflow-y-auto pb-8">
+        <p class="text-[0.68rem] uppercase tracking-[0.18em] font-semibold text-black/55 dark:text-white/55 mb-3">
+            En este artículo
+        </p>
+        <nav id="toc-nav" aria-label="Tabla de contenido">
+            <ul id="toc-list" class="space-y-2 text-sm border-l border-black/[0.08] dark:border-white/[0.1]">
+                <!-- llenado por JS -->
+            </ul>
+        </nav>
+    </div>
+</aside>
+
+<style>
+    .toc-aside :global(.toc-link) {
+        @apply block py-1 pl-4 -ml-px border-l border-transparent text-black/60 dark:text-white/60 hover:text-[var(--primary)] transition leading-snug;
+    }
+    .toc-aside :global(.toc-link:hover) {
+        border-left-color: color-mix(in oklch, var(--primary) 40%, transparent);
+    }
+    .toc-aside :global(.toc-link.is-active) {
+        @apply text-[var(--primary)] border-[var(--primary)] font-semibold;
+    }
+    .toc-aside :global(.toc-h3) {
+        @apply pl-7 text-[0.84rem] text-black/50 dark:text-white/50;
+    }
+</style>
+
+<script>
+function buildTOC() {
+    const list = document.getElementById('toc-list');
+    if (!list) return;
+
+    const article = document.querySelector('.markdown-content');
+    if (!article) {
+        list.parentElement?.parentElement?.parentElement?.classList.add('hidden');
+        return;
+    }
+
+    const headings = article.querySelectorAll<HTMLElement>('h2, h3');
+    if (headings.length < 2) {
+        // No vale la pena un TOC con menos de 2 secciones
+        const aside = document.querySelector('.toc-aside');
+        aside?.classList.add('!hidden');
+        return;
+    }
+
+    list.innerHTML = '';
+
+    headings.forEach(h => {
+        if (!h.id) return;
+        const li = document.createElement('li');
+        const a = document.createElement('a');
+        a.href = `#${h.id}`;
+        a.textContent = h.textContent?.replace('#', '').trim() ?? '';
+        a.className = 'toc-link';
+        if (h.tagName === 'H3') a.classList.add('toc-h3');
+        a.dataset.targetId = h.id;
+        li.appendChild(a);
+        list.appendChild(li);
+    });
+
+    // Highlight on scroll con IntersectionObserver
+    if ('IntersectionObserver' in window) {
+        const links = list.querySelectorAll<HTMLAnchorElement>('.toc-link');
+        const visibleHeadings = new Set<string>();
+
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                const id = entry.target.id;
+                if (entry.isIntersecting) visibleHeadings.add(id);
+                else visibleHeadings.delete(id);
+            });
+
+            // Marca como activo el primero visible
+            links.forEach(l => l.classList.remove('is-active'));
+            for (const h of headings) {
+                if (visibleHeadings.has(h.id)) {
+                    const link = list.querySelector<HTMLAnchorElement>(`.toc-link[data-target-id="${h.id}"]`);
+                    link?.classList.add('is-active');
+                    break;
+                }
+            }
+        }, { rootMargin: '-80px 0px -65% 0px' });
+
+        headings.forEach(h => observer.observe(h));
+    }
+}
+
+buildTOC();
+document.addEventListener('astro:after-swap', buildTOC);
+</script>

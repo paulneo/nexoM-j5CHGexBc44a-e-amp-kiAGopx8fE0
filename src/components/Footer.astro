@@ -1,13 +1,72 @@
 ---
-
-import {profileConfig} from "../config";
-
+import { Icon } from 'astro-icon/components';
+import { profileConfig, siteConfig } from "../config";
+import { CATEGORY_LIST } from "../lib/categories";
+const year = new Date().getFullYear();
 ---
 
-<div class="card-base max-w-[var(--page-width)] min-h-[4.5rem] rounded-b-none mx-auto flex items-center px-6">
-    <div class="transition text-50 text-sm">
-        © 2024 {profileConfig.name}. All Rights Reserved.
-        <br>
-        Powered by <a class="link text-[var(--primary)] font-medium" href="/">NexoMundial</a>
+<footer class="border-t border-black/[0.07] dark:border-white/[0.08] bg-[var(--page-bg)] mt-16">
+    <div class="max-w-[var(--page-width)] mx-auto px-4 md:px-6 lg:px-8 py-12 md:py-14">
+        <div class="grid grid-cols-2 md:grid-cols-5 gap-10 md:gap-8">
+            <!-- Brand -->
+            <div class="col-span-2 md:col-span-2 max-w-md">
+                <div class="flex items-center gap-2 mb-3">
+                    <span class="inline-flex items-center justify-center w-7 h-7 rounded bg-[var(--primary)] text-white font-bold text-xs">N</span>
+                    <span class="text-lg tracking-[-0.01em] font-bold text-[var(--deep-text)] dark:text-white/90">
+                        {siteConfig.title}
+                    </span>
+                </div>
+                <p class="text-sm text-black/60 dark:text-white/60 leading-relaxed mb-5">
+                    {profileConfig.bio}
+                </p>
+                <div class="flex items-center gap-3">
+                    {profileConfig.links.map((l) => (
+                        <a href={l.url} target="_blank" rel="noopener noreferrer" aria-label={l.name}
+                           class="text-black/45 dark:text-white/45 hover:text-[var(--primary)] transition">
+                            <Icon name={l.icon} size="1.15rem"></Icon>
+                        </a>
+                    ))}
+                </div>
+            </div>
+
+            <!-- Categorías -->
+            <div>
+                <p class="text-[0.7rem] uppercase tracking-[0.16em] font-semibold text-black/55 dark:text-white/55 mb-4">Temas</p>
+                <ul class="text-sm space-y-2.5">
+                    {CATEGORY_LIST.map(cat => (
+                        <li><a href={`/categorias/${cat.slug}/`} class="text-black/65 dark:text-white/65 hover:text-[var(--primary)] transition">{cat.short}</a></li>
+                    ))}
+                </ul>
+            </div>
+
+            <!-- Sitio -->
+            <div>
+                <p class="text-[0.7rem] uppercase tracking-[0.16em] font-semibold text-black/55 dark:text-white/55 mb-4">Sitio</p>
+                <ul class="text-sm space-y-2.5">
+                    <li><a href="/about/" class="text-black/65 dark:text-white/65 hover:text-[var(--primary)] transition">Sobre el proyecto</a></li>
+                    <li><a href="/categorias/" class="text-black/65 dark:text-white/65 hover:text-[var(--primary)] transition">Todas las categorías</a></li>
+                    <li><a href="/glosario/" class="text-black/65 dark:text-white/65 hover:text-[var(--primary)] transition">Glosario</a></li>
+                    <li><a href="/rss.xml" class="text-black/65 dark:text-white/65 hover:text-[var(--primary)] transition">RSS</a></li>
+                </ul>
+            </div>
+
+            <!-- Legal -->
+            <div>
+                <p class="text-[0.7rem] uppercase tracking-[0.16em] font-semibold text-black/55 dark:text-white/55 mb-4">Legal</p>
+                <ul class="text-sm space-y-2.5">
+                    <li><a href="/contacto/" class="text-black/65 dark:text-white/65 hover:text-[var(--primary)] transition">Contacto</a></li>
+                    <li><a href="/privacidad/" class="text-black/65 dark:text-white/65 hover:text-[var(--primary)] transition">Privacidad</a></li>
+                    <li><a href="/terminos/" class="text-black/65 dark:text-white/65 hover:text-[var(--primary)] transition">Términos de uso</a></li>
+                    <li><a href="/politica-ia/" class="text-black/65 dark:text-white/65 hover:text-[var(--primary)] transition">Política de IA</a></li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="mt-10 pt-6 border-t border-black/[0.06] dark:border-white/[0.06]">
+            <p class="text-xs text-black/45 dark:text-white/45">
+                © {year} {profileConfig.name}. Contenido publicado bajo licencia
+                <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/" target="_blank" rel="noopener noreferrer" class="hover:text-[var(--primary)] transition">CC BY-NC-SA 4.0</a>.
+            </p>
+        </div>
     </div>
-</div>
+</footer>

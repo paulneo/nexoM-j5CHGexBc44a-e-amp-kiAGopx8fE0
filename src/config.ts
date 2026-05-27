@@ -8,48 +8,42 @@ import { LinkPreset } from './types/config'
 
 export const siteConfig: SiteConfig = {
   title: 'Nexo Mundial',
-  subtitle: 'Una diversión para todos',
-  lang: 'es',         // 'en', 'zh_CN', 'zh_TW', 'ja'
+  subtitle: 'Conocimiento técnico, explicado simple.',
+  lang: 'es',
   themeColor: {
-    hue: 250,         // Default hue for the theme color, from 0 to 360. e.g. red: 0, teal: 200, cyan: 250, pink: 345
-    fixed: false,     // Hide the theme color picker for visitors
+    hue: 170,         // verde teal técnico (≈ #0E7C66)
+    fixed: true,      // ocultar el picker — la paleta es parte de la identidad
   },
   banner: {
-    enable: true,
-    src: 'assets/images/banner.png',   // Relative to the /src directory. Relative to the /public directory if it starts with '/'
+    enable: false,    // sin banner: identidad editorial limpia
+    src: '',          // sin asset físico (las imágenes viejas se eliminaron)
   },
-  favicon: [    // Leave this array empty to use the default favicon
+  favicon: [
     {
-      src: 'favicon.png',    // Path of the favicon, relative to the /public directory
-      // theme: 'light',              // (Optional) Either 'light' or 'dark', set only if you have different favicons for light and dark mode
-      // sizes: '32x32',              // (Optional) Size of the favicon, set only if you have favicons of different sizes
-    }
-    // {
-    //   src: '/favicon/icon.png',    // Path of the favicon, relative to the /public directory
-    //   theme: 'light',              // (Optional) Either 'light' or 'dark', set only if you have different favicons for light and dark mode
-    //   sizes: '32x32',              // (Optional) Size of the favicon, set only if you have favicons of different sizes
-    // }
-  ]
+      src: 'favicon.png',
+    },
+  ],
 }
 
 export const navBarConfig: NavBarConfig = {
   links: [
-    LinkPreset.Home,
-    LinkPreset.Archive,
+    { name: 'Arquitectura',  url: '/categorias/arquitectura/',     external: false },
+    { name: 'Construcción',  url: '/categorias/construccion/',     external: false },
+    { name: 'Maquinaria',    url: '/categorias/maquinaria-pesada/', external: false },
+    { name: 'Ingeniería',    url: '/categorias/ingenieria-basica/', external: false },
+    { name: 'Glosario',      url: '/glosario/',                    external: false },
     LinkPreset.About,
   ],
 }
 
 export const profileConfig: ProfileConfig = {
-  avatar: 'assets/images/avatar.webp',  // Relative to the /src directory. Relative to the /public directory if it starts with '/'
+  avatar: '',  // sin avatar físico — branding del sitio va en el wordmark del navbar
   name: 'Nexo Mundial',
-  bio: 'Descubre en Nexo Mundial una fuente de inspiración global con cuentos, recetas, noticias y espectáculos que te conectan con culturas de todo el mundo. ¡Explora y disfruta contenido diverso y entretenido!',
+  bio: 'Biblioteca práctica de arquitectura, construcción, maquinaria pesada e ingeniería básica. Conceptos técnicos explicados de forma sencilla, sin tecnicismos innecesarios.',
   links: [
     {
       name: 'Facebook',
-      icon: 'fa6-brands:facebook',       // Visit https://icones.js.org/ for icon codes
-                                        // You will need to install the corresponding icon set if it's not already included
-                                        // `pnpm add @iconify-json/<icon-set-name>`
+      icon: 'fa6-brands:facebook',
       url: 'https://www.facebook.com/nexomundial2/',
     },
     {

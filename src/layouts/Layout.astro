@@ -1,14 +1,13 @@
 ---
 import GlobalStyles from "@components/GlobalStyles.astro";
-import '@fontsource/roboto/400.css';
-import '@fontsource/roboto/500.css';
-import '@fontsource/roboto/700.css';
+import '@fontsource-variable/inter';
 import ImageWrapper from "@components/misc/ImageWrapper.astro";
 import {pathsEqual} from "@utils/url-utils";
 import ConfigCarrier from "@components/ConfigCarrier.astro";
 import {profileConfig, siteConfig} from "@/config";
 import { type Favicon } from "../types/config";
 import BaseHead from '@components/BaseHead.astro'
+import CookieConsent from '@components/CookieConsent.astro'
 import {defaultFavicons} from "../constants/icon";
 import {LIGHT_MODE, DARK_MODE, AUTO_MODE, DEFAULT_THEME} from "../constants/constants";
 import {url} from "../utils/url-utils";
@@ -16,9 +15,29 @@ interface Props {
 	title: string;
 	banner: string;
 	description?: string;
+	ogType?: 'website' | 'article';
+	ogImage?: string;
+	canonical?: string;
+	publishedTime?: Date;
+	modifiedTime?: Date;
+	author?: string;
+	tags?: string[];
+	noindex?: boolean;
 }
 
-let { title, banner, description } = Astro.props;
+let {
+	title,
+	banner,
+	description,
+	ogType = 'website',
+	ogImage,
+	canonical,
+	publishedTime,
+	modifiedTime,
+	author,
+	tags,
+	noindex,
+} = Astro.props;
 
 const isHomePage = pathsEqual(Astro.url.pathname, '/');
 
@@ -74,14 +93,19 @@ const siteLang = siteConfig.lang.replace('_', '-')
 <!DOCTYPE html>
 <html lang={siteLang} class="bg-[var(--page-bg)] transition text-[14px] md:text-[16px]">
 	<head>
-		<title>{pageTitle}</title>
-		<BaseHead title={pageTitle} description={description}></BaseHead>
+		<BaseHead
+			title={pageTitle}
+			description={description}
+			ogType={ogType}
+			ogImage={ogImage}
+			canonical={canonical}
+			publishedTime={publishedTime}
+			modifiedTime={modifiedTime}
+			author={author}
+			tags={tags}
+			noindex={noindex}
+		/>
 
-		<meta charset="UTF-8" />
-		<meta name="title" content={pageTitle} />
-		<meta name="description" content={description || pageTitle}>
-		<meta name="viewport" content="width=device-width" />
-		<meta name="generator" content={Astro.generator} />
 		{favicons.map(fav => (
 			<link rel="icon" type="image/png+xml"
 				  href={fav.src.startsWith('/') ? url(fav.src) : fav.src}
@@ -120,14 +144,16 @@ const siteLang = siteConfig.lang.replace('_', '-')
 	<body class=" min-h-screen transition " class:list={[{"is-home": isHomePage, "enable-banner": enableBanner}]}>
 		<ConfigCarrier></ConfigCarrier>
 		<GlobalStyles>
-		<div id="banner-wrapper" class="absolute w-full">
-			<ImageWrapper id="boxtest" alt="Banner | Nexomundial" class:list={["object-center object-cover h-full", {"hidden": !siteConfig.banner.enable}]}
-					  src={siteConfig.banner.src}
-			>
-			</ImageWrapper>
-		</div>
+		{siteConfig.banner.enable && siteConfig.banner.src && (
+			<div id="banner-wrapper" class="absolute w-full">
+				<ImageWrapper id="boxtest" alt="Banner | Nexomundial" class="object-center object-cover h-full"
+						  src={siteConfig.banner.src}
+				/>
+			</div>
+		)}
 		<slot />
 		</GlobalStyles>
+		<CookieConsent />
 	</body>
 </html>
 <style is:global>
@@ -245,6 +271,7 @@ function loadHue() {
 
 function setBannerHeight() {
 	const banner = document.getElementById('banner-wrapper');
+	if (!banner) return;
 	if (document.documentElement.hasAttribute('isHome')) {
 		banner.classList.remove('banner-else');
 		banner.classList.add('banner-home');
@@ -283,12 +310,34 @@ function initCustomScrollbar() {
 	});
 }
 
+function initRevealOnScroll() {
+	const els = document.querySelectorAll<HTMLElement>('.reveal:not(.is-revealed)');
+	if (!els.length) return;
+
+	if (!('IntersectionObserver' in window)) {
+		els.forEach(el => el.classList.add('is-revealed'));
+		return;
+	}
+
+	const observer = new IntersectionObserver((entries) => {
+		entries.forEach(entry => {
+			if (entry.isIntersecting) {
+				entry.target.classList.add('is-revealed');
+				observer.unobserve(entry.target);
+			}
+		});
+	}, { threshold: 0.05, rootMargin: '0px 0px -10% 0px' });
+
+	els.forEach(el => observer.observe(el));
+}
+
 function init() {
 	// disableAnimation()()		// TODO
 	setBannerHeight();
 	loadTheme();
 	loadHue();
 	initCustomScrollbar();
+	initRevealOnScroll();
 }
 
 /* Load settings when entering the site */

@@ -1,0 +1,87 @@
+---
+import MainGridLayout from "../layouts/MainGridLayout.astro";
+import { Icon } from 'astro-icon/components';
+import { profileConfig } from "../config";
+---
+
+<MainGridLayout
+    title="Contacto"
+    description="Cómo escribirnos: correo electrónico y redes sociales del equipo editorial de Nexo Mundial."
+    canonical="https://www.nexomundial.com/contacto/"
+>
+    <article class="max-w-3xl mx-auto">
+        <header class="mb-12">
+            <p class="text-[0.72rem] uppercase tracking-[0.18em] text-[var(--primary)] font-semibold mb-3">
+                Hablemos
+            </p>
+            <h1 class="text-4xl md:text-5xl font-bold tracking-tight leading-[1.1] text-[var(--deep-text)] dark:text-white/95 mb-4">
+                Contacto
+            </h1>
+            <p class="text-xl text-black/65 dark:text-white/70 leading-[1.5]">
+                ¿Tenés una sugerencia, encontraste un error en un artículo o querés
+                proponer un tema? Escribinos.
+            </p>
+        </header>
+
+        <section class="mb-12 prose-blog">
+            <h2>Correo electrónico</h2>
+            <p>
+                La forma más directa de llegar al equipo editorial es por correo:
+            </p>
+            <p>
+                <a
+                    href="mailto:contacto@nexomundial.com"
+                    class="inline-flex items-center gap-2 px-5 py-3 rounded-lg bg-[var(--primary)] text-white font-medium hover:opacity-90 transition no-underline"
+                >
+                    <Icon name="material-symbols:mail-outline" class="w-5 h-5" />
+                    contacto@nexomundial.com
+                </a>
+            </p>
+            <p>
+                Respondemos en un plazo aproximado de 3 a 5 días hábiles. Para que
+                podamos ayudarte mejor:
+            </p>
+            <ul>
+                <li>Si encontraste un error en un artículo, contanos el título o el link.</li>
+                <li>Si querés sugerir un tema, dejanos saber qué te gustaría aprender.</li>
+                <li>Si buscás colaborar como autor o revisor técnico, incluí una breve presentación.</li>
+            </ul>
+        </section>
+
+        <section class="mb-12">
+            <h2 class="text-2xl md:text-3xl font-bold tracking-tight mb-5 text-[var(--deep-text)] dark:text-white/95">
+                Redes sociales
+            </h2>
+            <p class="text-black/65 dark:text-white/65 mb-5">
+                También nos podés encontrar y escribir en redes:
+            </p>
+            <div class="flex flex-wrap gap-3">
+                {profileConfig.links.map(l => (
+                    <a
+                        href={l.url}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        class="inline-flex items-center gap-2 px-4 py-2.5 rounded-lg bg-black/[0.04] dark:bg-white/[0.06] text-black/70 dark:text-white/70 hover:bg-[var(--primary)] hover:text-white transition text-sm font-medium"
+                    >
+                        <Icon name={l.icon} class="w-4 h-4" />
+                        {l.name}
+                    </a>
+                ))}
+            </div>
+        </section>
+
+        <section class="prose-blog">
+            <h2>Lo que no respondemos por aquí</h2>
+            <p>
+                Nexo Mundial es un sitio editorial, no un servicio profesional.
+                <strong>No damos consultas técnicas vinculantes</strong> sobre proyectos
+                concretos (cálculos estructurales, diseños de obra, dictámenes técnicos)
+                — eso requiere un profesional certificado en tu jurisdicción.
+            </p>
+            <p>
+                Si lo que buscás es asesoría profesional, te recomendamos contactar a
+                un arquitecto, ingeniero o técnico habilitado en tu zona.
+            </p>
+        </section>
+    </article>
+</MainGridLayout>

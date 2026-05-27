@@ -1,0 +1,123 @@
+---
+import MainGridLayout from "../layouts/MainGridLayout.astro";
+const updatedAt = new Date('2026-05-26');
+---
+
+<MainGridLayout
+    title="Términos de uso"
+    description="Condiciones para el uso del sitio Nexo Mundial: licencia del contenido, responsabilidad y propiedad intelectual."
+    canonical="https://www.nexomundial.com/terminos/"
+>
+    <article class="max-w-3xl mx-auto prose-blog">
+        <header class="mb-10">
+            <p class="text-[0.72rem] uppercase tracking-[0.18em] text-[var(--primary)] font-semibold mb-3">
+                Documento legal
+            </p>
+            <h1 class="text-4xl md:text-5xl font-bold tracking-tight leading-[1.1] text-[var(--deep-text)] dark:text-white/95 mb-3">
+                Términos de uso
+            </h1>
+            <p class="text-sm text-black/55 dark:text-white/55">
+                Última actualización: {updatedAt.toLocaleDateString('es', { day: 'numeric', month: 'long', year: 'numeric' })}
+            </p>
+        </header>
+
+        <p>
+            Al acceder y usar el sitio <strong>Nexo Mundial</strong>
+            (<a href="https://www.nexomundial.com">nexomundial.com</a>) aceptás
+            estos términos. Si no estás de acuerdo con alguno, te pedimos que no uses el
+            sitio.
+        </p>
+
+        <h2>1. Propósito del sitio</h2>
+        <p>
+            Nexo Mundial publica contenido educativo y divulgativo sobre arquitectura,
+            construcción, maquinaria pesada e ingeniería básica, en español. El sitio
+            tiene fines informativos y no constituye asesoría profesional.
+        </p>
+
+        <h2>2. Contenido informativo, no profesional</h2>
+        <p>
+            La información publicada se proporciona "tal cual" y con la mejor intención
+            de exactitud. <strong>No reemplaza la consulta con un profesional
+            habilitado</strong> en tu jurisdicción (arquitecto, ingeniero, técnico de
+            obra) para proyectos concretos. No nos hacemos responsables de decisiones
+            tomadas únicamente con base en el contenido del sitio.
+        </p>
+
+        <h2>3. Propiedad intelectual y licencia</h2>
+        <p>
+            Todo el contenido publicado en Nexo Mundial (textos, ilustraciones,
+            esquemas, código y diseño del sitio) es propiedad del equipo editorial de
+            Nexo Mundial o se utiliza con el permiso correspondiente.
+        </p>
+        <p>
+            El contenido editorial (artículos y glosario) se publica bajo licencia
+            <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/" target="_blank" rel="noopener noreferrer">
+                Creative Commons Atribución-NoComercial-CompartirIgual 4.0 (CC BY-NC-SA 4.0)
+            </a>. Eso significa que podés:
+        </p>
+        <ul>
+            <li><strong>Compartir</strong>: copiar y redistribuir el material.</li>
+            <li><strong>Adaptar</strong>: remezclar, transformar y crear a partir del material.</li>
+        </ul>
+        <p>Bajo las siguientes condiciones:</p>
+        <ul>
+            <li><strong>Atribución</strong>: debés citar la fuente y enlazar al artículo original.</li>
+            <li><strong>NoComercial</strong>: no podés usar el material con fines comerciales sin autorización.</li>
+            <li><strong>CompartirIgual</strong>: si remezclás, transformás o creás a partir del material, debés distribuir lo nuevo bajo la misma licencia.</li>
+        </ul>
+
+        <h2>4. Uso aceptable</h2>
+        <p>Al usar el sitio te comprometés a no:</p>
+        <ul>
+            <li>Reproducir contenido sin atribución o con fines comerciales sin autorización.</li>
+            <li>Intentar acceder a áreas restringidas, alterar el funcionamiento del sitio o introducir código malicioso.</li>
+            <li>Recolectar datos de los visitantes mediante scraping automatizado u otros métodos sin permiso explícito.</li>
+            <li>Usar el sitio para difundir contenido ilegal, ofensivo o difamatorio.</li>
+        </ul>
+
+        <h2>5. Enlaces y contenido de terceros</h2>
+        <p>
+            El sitio puede contener enlaces a sitios externos y mostrar publicidad de
+            terceros (por ejemplo, Google AdSense). No controlamos ni respaldamos
+            necesariamente el contenido de esos sitios externos, ni nos hacemos
+            responsables de sus prácticas o productos. Las visitas a sitios de terceros
+            se rigen por los términos de uso y políticas de privacidad de cada uno.
+        </p>
+
+        <h2>6. Disponibilidad del sitio</h2>
+        <p>
+            Hacemos un esfuerzo razonable para mantener el sitio operativo, pero no
+            garantizamos disponibilidad continua. El sitio puede tener interrupciones
+            por mantenimiento, fallas técnicas o causas ajenas a nuestro control.
+        </p>
+
+        <h2>7. Limitación de responsabilidad</h2>
+        <p>
+            En la máxima medida permitida por la ley aplicable, Nexo Mundial no será
+            responsable por daños directos, indirectos, incidentales o consecuentes que
+            surjan del uso o la imposibilidad de uso del sitio.
+        </p>
+
+        <h2>8. Cambios en los términos</h2>
+        <p>
+            Podemos modificar estos términos en cualquier momento. Cuando lo hagamos,
+            actualizaremos la fecha en la parte superior del documento. El uso continuo
+            del sitio después de un cambio implica la aceptación de los nuevos
+            términos.
+        </p>
+
+        <h2>9. Ley aplicable</h2>
+        <p>
+            Estos términos se rigen por las leyes aplicables al lugar de residencia del
+            responsable editorial. Cualquier controversia se resolverá por los tribunales
+            competentes de esa jurisdicción.
+        </p>
+
+        <h2>10. Contacto</h2>
+        <p>
+            Para cualquier consulta sobre estos términos, escribinos a
+            <a href="mailto:contacto@nexomundial.com">contacto@nexomundial.com</a>.
+        </p>
+    </article>
+</MainGridLayout>

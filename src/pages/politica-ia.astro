@@ -1,0 +1,128 @@
+---
+import MainGridLayout from "../layouts/MainGridLayout.astro";
+const updatedAt = new Date('2026-05-26');
+---
+
+<MainGridLayout
+    title="Política de uso de IA"
+    description="Cómo Nexo Mundial usa inteligencia artificial en la redacción de sus artículos y qué garantías de revisión humana aplican."
+    canonical="https://www.nexomundial.com/politica-ia/"
+>
+    <article class="max-w-3xl mx-auto prose-blog">
+        <header class="mb-10">
+            <p class="text-[0.72rem] uppercase tracking-[0.18em] text-[var(--primary)] font-semibold mb-3">
+                Transparencia editorial
+            </p>
+            <h1 class="text-4xl md:text-5xl font-bold tracking-tight leading-[1.1] text-[var(--deep-text)] dark:text-white/95 mb-3">
+                Política de uso de IA
+            </h1>
+            <p class="text-sm text-black/55 dark:text-white/55">
+                Última actualización: {updatedAt.toLocaleDateString('es', { day: 'numeric', month: 'long', year: 'numeric' })}
+            </p>
+        </header>
+
+        <p>
+            En Nexo Mundial creemos que la transparencia es una parte central de la
+            confianza editorial. Por eso documentamos abiertamente cómo usamos
+            herramientas de inteligencia artificial en nuestro proceso de redacción.
+        </p>
+
+        <h2>1. Lo esencial</h2>
+        <ul>
+            <li>Usamos IA como <strong>asistente</strong>, no como autor autónomo.</li>
+            <li>Cada artículo es <strong>revisado por una persona</strong> antes de publicarse.</li>
+            <li>Cuando un texto usa asistencia de IA, lo <strong>indicamos explícitamente</strong> al final del artículo.</li>
+            <li>Las cifras técnicas, normativas y datos verificables se contrastan con fuentes.</li>
+            <li>Lo que no podemos verificar, no lo publicamos.</li>
+        </ul>
+
+        <h2>2. Cómo escribimos un artículo</h2>
+        <p>Nuestro flujo de trabajo típico es así:</p>
+        <ol>
+            <li>
+                <strong>Selección de tema</strong>: una persona del equipo elige el tema
+                con base en relevancia, demanda de búsqueda y vacíos de información en
+                español.
+            </li>
+            <li>
+                <strong>Esquema (outline)</strong>: con apoyo de IA armamos un esquema
+                con el alcance, las secciones y los puntos clave que el artículo debe
+                cubrir. Un editor revisa el esquema antes de continuar.
+            </li>
+            <li>
+                <strong>Borrador asistido</strong>: la IA genera un primer borrador
+                siguiendo el esquema y los criterios editoriales del sitio.
+            </li>
+            <li>
+                <strong>Edición humana</strong>: una persona del equipo revisa el
+                borrador completo. Corrige redacción, verifica datos técnicos, agrega
+                ejemplos prácticos, ajusta el tono y reescribe lo que haga falta.
+            </li>
+            <li>
+                <strong>Verificación de fuentes</strong>: las cifras y afirmaciones
+                técnicas se contrastan con manuales, normativas o publicaciones
+                especializadas. Cuando una fuente es relevante, la citamos al final del
+                artículo.
+            </li>
+            <li>
+                <strong>Publicación</strong>: el artículo se publica con el campo
+                <code>aiAssisted: true</code> en su ficha editorial cuando la IA
+                participó en alguna parte del proceso.
+            </li>
+        </ol>
+
+        <h2>3. Qué hace la IA (y qué no)</h2>
+        <p><strong>La IA puede:</strong></p>
+        <ul>
+            <li>Proponer estructuras de artículo y formular preguntas frecuentes.</li>
+            <li>Redactar borradores siguiendo un esquema y un tono dado.</li>
+            <li>Sugerir reformulaciones, sinónimos y aclaraciones.</li>
+            <li>Resumir o reformular información que un editor le proporciona.</li>
+        </ul>
+        <p><strong>La IA no puede en nuestro flujo:</strong></p>
+        <ul>
+            <li>Publicar contenido directamente, sin revisión humana.</li>
+            <li>Citar fuentes sin que un editor las verifique manualmente.</li>
+            <li>Inventar normativas, fechas, cifras o autores. Si algo aparece en el sitio sin verificar, es un error nuestro y queremos saberlo.</li>
+            <li>Reemplazar la consulta con un profesional habilitado en proyectos reales.</li>
+        </ul>
+
+        <h2>4. Modelos y herramientas</h2>
+        <p>
+            Hoy usamos modelos de la familia Claude (Anthropic) para asistencia de
+            redacción. Esta lista puede cambiar a medida que evolucione el ecosistema;
+            actualizaremos esta página cuando lo haga.
+        </p>
+
+        <h2>5. Cómo saber si un artículo usó IA</h2>
+        <p>
+            Cada ficha editorial tiene un campo <code>aiAssisted</code>. Cuando ese campo
+            está activo, mostramos al final del artículo una nota explícita: "Este
+            artículo fue redactado con asistencia de IA y revisado por el equipo
+            editorial."
+        </p>
+        <p>
+            Si no ves esa nota, el artículo fue escrito sin asistencia de IA o la
+            asistencia fue marginal (correcciones puntuales, no redacción).
+        </p>
+
+        <h2>6. Responsabilidad editorial</h2>
+        <p>
+            Aunque usemos IA, <strong>la responsabilidad editorial siempre es
+            humana</strong>. Si un artículo contiene un error, no es "culpa de la IA":
+            es nuestra responsabilidad como editores haberlo aprobado para
+            publicación. Por eso valoramos tanto los reportes de errores.
+        </p>
+        <p>
+            Si encontrás algo incorrecto, anticuado o impreciso, escribinos a
+            <a href="mailto:contacto@nexomundial.com">contacto@nexomundial.com</a> y lo
+            corregimos cuanto antes.
+        </p>
+
+        <h2>7. Cambios en esta política</h2>
+        <p>
+            Esta política evoluciona con nuestras prácticas y con la tecnología. Las
+            actualizaciones se reflejan en la fecha al inicio del documento.
+        </p>
+    </article>
+</MainGridLayout>
