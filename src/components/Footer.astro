@@ -1,8 +1,8 @@
 ---
-import { Icon } from 'astro-icon/components';
-import { profileConfig, siteConfig } from "../config";
-import { CATEGORY_LIST } from "../lib/categories";
-const year = new Date().getFullYear();
+import { Icon } from 'astro-icon/components'
+import { profileConfig, siteConfig } from '../config'
+import { CATEGORY_LIST } from '../lib/categories'
+const year = new Date().getFullYear()
 ---
 
 <footer class="border-t border-black/[0.07] dark:border-white/[0.08] bg-[var(--page-bg)] mt-16">
@@ -16,7 +16,7 @@ const year = new Date().getFullYear();
                         alt={siteConfig.title}
                         width="2172"
                         height="724"
-                        class="block dark:hidden h-10 w-auto"
+                        class="block dark:hidden h-12 w-auto"
                         loading="lazy"
                     />
                     <img
@@ -24,7 +24,7 @@ const year = new Date().getFullYear();
                         alt={siteConfig.title}
                         width="2172"
                         height="724"
-                        class="hidden dark:block h-10 w-auto"
+                        class="hidden dark:block h-12 w-auto"
                         loading="lazy"
                     />
                 </a>

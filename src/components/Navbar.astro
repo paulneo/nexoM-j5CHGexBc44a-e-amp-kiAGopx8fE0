@@ -1,31 +1,39 @@
 ---
-import { Icon } from 'astro-icon/components';
-import DisplaySettings from "./widget/DisplaySettings.svelte";
-import { siteConfig } from "../config";
-import NavMenuPanel from "./widget/NavMenuPanel.astro";
-import Search from "./Search.svelte";
-import LightDarkSwitch from "./LightDarkSwitch.svelte";
-import { url } from "../utils/url-utils";
-import { CATEGORY_LIST } from "../lib/categories";
+import { Icon } from 'astro-icon/components'
+import { siteConfig } from '../config'
+import { CATEGORY_LIST } from '../lib/categories'
+import { url } from '../utils/url-utils'
+import LightDarkSwitch from './LightDarkSwitch.svelte'
+import Search from './Search.svelte'
+import DisplaySettings from './widget/DisplaySettings.svelte'
+import NavMenuPanel from './widget/NavMenuPanel.astro'
 
-const className = Astro.props.class;
-const currentPath = Astro.url.pathname;
+const className = Astro.props.class
+const currentPath = Astro.url.pathname
 
 const isActive = (path: string) => {
-    if (path === '/') return currentPath === '/' || currentPath === '';
-    return currentPath.startsWith(path);
-};
+  if (path === '/') return currentPath === '/' || currentPath === ''
+  return currentPath.startsWith(path)
+}
 
 // Para el menú mobile usamos los links principales (sin megamenú)
 const mobileLinks = [
-    { name: 'Inicio',      url: '/',            external: false },
-    { name: 'Arquitectura', url: '/categorias/arquitectura/',     external: false },
-    { name: 'Construcción', url: '/categorias/construccion/',     external: false },
-    { name: 'Maquinaria',   url: '/categorias/maquinaria-pesada/', external: false },
-    { name: 'Ingeniería',   url: '/categorias/ingenieria-basica/', external: false },
-    { name: 'Glosario',     url: '/glosario/',                    external: false },
-    { name: 'Sobre',        url: '/about/',                       external: false },
-];
+  { name: 'Inicio', url: '/', external: false },
+  { name: 'Arquitectura', url: '/categorias/arquitectura/', external: false },
+  { name: 'Construcción', url: '/categorias/construccion/', external: false },
+  {
+    name: 'Maquinaria',
+    url: '/categorias/maquinaria-pesada/',
+    external: false,
+  },
+  {
+    name: 'Ingeniería',
+    url: '/categorias/ingenieria-basica/',
+    external: false,
+  },
+  { name: 'Glosario', url: '/glosario/', external: false },
+  { name: 'Sobre', url: '/about/', external: false },
+]
 ---
 <header
     class:list={[
@@ -42,7 +50,7 @@ const mobileLinks = [
                 alt={siteConfig.title}
                 width="2172"
                 height="724"
-                class="block dark:hidden h-11 md:h-12 w-auto"
+                class="block dark:hidden h-14 md:h-14 w-auto"
                 fetchpriority="high"
             />
             <img
@@ -50,7 +58,7 @@ const mobileLinks = [
                 alt={siteConfig.title}
                 width="2172"
                 height="724"
-                class="hidden dark:block h-11 md:h-12 w-auto"
+                class="hidden dark:block h-14 md:h-14 w-auto"
                 fetchpriority="high"
             />
         </a>

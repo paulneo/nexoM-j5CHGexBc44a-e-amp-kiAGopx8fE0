@@ -92,6 +92,41 @@ const siteLocale = localeMap[siteConfig.lang] ?? siteConfig.lang.replace('-', '_
 
 <link rel="sitemap" href="/sitemap-index.xml" />
 
+<script type="application/ld+json" set:html={JSON.stringify({
+  "@context": "https://schema.org",
+  "@type": "Organization",
+  "name": siteConfig.title,
+  "alternateName": "Nexo Mundial Blog",
+  "url": new URL('/', Astro.site).toString(),
+  "logo": new URL('/logo-mark-light.png', Astro.site).toString(),
+  "description": siteConfig.subtitle,
+  "sameAs": [
+    "https://www.facebook.com/nexomundial2/",
+    "https://www.instagram.com/nxmundial2024/",
+    "https://www.tiktok.com/@nexomundial2024"
+  ]
+})}></script>
+
+<script type="application/ld+json" set:html={JSON.stringify({
+  "@context": "https://schema.org",
+  "@type": "WebSite",
+  "name": siteConfig.title,
+  "url": new URL('/', Astro.site).toString(),
+  "inLanguage": siteConfig.lang,
+  "publisher": {
+    "@type": "Organization",
+    "name": siteConfig.title
+  },
+  "potentialAction": {
+    "@type": "SearchAction",
+    "target": {
+      "@type": "EntryPoint",
+      "urlTemplate": new URL('/?q={search_term_string}', Astro.site).toString()
+    },
+    "query-input": "required name=search_term_string"
+  }
+})}></script>
+
 {isProd && (
   <>
     <script is:inline>
