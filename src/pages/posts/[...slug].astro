@@ -254,6 +254,8 @@ const tagsList = (entry.data.tags as string[] | undefined) ?? [];
         <ShareButtons
             title={entry.data.title}
             url={new URL(`/posts/${entry.slug}/`, Astro.site).toString()}
+            description={entry.data.description}
+            tags={entry.data.tags ?? []}
         />
 
         <!-- Volver a categoría -->

@@ -4,14 +4,29 @@ import { Icon } from 'astro-icon/components'
 interface Props {
   title: string
   url: string
+  description?: string
+  tags?: string[]
   variant?: 'inline' | 'compact'
 }
 
-const { title, url, variant = 'inline' } = Astro.props
+const { title, url, description = '', tags = [], variant = 'inline' } = Astro.props
 
 const encodedUrl = encodeURIComponent(url)
 const encodedTitle = encodeURIComponent(title)
-const encodedShare = encodeURIComponent(`${title} ${url}`)
+const encodedDescription = encodeURIComponent(description)
+// WhatsApp/Telegram/email: título + descripción + URL en un solo bloque
+const encodedShare = encodeURIComponent(
+  description ? `${title}\n\n${description}\n\n${url}` : `${title} ${url}`,
+)
+// X/Twitter: título + tags hashtag-style (X soporta varios hashtags, separados por coma)
+const xHashtags = tags.length
+  ? `&hashtags=${tags.slice(0, 3).map((t) => t.replace(/-/g, '')).join(',')}`
+  : ''
+// Facebook acepta un solo hashtag (con #) y un quote pre-cargado en el post
+const fbHashtag = tags.length ? `&hashtag=${encodeURIComponent('#' + tags[0].replace(/-/g, ''))}` : ''
+const fbQuote = description ? `&quote=${encodedDescription}` : ''
+const emailBody = description ? `${title}\n\n${description}\n\nLeer artículo: ${url}` : `${title}\n\n${url}`
+const encodedEmailBody = encodeURIComponent(emailBody)
 
 const networks = [
   {
@@ -28,19 +43,19 @@ const networks = [
   },
   {
     name: 'X',
-    href: `https://x.com/intent/tweet?text=${encodedTitle}&url=${encodedUrl}`,
+    href: `https://x.com/intent/tweet?text=${encodedTitle}&url=${encodedUrl}${xHashtags}`,
     icon: 'fa6-brands:x-twitter',
     hover: 'hover:bg-black hover:text-white hover:border-black dark:hover:bg-white dark:hover:text-black dark:hover:border-white',
   },
   {
     name: 'Facebook',
-    href: `https://www.facebook.com/sharer/sharer.php?u=${encodedUrl}`,
+    href: `https://www.facebook.com/sharer/sharer.php?u=${encodedUrl}${fbQuote}${fbHashtag}`,
     icon: 'fa6-brands:facebook-f',
     hover: 'hover:bg-[#1877F2] hover:text-white hover:border-[#1877F2]',
   },
   {
     name: 'Email',
-    href: `mailto:?subject=${encodedTitle}&body=${encodedShare}`,
+    href: `mailto:?subject=${encodedTitle}&body=${encodedEmailBody}`,
     icon: 'material-symbols:mail-outline',
     hover: 'hover:bg-[var(--primary)] hover:text-white hover:border-[var(--primary)]',
   },
