@@ -13,9 +13,12 @@ import { defineCollection, reference, z } from 'astro:content'
 const FORMATOS = ['guia', 'concepto', 'comparativa', 'resumen', 'glosario', 'tutorial'] as const
 const NIVELES = ['basico', 'intermedio', 'avanzado'] as const
 
+// url: acepta URL válida o string vacío (Sveltia CMS escribe "" cuando
+// el editor deja el campo vacío, en vez de omitirlo). Sin esta tolerancia
+// el build rompe cada vez que se guarda un post desde el CMS.
 const sourceSchema = z.object({
   title: z.string(),
-  url: z.string().url().optional(),
+  url: z.union([z.string().url(), z.literal('')]).optional(),
   author: z.string().optional(),
   year: z.number().int().optional(),
 })
