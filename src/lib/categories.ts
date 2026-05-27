@@ -51,9 +51,9 @@ export const CATEGORIES: Record<string, CategoryMeta> = {
   },
   'ingenieria-basica': {
     slug: 'ingenieria-basica',
-    label: 'Ingeniería básica',
+    label: 'Ingeniería',
     short: 'Ingeniería',
-    description: 'Conceptos transversales de ingeniería civil, estructural y de suelos.',
+    description: 'Conceptos técnicos aplicados a obra y al rubro: estructural, suelos, hidráulica, materiales, minería y sostenibilidad.',
     icon: 'material-symbols:engineering',
     bg: 'bg-violet-100 dark:bg-violet-900/30',
     text: 'text-violet-700 dark:text-violet-300',
