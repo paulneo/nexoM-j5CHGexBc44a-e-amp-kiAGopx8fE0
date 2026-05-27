@@ -1,26 +1,30 @@
 ---
-title: "Qué es un plano arquitectónico y cómo se lee"
+title: Qué es un plano arquitectónico y cómo se lee
 published: 2026-05-04
 updatedAt: 2026-05-04
 draft: false
-description: "Un plano arquitectónico es un dibujo técnico a escala que describe un edificio. Te explicamos los símbolos, escalas y elementos básicos para empezar a leerlos."
+featured: false
+description: Un plano arquitectónico es un dibujo técnico a escala que describe un edificio. Te explicamos los símbolos, escalas y elementos básicos para empezar a leerlos.
 category: arquitectura
-tags: [planos, dibujo-tecnico, principiantes]
 formato: concepto
 nivel: basico
-featured: false
+tags:
+  - planos
+  - dibujo-tecnico
+  - principiantes
+image: /_uploads/que-es-un-plano-arquitectonico.webp
 author: jean-paul
-reviewedBy: jean-paul
 aiAssisted: false
 faq:
-  - q: "¿Cómo sé qué pared es portante en un plano?"
-    a: "En la mayoría de planos arquitectónicos, los muros portantes se dibujan con un grosor mayor que las divisiones internas. Si hay duda, hay que mirar los planos estructurales: ahí aparecen las columnas y los muros de carga claramente identificados."
-  - q: "¿Qué significan las flechas en una escalera?"
-    a: "La flecha indica el sentido de subida. Empieza desde la huella inferior y apunta hacia arriba, hacia el descanso o el piso superior. Junto a la flecha suele ir un número que indica los escalones."
-  - q: "¿Qué es la línea de tierra en un plano?"
-    a: "Es la línea que representa el nivel del suelo natural antes de construir. Sirve como referencia para indicar profundidades de cimentación, sótanos o desniveles del proyecto."
+  - q: ¿Cómo sé qué pared es portante en un plano?
+    a: 'En la mayoría de planos arquitectónicos, los muros portantes se dibujan con un grosor mayor que las divisiones internas. Si hay duda, hay que mirar los planos estructurales: ahí aparecen las columnas y los muros de carga claramente identificados.'
+  - q: ¿Qué significan las flechas en una escalera?
+    a: La flecha indica el sentido de subida. Empieza desde la huella inferior y apunta hacia arriba, hacia el descanso o el piso superior. Junto a la flecha suele ir un número que indica los escalones.
+  - q: ¿Qué es la línea de tierra en un plano?
+    a: Es la línea que representa el nivel del suelo natural antes de construir. Sirve como referencia para indicar profundidades de cimentación, sótanos o desniveles del proyecto.
 related:
   - tipos-de-planos-arquitectonicos
+reviewedBy: jean-paul
 ---
 
 Un **plano arquitectónico** es un dibujo técnico, hecho a escala, que
@@ -55,7 +59,7 @@ Una planta es el tipo de plano más informativo. En ella aparecen:
 ## Símbolos básicos que vas a ver
 
 | Símbolo | Significa |
-|---|---|
+| --- | --- |
 | Línea gruesa cerrada | Muro |
 | Arco con línea recta | Puerta (el arco indica apertura) |
 | Líneas finas paralelas en muro | Ventana |
