@@ -322,6 +322,9 @@ const tagsList = (entry.data.tags as string[] | undefined) ?? [];
 }
 .prose-blog ul { list-style-type: disc; }
 .prose-blog ol { list-style-type: decimal; }
+.prose-blog li {
+    @apply text-black/80 dark:text-white/80;
+}
 .prose-blog li::marker {
     @apply text-[var(--primary)];
 }
