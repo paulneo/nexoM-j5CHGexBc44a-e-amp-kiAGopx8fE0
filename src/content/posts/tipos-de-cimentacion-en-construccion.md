@@ -1,28 +1,32 @@
 ---
-title: "Tipos de cimentación en construcción"
+title: Tipos de cimentación en construcción
 published: 2026-05-07
 updatedAt: 2026-05-07
 draft: false
-description: "Las cimentaciones superficiales y profundas explicadas con ejemplos prácticos. Cuándo usar zapatas, losas o pilotes según el suelo y la carga."
+featured: true
+description: Las cimentaciones superficiales y profundas explicadas con ejemplos prácticos. Cuándo usar zapatas, losas o pilotes según el suelo y la carga.
 category: construccion
-tags: [cimentacion, estructuras, obra]
 formato: guia
 nivel: basico
-featured: true
+tags:
+  - cimentacion
+  - estructuras
+  - obra
+image: /_uploads/tipos-de-cimentacion-en-construccion.webp
 author: jean-paul
-reviewedBy: jean-paul
 aiAssisted: false
 faq:
-  - q: "¿Cuál es la cimentación más usada en viviendas?"
-    a: "En viviendas unifamiliares de uno o dos pisos sobre suelos firmes, las zapatas aisladas son la opción más común. Si el suelo es más débil o la construcción más pesada, se usan zapatas corridas o losas de cimentación."
-  - q: "¿Cuándo se necesita cimentación profunda?"
-    a: "Cuando los estratos resistentes están a más de 4-5 metros de profundidad, cuando hay riesgo de licuación del suelo, o cuando la carga del edificio es muy alta y el suelo superficial no puede absorberla. En esos casos se usan pilotes o pilas."
-  - q: "¿Qué pasa si la cimentación es insuficiente?"
-    a: "Aparecen asentamientos diferenciales: la estructura se hunde más en una zona que en otra y se generan grietas en muros, fisuras en losas y, en casos graves, daño estructural. La cimentación es el componente menos visible de un edificio pero el más crítico."
+  - q: ¿Cuál es la cimentación más usada en viviendas?
+    a: En viviendas unifamiliares de uno o dos pisos sobre suelos firmes, las zapatas aisladas son la opción más común. Si el suelo es más débil o la construcción más pesada, se usan zapatas corridas o losas de cimentación.
+  - q: ¿Cuándo se necesita cimentación profunda?
+    a: Cuando los estratos resistentes están a más de 4-5 metros de profundidad, cuando hay riesgo de licuación del suelo, o cuando la carga del edificio es muy alta y el suelo superficial no puede absorberla. En esos casos se usan pilotes o pilas.
+  - q: ¿Qué pasa si la cimentación es insuficiente?
+    a: 'Aparecen asentamientos diferenciales: la estructura se hunde más en una zona que en otra y se generan grietas en muros, fisuras en losas y, en casos graves, daño estructural. La cimentación es el componente menos visible de un edificio pero el más crítico.'
 related:
   - que-es-el-hormigon-armado
   - tipos-de-suelo-en-ingenieria-civil
   - diferencia-entre-viga-y-columna
+reviewedBy: jean-paul
 ---
 
 La **cimentación** es la parte de la estructura que transmite las cargas del
