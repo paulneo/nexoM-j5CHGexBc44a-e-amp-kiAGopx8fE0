@@ -1,17 +1,23 @@
 # ════════════════════════════════════════════════════════════════════════
-# Decap CMS — Configuración del panel editorial de Nexo Mundial
+# Sveltia CMS — Configuración del panel editorial de Nexo Mundial
 # ════════════════════════════════════════════════════════════════════════
 #
-# Documentación: https://decapcms.org/docs/configuration-options/
-# Test localmente con:  pnpm dev  →  http://localhost:4321/admin/
-# (Para login local usa "Test Backend" — abajo está activado en dev.)
+# Documentación: https://github.com/sveltia/sveltia-cms
+# Test localmente: pnpm dev → http://localhost:4321/admin/ (requiere
+# correr `npx @sveltia/cms-proxy-server` en otra terminal para Local
+# Backend, o `local_backend: true` aquí abajo.)
 
 # ─── Backend ──────────────────────────────────────────────────────────
-# En producción: git-gateway + Netlify Identity (se activa desde el
-# panel de Netlify).
+# GitHub OAuth via Sveltia's hosted gateway (api.sveltia.dev). Funciona
+# en cualquier host estático (Vercel, Netlify, Cloudflare Pages, etc.)
+# sin requerir Netlify Identity ni infra propia. El login lo hace el
+# usuario con su cuenta de GitHub.
 backend:
-  name: git-gateway
+  name: github
+  repo: paulneo/nexoM-j5CHGexBc44a-e-amp-kiAGopx8fE0
   branch: main
+  base_url: https://api.sveltia.dev
+  auth_endpoint: /oauth/authorize
   commit_messages:
     create: 'editorial: nuevo post "{{slug}}"'
     update: 'editorial: actualizado "{{slug}}"'
