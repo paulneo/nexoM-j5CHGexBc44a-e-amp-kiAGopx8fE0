@@ -1,27 +1,31 @@
 ---
-title: "Errores comunes al operar maquinaria pesada en obra"
+title: Errores comunes al operar maquinaria pesada en obra
 published: 2026-04-29
 updatedAt: 2026-04-29
 draft: false
-description: "Los 10 errores más frecuentes al manejar excavadoras, retroexcavadoras y cargadores. Por qué ocurren, qué pasa cuando ocurren y cómo evitarlos."
+featured: false
+description: Los 10 errores más frecuentes al manejar excavadoras, retroexcavadoras y cargadores. Por qué ocurren, qué pasa cuando ocurren y cómo evitarlos.
 category: glosario-y-guias
-tags: [maquinaria-pesada, seguridad, operacion]
 formato: guia
 nivel: basico
-featured: false
+tags:
+  - maquinaria-pesada
+  - seguridad
+  - operacion
+image: /_uploads/errores-comunes-al-operar-maquinaria-pesada.webp
 author: jean-paul
-reviewedBy: jean-paul
 aiAssisted: false
 faq:
-  - q: "¿Quién es responsable de los daños por mala operación?"
-    a: "Depende de la legislación local, pero en general el operador es el responsable directo y la empresa contratista lo es solidariamente. Si hubo daños a terceros (servicios públicos, vecinos), suele entrar el seguro de responsabilidad civil de la obra."
-  - q: "¿Cuánto puede inclinar una excavadora antes de volcar?"
-    a: "Depende del modelo, pero la mayoría de excavadoras y retroexcavadoras de obra tienen un ángulo crítico de 15-20°. Trabajar en pendientes superiores requiere posicionamiento específico (pluma orientada hacia la pendiente, contrapeso compensado). En todo caso, el manual del fabricante manda."
-  - q: "¿Qué hago si golpeo un cable enterrado?"
-    a: "Detener la máquina inmediatamente. NO intentes liberarla tú mismo. Avisa a la compañía propietaria del servicio y mantén a todo el personal alejado. Un cable eléctrico puede seguir energizado y matar al operador o a un tercero. Esperar al equipo técnico es protocolo, no capricho."
+  - q: ¿Quién es responsable de los daños por mala operación?
+    a: Depende de la legislación local, pero en general el operador es el responsable directo y la empresa contratista lo es solidariamente. Si hubo daños a terceros (servicios públicos, vecinos), suele entrar el seguro de responsabilidad civil de la obra.
+  - q: ¿Cuánto puede inclinar una excavadora antes de volcar?
+    a: Depende del modelo, pero la mayoría de excavadoras y retroexcavadoras de obra tienen un ángulo crítico de 15-20°. Trabajar en pendientes superiores requiere posicionamiento específico (pluma orientada hacia la pendiente, contrapeso compensado). En todo caso, el manual del fabricante manda.
+  - q: ¿Qué hago si golpeo un cable enterrado?
+    a: Detener la máquina inmediatamente. NO intentes liberarla tú mismo. Avisa a la compañía propietaria del servicio y mantén a todo el personal alejado. Un cable eléctrico puede seguir energizado y matar al operador o a un tercero. Esperar al equipo técnico es protocolo, no capricho.
 related:
   - que-es-una-excavadora
   - diferencia-retroexcavadora-cargador-frontal
+reviewedBy: jean-paul
 ---
 
 La maquinaria pesada es responsable de buena parte de los accidentes
