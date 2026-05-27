@@ -1,5 +1,5 @@
 ---
-title: 'Tipos de suelo en construcción: clasificación, comportamiento y estudio geotécnico'
+title: 'Tipos de suelo en construcción: clasificación y comportamiento'
 published: 2026-05-01
 updatedAt: 2026-05-01
 draft: false
