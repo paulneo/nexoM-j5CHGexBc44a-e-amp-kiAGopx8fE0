@@ -24,7 +24,7 @@ backend:
   name: github
   repo: paulneo/nexoM-j5CHGexBc44a-e-amp-kiAGopx8fE0
   branch: main
-  # base_url: https://sveltia-cms-auth.<TU-SUBDOMAIN>.workers.dev
+  base_url: https://sveltia-cms-auth.nexomundial2024.workers.dev
   commit_messages:
     create: 'editorial: nuevo post "{{slug}}"'
     update: 'editorial: actualizado "{{slug}}"'
