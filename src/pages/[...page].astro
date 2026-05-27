@@ -93,13 +93,27 @@ const renderCard = (entry: any, size: 'sm' | 'md' | 'lg' = 'sm') => ({
                 {CATEGORY_LIST.map((cat) => (
                     <a
                         href={`/categorias/${cat.slug}/`}
-                        class={`group relative overflow-hidden rounded-2xl ${cat.bg} aspect-square md:aspect-[4/3] hover:-translate-y-1 hover:shadow-lg hover:shadow-black/10 transition-all duration-300`}
+                        class={`group relative overflow-hidden rounded-2xl aspect-square md:aspect-[4/3] hover:-translate-y-1 hover:shadow-lg hover:shadow-black/10 transition-all duration-300 ${cat.image ? 'bg-black/5 dark:bg-white/5' : cat.bg}`}
                     >
-                        <div class="absolute inset-0 flex flex-col items-center justify-center p-4">
-                            <div class={cat.text}>
-                                <Icon name={cat.icon} class="w-10 h-10 md:w-12 md:h-12 mb-2 opacity-90 group-hover:scale-110 transition-transform duration-300"></Icon>
-                            </div>
-                            <span class={`text-[0.78rem] md:text-sm font-bold text-center ${cat.text}`}>
+                        {cat.image && (
+                            <>
+                                <img
+                                    src={cat.image}
+                                    alt={cat.label}
+                                    loading="lazy"
+                                    decoding="async"
+                                    class="absolute inset-0 w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
+                                />
+                                <div class="absolute inset-0 bg-gradient-to-t from-black/75 via-black/30 to-transparent"></div>
+                            </>
+                        )}
+                        <div class:list={["absolute inset-0 flex flex-col p-4", cat.image ? 'justify-end' : 'items-center justify-center']}>
+                            {!cat.image && (
+                                <div class={cat.text}>
+                                    <Icon name={cat.icon} class="w-10 h-10 md:w-12 md:h-12 mb-2 opacity-90 group-hover:scale-110 transition-transform duration-300"></Icon>
+                                </div>
+                            )}
+                            <span class:list={["font-bold", cat.image ? 'text-white text-sm md:text-base drop-shadow-md' : `text-[0.78rem] md:text-sm text-center ${cat.text}`]}>
                                 {cat.short}
                             </span>
                         </div>

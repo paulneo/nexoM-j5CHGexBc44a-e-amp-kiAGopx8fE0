@@ -12,6 +12,7 @@ export type CategoryMeta = {
   bg: string             // tailwind bg class para fallback de cover
   text: string           // tailwind text class para iconos sobre el bg
   chip: string           // tailwind classes para el chip de categoría
+  image?: string         // path a la imagen del card del home, fallback si no existe
 }
 
 export const CATEGORIES: Record<string, CategoryMeta> = {
@@ -24,6 +25,7 @@ export const CATEGORIES: Record<string, CategoryMeta> = {
     bg: 'bg-blue-100 dark:bg-blue-900/30',
     text: 'text-blue-700 dark:text-blue-300',
     chip: 'text-blue-700 bg-blue-50 dark:text-blue-300 dark:bg-blue-900/30',
+    image: '/images/categories/arquitectura.webp',
   },
   'construccion': {
     slug: 'construccion',
@@ -34,6 +36,7 @@ export const CATEGORIES: Record<string, CategoryMeta> = {
     bg: 'bg-orange-100 dark:bg-orange-900/30',
     text: 'text-orange-700 dark:text-orange-300',
     chip: 'text-orange-700 bg-orange-50 dark:text-orange-300 dark:bg-orange-900/30',
+    image: '/images/categories/construccion.webp',
   },
   'maquinaria-pesada': {
     slug: 'maquinaria-pesada',
@@ -44,6 +47,7 @@ export const CATEGORIES: Record<string, CategoryMeta> = {
     bg: 'bg-amber-100 dark:bg-amber-900/30',
     text: 'text-amber-700 dark:text-amber-300',
     chip: 'text-amber-800 bg-amber-50 dark:text-amber-300 dark:bg-amber-900/30',
+    image: '/images/categories/maquinaria-pesada.webp',
   },
   'ingenieria-basica': {
     slug: 'ingenieria-basica',
@@ -54,6 +58,7 @@ export const CATEGORIES: Record<string, CategoryMeta> = {
     bg: 'bg-violet-100 dark:bg-violet-900/30',
     text: 'text-violet-700 dark:text-violet-300',
     chip: 'text-violet-700 bg-violet-50 dark:text-violet-300 dark:bg-violet-900/30',
+    image: '/images/categories/ingenieria-basica.webp',
   },
   'glosario-y-guias': {
     slug: 'glosario-y-guias',
@@ -64,6 +69,7 @@ export const CATEGORIES: Record<string, CategoryMeta> = {
     bg: 'bg-emerald-100 dark:bg-emerald-900/30',
     text: 'text-emerald-700 dark:text-emerald-300',
     chip: 'text-emerald-700 bg-emerald-50 dark:text-emerald-300 dark:bg-emerald-900/30',
+    image: '/images/categories/glosario-y-guias.webp',
   },
 }
 
