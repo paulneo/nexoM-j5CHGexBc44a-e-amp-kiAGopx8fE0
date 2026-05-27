@@ -8,7 +8,7 @@ import { LinkPreset } from './types/config'
 
 export const siteConfig: SiteConfig = {
   title: 'Nexo Mundial',
-  subtitle: 'Conocimiento técnico, explicado simple.',
+  subtitle: 'Conocimiento técnico de arquitectura, construcción, maquinaria pesada e ingeniería, explicado simple para Latinoamérica.',
   lang: 'es',
   themeColor: {
     hue: 170,         // verde teal técnico (≈ #0E7C66)
