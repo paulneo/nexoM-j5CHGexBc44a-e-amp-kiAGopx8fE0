@@ -1,27 +1,31 @@
 ---
-title: "Qué es una excavadora y para qué sirve"
+title: Qué es una excavadora y para qué sirve
 published: 2026-05-06
 updatedAt: 2026-05-06
 draft: false
-description: "La excavadora es la máquina más versátil de una obra. Te explicamos qué es, sus tipos principales y cuándo conviene usar cada uno."
+featured: true
+description: La excavadora es la máquina más versátil de una obra. Te explicamos qué es, sus tipos principales y cuándo conviene usar cada uno.
 category: maquinaria-pesada
-tags: [excavadora, movimiento-tierras, maquinaria-pesada]
 formato: concepto
 nivel: basico
-featured: true
+tags:
+  - excavadora
+  - movimiento-tierras
+  - maquinaria-pesada
+image: /_uploads/que-es-una-excavadora.webp
 author: jean-paul
-reviewedBy: jean-paul
 aiAssisted: false
 faq:
-  - q: "¿Cuál es la diferencia entre una excavadora y una retroexcavadora?"
-    a: "La excavadora es una máquina dedicada al movimiento de tierras con un brazo y un cucharón frontal montados sobre un cuerpo giratorio. La retroexcavadora es una máquina mixta: tiene un cargador frontal y un brazo excavador trasero más pequeño. La excavadora es más potente y específica; la retroexcavadora es más versátil pero menos productiva en excavación."
-  - q: "¿Qué tamaño de excavadora necesito para una casa?"
-    a: "Para excavación de cimientos de una vivienda unifamiliar, una mini excavadora (1.5 a 6 toneladas) suele ser suficiente y tiene la ventaja de pasar por accesos estrechos. Para excavaciones más profundas o terrenos duros, una excavadora compacta o mediana (7 a 14 toneladas) es la elección habitual."
-  - q: "¿Una excavadora puede demoler edificios?"
-    a: "Sí, pero requiere accesorios específicos: martillo hidráulico para demolición de hormigón, cizallas para acero, o cucharones de demolición. La excavadora estándar está optimizada para excavar, no para demoler — usar el accesorio incorrecto reduce la vida útil del equipo."
+  - q: ¿Cuál es la diferencia entre una excavadora y una retroexcavadora?
+    a: 'La excavadora es una máquina dedicada al movimiento de tierras con un brazo y un cucharón frontal montados sobre un cuerpo giratorio. La retroexcavadora es una máquina mixta: tiene un cargador frontal y un brazo excavador trasero más pequeño. La excavadora es más potente y específica; la retroexcavadora es más versátil pero menos productiva en excavación.'
+  - q: ¿Qué tamaño de excavadora necesito para una casa?
+    a: Para excavación de cimientos de una vivienda unifamiliar, una mini excavadora (1.5 a 6 toneladas) suele ser suficiente y tiene la ventaja de pasar por accesos estrechos. Para excavaciones más profundas o terrenos duros, una excavadora compacta o mediana (7 a 14 toneladas) es la elección habitual.
+  - q: ¿Una excavadora puede demoler edificios?
+    a: 'Sí, pero requiere accesorios específicos: martillo hidráulico para demolición de hormigón, cizallas para acero, o cucharones de demolición. La excavadora estándar está optimizada para excavar, no para demoler — usar el accesorio incorrecto reduce la vida útil del equipo.'
 related:
   - diferencia-retroexcavadora-cargador-frontal
   - tipos-maquinaria-pesada-construccion
+reviewedBy: jean-paul
 ---
 
 Una **excavadora** es una máquina pesada diseñada para mover grandes volúmenes
@@ -52,7 +56,7 @@ El uso más obvio es **excavar**, pero la versatilidad de la máquina se extiend
 mucho más:
 
 | Tarea | Cuándo se usa | Accesorio típico |
-|---|---|---|
+| --- | --- | --- |
 | Excavación de cimientos | Apertura de zanjas y huecos para cimentación | Cucharón estándar |
 | Movimiento de tierras | Nivelación y traslado de grandes volúmenes | Cucharón estándar |
 | Demolición | Derribo controlado de estructuras | Martillo hidráulico, cizalla |
@@ -66,8 +70,8 @@ una pinza o incluso una herramienta de precisión para acabados.
 
 ## Tipos de excavadora
 
-No todas las excavadoras son iguales. Se clasifican principalmente por **peso
-operativo**, que determina la potencia y el tipo de obra para el que están
+No todas las excavadoras son iguales. Se clasifican principalmente por \*\*peso
+operativo\*\*, que determina la potencia y el tipo de obra para el que están
 hechas.
 
 ### Mini excavadoras (1 - 6 toneladas)
@@ -120,8 +124,8 @@ La elección depende de tres factores:
 3. **Tipo de terreno**: terrenos blandos o pendientes piden orugas; obra
    urbana con desplazamientos frecuentes piden ruedas.
 
-La regla práctica de campo: **siempre conviene una talla por debajo de lo que
-crees que necesitas, no por encima**. Una excavadora sobredimensionada cuesta
+La regla práctica de campo: \*\*siempre conviene una talla por debajo de lo que
+crees que necesitas, no por encima\*\*. Una excavadora sobredimensionada cuesta
 más por hora, consume más combustible y puede no caber donde se necesita.
 
 ## Errores comunes al trabajar con excavadoras
