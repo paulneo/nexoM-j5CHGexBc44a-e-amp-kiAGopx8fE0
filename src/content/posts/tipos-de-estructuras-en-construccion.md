@@ -1,39 +1,43 @@
 ---
-title: "Tipos de estructuras en construcción"
+title: Tipos de estructuras en construcción
 published: 2026-05-26
 updatedAt: 2026-05-26
 draft: false
-description: "Cómo se clasifican las estructuras de un edificio por material y por sistema estructural, qué ventajas y limitaciones tiene cada una, y cómo se elige."
+featured: false
+description: Cómo se clasifican las estructuras de un edificio por material y por sistema estructural, qué ventajas y limitaciones tiene cada una, y cómo se elige.
 category: ingenieria-basica
-tags: [estructuras, materiales, construccion]
 formato: guia
 nivel: basico
-featured: false
+tags:
+  - estructuras
+  - materiales
+  - construccion
+image: /_uploads/tipos-de-estructuras-en-construccion.webp
 author: jean-paul
-reviewedBy: jean-paul
 aiAssisted: true
 faq:
-  - q: "¿Cuál es la diferencia entre estructura y cimentación?"
-    a: "La estructura es el conjunto de elementos (columnas, vigas, losas, muros) que sostiene el edificio sobre el terreno. La cimentación es la parte de la estructura que se apoya en el suelo y reparte las cargas hacia él. La cimentación es estructura, pero no toda la estructura es cimentación."
-  - q: "¿Qué sistema estructural es más económico para una vivienda?"
-    a: "Para viviendas de uno o dos pisos sobre suelo firme, la mampostería confinada (muros portantes de ladrillo o bloque reforzados con vigas y columnas de hormigón) suele ser la opción más económica. Para edificios de más altura, el sistema aporticado de hormigón armado es el estándar en la mayoría de Latinoamérica."
-  - q: "¿Se puede tirar abajo cualquier muro de una casa?"
-    a: "No. Los muros divisorios pueden eliminarse, pero los muros portantes sostienen cargas. Tirar abajo un muro portante sin refuerzo puede causar fallas estructurales graves. Antes de cualquier modificación, un profesional debe verificar planos estructurales y confirmar si el muro carga peso o no."
-  - q: "¿Qué dura más, una estructura de hormigón o una de acero?"
-    a: "Bien diseñadas y mantenidas, ambas duran más de 100 años. El hormigón armado es más resistente al fuego y a la humedad sin mantenimiento, pero puede sufrir carbonatación o corrosión de la armadura. El acero exige protección contra fuego y corrosión, pero es más fácil de reforzar o reemplazar componentes. La durabilidad depende más del mantenimiento que del material."
-  - q: "¿Qué tipo de estructura conviene para una casa en zona sísmica?"
-    a: "En zonas de alta sismicidad lo más usado es el hormigón armado con estructura aporticada y muros de corte, o mampostería confinada para casas pequeñas, siempre siguiendo el reglamento sísmico local. El acero también es buena opción por su ductilidad. Lo crítico no es el material sino el diseño según norma sísmica y la calidad de ejecución."
+  - q: ¿Cuál es la diferencia entre estructura y cimentación?
+    a: La estructura es el conjunto de elementos (columnas, vigas, losas, muros) que sostiene el edificio sobre el terreno. La cimentación es la parte de la estructura que se apoya en el suelo y reparte las cargas hacia él. La cimentación es estructura, pero no toda la estructura es cimentación.
+  - q: ¿Qué sistema estructural es más económico para una vivienda?
+    a: Para viviendas de uno o dos pisos sobre suelo firme, la mampostería confinada (muros portantes de ladrillo o bloque reforzados con vigas y columnas de hormigón) suele ser la opción más económica. Para edificios de más altura, el sistema aporticado de hormigón armado es el estándar en la mayoría de Latinoamérica.
+  - q: ¿Se puede tirar abajo cualquier muro de una casa?
+    a: No. Los muros divisorios pueden eliminarse, pero los muros portantes sostienen cargas. Tirar abajo un muro portante sin refuerzo puede causar fallas estructurales graves. Antes de cualquier modificación, un profesional debe verificar planos estructurales y confirmar si el muro carga peso o no.
+  - q: ¿Qué dura más, una estructura de hormigón o una de acero?
+    a: Bien diseñadas y mantenidas, ambas duran más de 100 años. El hormigón armado es más resistente al fuego y a la humedad sin mantenimiento, pero puede sufrir carbonatación o corrosión de la armadura. El acero exige protección contra fuego y corrosión, pero es más fácil de reforzar o reemplazar componentes. La durabilidad depende más del mantenimiento que del material.
+  - q: ¿Qué tipo de estructura conviene para una casa en zona sísmica?
+    a: En zonas de alta sismicidad lo más usado es el hormigón armado con estructura aporticada y muros de corte, o mampostería confinada para casas pequeñas, siempre siguiendo el reglamento sísmico local. El acero también es buena opción por su ductilidad. Lo crítico no es el material sino el diseño según norma sísmica y la calidad de ejecución.
 sources:
-  - title: "Diseño de estructuras de concreto armado"
-    author: "Teodoro E. Harmsen"
-  - title: "ACI 318 — Requisitos de Reglamento para Concreto Estructural"
-    author: "American Concrete Institute"
-  - title: "Eurocódigo 2 — Proyecto de estructuras de hormigón"
-    author: "Comité Europeo de Normalización"
+  - title: Diseño de estructuras de concreto armado
+    author: Teodoro E. Harmsen
+  - title: ACI 318 — Requisitos de Reglamento para Concreto Estructural
+    author: American Concrete Institute
+  - title: Eurocódigo 2 — Proyecto de estructuras de hormigón
+    author: Comité Europeo de Normalización
 related:
   - diferencia-entre-viga-y-columna
   - tipos-de-suelo-en-ingenieria-civil
   - tipos-de-cimentacion-en-construccion
+reviewedBy: jean-paul
 ---
 
 La **estructura** de un edificio es su esqueleto. Es el conjunto de
