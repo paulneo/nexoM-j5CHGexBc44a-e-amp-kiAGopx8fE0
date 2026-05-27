@@ -33,20 +33,35 @@ for (const p of posts) {
         {CATEGORY_LIST.map(cat => (
             <a
                 href={`/categorias/${cat.slug}/`}
-                class={`group block rounded-2xl p-7 md:p-8 ${cat.bg} hover:scale-[1.01] transition`}
+                class:list={["group relative block overflow-hidden rounded-2xl p-7 md:p-8 min-h-[220px] md:min-h-[260px] hover:scale-[1.01] transition", cat.image ? '' : cat.bg]}
             >
-                <div class={`${cat.text} mb-4`}>
-                    <Icon name={cat.icon} class="w-10 h-10 md:w-12 md:h-12 opacity-90"></Icon>
+                {cat.image && (
+                    <>
+                        <img
+                            src={cat.image}
+                            alt=""
+                            role="presentation"
+                            loading="lazy"
+                            decoding="async"
+                            class="absolute inset-0 w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
+                        />
+                        <div class="absolute inset-0 bg-gradient-to-t from-black/85 via-black/55 to-black/20"></div>
+                    </>
+                )}
+                <div class:list={["relative", cat.image ? 'text-white' : '']}>
+                    <div class:list={["mb-4", cat.image ? 'text-white/90' : cat.text]}>
+                        <Icon name={cat.icon} class="w-10 h-10 md:w-12 md:h-12 opacity-90"></Icon>
+                    </div>
+                    <h2 class:list={["text-xl md:text-2xl font-bold mb-2 tracking-tight", cat.image ? 'text-white drop-shadow-md' : cat.text]}>
+                        {cat.label}
+                    </h2>
+                    <p class:list={["text-sm md:text-base leading-relaxed mb-3", cat.image ? 'text-white/85' : 'text-black/65 dark:text-white/65']}>
+                        {cat.description}
+                    </p>
+                    <span class:list={["text-xs uppercase tracking-[0.14em] font-semibold", cat.image ? 'text-white/85' : `${cat.text} opacity-80`]}>
+                        {counts[cat.slug] ?? 0} {counts[cat.slug] === 1 ? 'artículo' : 'artículos'} →
+                    </span>
                 </div>
-                <h2 class={`text-xl md:text-2xl font-bold mb-2 tracking-tight ${cat.text}`}>
-                    {cat.label}
-                </h2>
-                <p class="text-sm md:text-base text-black/65 dark:text-white/65 leading-relaxed mb-3">
-                    {cat.description}
-                </p>
-                <span class={`text-xs uppercase tracking-[0.14em] font-semibold ${cat.text} opacity-80`}>
-                    {counts[cat.slug] ?? 0} {counts[cat.slug] === 1 ? 'artículo' : 'artículos'} →
-                </span>
             </a>
         ))}
     </div>
