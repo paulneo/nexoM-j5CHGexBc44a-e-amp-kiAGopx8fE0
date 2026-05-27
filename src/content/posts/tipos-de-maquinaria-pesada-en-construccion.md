@@ -1,39 +1,44 @@
 ---
-title: "Tipos de maquinaria pesada en construcción"
+title: Tipos de maquinaria pesada en construcción
 published: 2026-05-26
 updatedAt: 2026-05-26
 draft: false
-description: "Las familias de maquinaria pesada en obra: excavación, movimiento de tierras, compactación, transporte, elevación y pavimentación, con criterios para elegir cada equipo."
+featured: false
+description: 'Las familias de maquinaria pesada en obra: excavación, movimiento de tierras, compactación, transporte, elevación y pavimentación, con criterios para elegir cada equipo.'
 category: maquinaria-pesada
-tags: [maquinaria-pesada, equipos-construccion, movimiento-tierras]
 formato: guia
 nivel: basico
-featured: false
+tags:
+  - maquinaria-pesada
+  - equipos-construccion
+  - movimiento-tierras
+image: /_uploads/tipos-de-maquinaria-pesada-en-construccion.webp
 author: jean-paul
-reviewedBy: jean-paul
 aiAssisted: true
 faq:
-  - q: "¿Cuál es la maquinaria pesada más usada en una obra?"
-    a: "La excavadora y el camión volquete son los equipos más comunes en obras de edificación y obra civil. La excavadora se usa para abrir cimientos, movimiento de tierras y demolición; el volquete para transportar tierra, escombros y materiales. En obras grandes se suman bulldozer, motoniveladora y rodillos compactadores."
-  - q: "¿Qué diferencia hay entre maquinaria pesada y maquinaria ligera?"
-    a: "La maquinaria pesada se distingue por su peso operativo (usualmente más de una tonelada), su uso de motores diésel de alta potencia y la necesidad de transporte especializado entre obras. La maquinaria ligera incluye herramientas como compactadoras manuales, mezcladoras de hormigón pequeñas o cortadoras de pavimento, que un operario puede mover sin equipos auxiliares."
-  - q: "¿Se necesita licencia para operar maquinaria pesada?"
-    a: "En la mayoría de países se exige certificación específica por tipo de máquina, no una licencia única. La normativa varía: en muchos países latinoamericanos se requiere un curso teórico-práctico avalado por una entidad reconocida y, para circular por vía pública, una licencia de conducir profesional. Consultá la normativa local antes de operar."
-  - q: "¿Qué máquina elijo para una obra residencial pequeña?"
-    a: "Para una vivienda unifamiliar suelen alcanzar una mini excavadora (1.5 a 6 toneladas) para cimientos, un camión volquete pequeño para transporte y, si hay losa, una mezcladora autocargante o una bomba para hormigón. El resto del trabajo pesado se subcontrata por horas a una empresa de movimiento de tierras."
-  - q: "¿Conviene comprar o alquilar maquinaria pesada?"
-    a: "Para empresas que mantienen alta utilización (más del 60-70% del tiempo) comprar tiende a ser rentable. Para obras puntuales o constructoras pequeñas el alquiler con o sin operador es la opción habitual: trasladás el costo de mantenimiento, depreciación y seguro al propietario del equipo y solo pagás las horas de uso real."
+  - q: ¿Cuál es la maquinaria pesada más usada en una obra?
+    a: La excavadora y el camión volquete son los equipos más comunes en obras de edificación y obra civil. La excavadora se usa para abrir cimientos, movimiento de tierras y demolición; el volquete para transportar tierra, escombros y materiales. En obras grandes se suman bulldozer, motoniveladora y rodillos compactadores.
+  - q: ¿Qué diferencia hay entre maquinaria pesada y maquinaria ligera?
+    a: La maquinaria pesada se distingue por su peso operativo (usualmente más de una tonelada), su uso de motores diésel de alta potencia y la necesidad de transporte especializado entre obras. La maquinaria ligera incluye herramientas como compactadoras manuales, mezcladoras de hormigón pequeñas o cortadoras de pavimento, que un operario puede mover sin equipos auxiliares.
+  - q: ¿Se necesita licencia para operar maquinaria pesada?
+    a: 'En la mayoría de países se exige certificación específica por tipo de máquina, no una licencia única. La normativa varía: en muchos países latinoamericanos se requiere un curso teórico-práctico avalado por una entidad reconocida y, para circular por vía pública, una licencia de conducir profesional. Consultá la normativa local antes de operar.'
+  - q: ¿Qué máquina elijo para una obra residencial pequeña?
+    a: Para una vivienda unifamiliar suelen alcanzar una mini excavadora (1.5 a 6 toneladas) para cimientos, un camión volquete pequeño para transporte y, si hay losa, una mezcladora autocargante o una bomba para hormigón. El resto del trabajo pesado se subcontrata por horas a una empresa de movimiento de tierras.
+  - q: ¿Conviene comprar o alquilar maquinaria pesada?
+    a: 'Para empresas que mantienen alta utilización (más del 60-70% del tiempo) comprar tiende a ser rentable. Para obras puntuales o constructoras pequeñas el alquiler con o sin operador es la opción habitual: trasladás el costo de mantenimiento, depreciación y seguro al propietario del equipo y solo pagás las horas de uso real.'
 sources:
-  - title: "Caterpillar Performance Handbook"
-    author: "Caterpillar Inc."
-  - title: "Construction Equipment Management"
-    author: "Douglas D. Gransberg, Calin M. Popescu, Richard C. Ryan"
-  - title: "Heavy Equipment Operations Manual"
-    author: "Associated General Contractors of America"
+  - title: Equipos para construcción — Manual del operador
+    author: Caterpillar Inc.
+  - title: Mecánica de suelos en la ingeniería práctica
+    author: Karl Terzaghi, Ralph B. Peck
+    year: 1948
+  - title: Heavy Equipment Operations Manual
+    author: Associated General Contractors of America
 related:
   - que-es-una-excavadora
   - diferencia-retroexcavadora-cargador-frontal
   - errores-comunes-al-operar-maquinaria-pesada
+reviewedBy: jean-paul
 ---
 
 La **maquinaria pesada** es el conjunto de equipos motorizados diseñados para
