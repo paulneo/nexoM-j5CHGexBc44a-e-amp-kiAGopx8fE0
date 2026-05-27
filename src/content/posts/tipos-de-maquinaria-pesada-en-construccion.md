@@ -28,11 +28,14 @@ faq:
     a: 'Para empresas que mantienen alta utilización (más del 60-70% del tiempo) comprar tiende a ser rentable. Para obras puntuales o constructoras pequeñas el alquiler con o sin operador es la opción habitual: trasladás el costo de mantenimiento, depreciación y seguro al propietario del equipo y solo pagás las horas de uso real.'
 sources:
   - title: Equipos para construcción — Manual del operador
+    url: ''
     author: Caterpillar Inc.
   - title: Mecánica de suelos en la ingeniería práctica
+    url: ''
     author: Karl Terzaghi, Ralph B. Peck
     year: 1948
   - title: Heavy Equipment Operations Manual
+    url: ''
     author: Associated General Contractors of America
 related:
   - que-es-una-excavadora
@@ -180,7 +183,7 @@ Casi todas las familias anteriores ofrecen modelos sobre **orugas** o sobre
 **ruedas**. La elección depende del terreno y la movilidad que necesites:
 
 | Característica | Orugas | Ruedas |
-|---|---|---|
+| --- | --- | --- |
 | Tracción en terreno blando | Excelente | Pobre |
 | Presión sobre el suelo | Baja (peso repartido) | Alta (concentrada) |
 | Velocidad de desplazamiento | Muy baja | Alta |
