@@ -12,7 +12,7 @@ tags:
   - retroexcavadora
   - cargador-frontal
   - comparativa
-image: /_uploads/diferencia-retroexcavadora-cargador-frontal.webp
+image: /images/posts/diferencia-retroexcavadora-cargador-frontal.webp
 author: jean-paul
 aiAssisted: false
 faq:

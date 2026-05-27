@@ -12,7 +12,7 @@ tags:
   - excavadora
   - movimiento-tierras
   - maquinaria-pesada
-image: /_uploads/que-es-una-excavadora.webp
+image: /images/posts/que-es-una-excavadora.webp
 author: jean-paul
 aiAssisted: false
 faq:

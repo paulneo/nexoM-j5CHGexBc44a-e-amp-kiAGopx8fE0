@@ -12,7 +12,7 @@ tags:
   - maquinaria-pesada
   - equipos-construccion
   - movimiento-tierras
-image: /_uploads/tipos-de-maquinaria-pesada-en-construccion.webp
+image: /images/posts/tipos-de-maquinaria-pesada-en-construccion.webp
 author: jean-paul
 aiAssisted: true
 faq:
