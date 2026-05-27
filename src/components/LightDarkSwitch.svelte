@@ -57,21 +57,27 @@ function hidePanel() {
 
     <div id="light-dark-panel" class="hidden lg:block absolute transition float-panel-closed top-11 -right-2 pt-5" >
         <div class="card-base float-panel p-2">
-            <button class="flex transition whitespace-nowrap items-center justify-start w-full btn-plain h-9 rounded-lg px-3 font-medium active:scale-95 mb-0.5"
+            <button role="menuitem"
+                    aria-label={i18n(I18nKey.lightMode)}
+                    class="flex transition whitespace-nowrap items-center justify-start w-full btn-plain h-9 rounded-lg px-3 font-medium active:scale-95 mb-0.5"
                     class:current-setting={mode === LIGHT_MODE}
                     on:click={() => switchScheme(LIGHT_MODE)}
             >
                 <Icon icon="material-symbols:wb-sunny-outline-rounded" class="text-[1.25rem] mr-3"></Icon>
                 {i18n(I18nKey.lightMode)}
             </button>
-            <button class="flex transition whitespace-nowrap items-center justify-start w-full btn-plain h-9 rounded-lg px-3 font-medium active:scale-95 mb-0.5"
+            <button role="menuitem"
+                    aria-label={i18n(I18nKey.darkMode)}
+                    class="flex transition whitespace-nowrap items-center justify-start w-full btn-plain h-9 rounded-lg px-3 font-medium active:scale-95 mb-0.5"
                     class:current-setting={mode === DARK_MODE}
                     on:click={() => switchScheme(DARK_MODE)}
             >
                 <Icon icon="material-symbols:dark-mode-outline-rounded" class="text-[1.25rem] mr-3"></Icon>
                 {i18n(I18nKey.darkMode)}
             </button>
-            <button class="flex transition whitespace-nowrap items-center justify-start w-full btn-plain h-9 rounded-lg px-3 font-medium active:scale-95"
+            <button role="menuitem"
+                    aria-label={i18n(I18nKey.systemMode)}
+                    class="flex transition whitespace-nowrap items-center justify-start w-full btn-plain h-9 rounded-lg px-3 font-medium active:scale-95"
                     class:current-setting={mode === AUTO_MODE}
                     on:click={() => switchScheme(AUTO_MODE)}
             >
