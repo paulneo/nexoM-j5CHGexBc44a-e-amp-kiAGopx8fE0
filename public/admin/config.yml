@@ -8,16 +8,23 @@
 # Backend, o `local_backend: true` aquí abajo.)
 
 # ─── Backend ──────────────────────────────────────────────────────────
-# GitHub OAuth via Sveltia's hosted gateway (api.sveltia.dev). Funciona
-# en cualquier host estático (Vercel, Netlify, Cloudflare Pages, etc.)
-# sin requerir Netlify Identity ni infra propia. El login lo hace el
-# usuario con su cuenta de GitHub.
+# GitHub OAuth via Sveltia CMS Authenticator (proxy desplegado en
+# Cloudflare Workers). El proxy es open source y se deploya con un
+# click desde: https://github.com/sveltia/sveltia-cms-auth
+#
+# Pasos:
+#   1. Deploy del worker → te da una URL tipo
+#      https://sveltia-cms-auth.<subdomain>.workers.dev
+#   2. Crear OAuth App en github.com/settings/applications/new con
+#      callback https://<worker-url>/callback
+#   3. Setear env vars en el worker: GITHUB_CLIENT_ID,
+#      GITHUB_CLIENT_SECRET, ALLOWED_DOMAINS=nexomundial.com,*.vercel.app
+#   4. Reemplazar base_url abajo con la URL real del worker.
 backend:
   name: github
   repo: paulneo/nexoM-j5CHGexBc44a-e-amp-kiAGopx8fE0
   branch: main
-  base_url: https://api.sveltia.dev
-  auth_endpoint: /oauth/authorize
+  # base_url: https://sveltia-cms-auth.<TU-SUBDOMAIN>.workers.dev
   commit_messages:
     create: 'editorial: nuevo post "{{slug}}"'
     update: 'editorial: actualizado "{{slug}}"'
