@@ -30,21 +30,32 @@ const otherCats = CATEGORY_LIST.filter(c => c.slug !== slug);
     description={cat.description}
 >
     <!-- Header -->
-    <header class={`mb-12 -mx-4 md:-mx-6 lg:-mx-8 px-4 md:px-6 lg:px-8 py-12 md:py-16 ${cat.bg}`}>
-        <div class="max-w-3xl">
-            <div class={`${cat.text} mb-4`}>
+    <header class:list={["relative overflow-hidden mb-12 -mx-4 md:-mx-6 lg:-mx-8 px-4 md:px-6 lg:px-8 py-12 md:py-20", cat.image ? '' : cat.bg]}>
+        {cat.image && (
+            <>
+                <img
+                    src={cat.image}
+                    alt={cat.label}
+                    decoding="async"
+                    class="absolute inset-0 w-full h-full object-cover"
+                />
+                <div class="absolute inset-0 bg-gradient-to-r from-black/85 via-black/55 to-black/20"></div>
+            </>
+        )}
+        <div class="relative max-w-3xl">
+            <div class:list={["mb-4", cat.image ? 'text-white/90' : cat.text]}>
                 <Icon name={cat.icon} class="w-12 h-12 md:w-14 md:h-14 opacity-90"></Icon>
             </div>
-            <p class={`text-[0.72rem] uppercase tracking-[0.18em] font-semibold mb-3 ${cat.text}`}>
+            <p class:list={["text-[0.72rem] uppercase tracking-[0.18em] font-semibold mb-3", cat.image ? 'text-white/85' : cat.text]}>
                 Categoría
             </p>
-            <h1 class={`text-4xl md:text-5xl font-bold tracking-tight leading-[1.1] mb-4 ${cat.text}`}>
+            <h1 class:list={["text-4xl md:text-5xl font-bold tracking-tight leading-[1.1] mb-4", cat.image ? 'text-white drop-shadow-md' : cat.text]}>
                 {cat.label}
             </h1>
-            <p class="text-lg text-black/70 dark:text-white/80 leading-relaxed max-w-2xl">
+            <p class:list={["text-lg leading-relaxed max-w-2xl", cat.image ? 'text-white/85' : 'text-black/70 dark:text-white/80']}>
                 {cat.description}
             </p>
-            <p class={`mt-5 text-sm font-medium ${cat.text} opacity-80`}>
+            <p class:list={["mt-5 text-sm font-medium", cat.image ? 'text-white/80' : `${cat.text} opacity-80`]}>
                 {posts.length} {posts.length === 1 ? 'artículo publicado' : 'artículos publicados'}
             </p>
         </div>
