@@ -1,39 +1,43 @@
 ---
-title: "Qué es BIM en construcción y por qué importa"
+title: Qué es BIM en construcción y por qué importa
 published: 2026-05-26
 updatedAt: 2026-05-26
 draft: false
-description: "BIM es mucho más que un modelo 3D: es una metodología que coordina diseño, costos, plazos y operación de un edificio en un mismo modelo digital."
+featured: false
+description: 'BIM es mucho más que un modelo 3D: es una metodología que coordina diseño, costos, plazos y operación de un edificio en un mismo modelo digital.'
 category: arquitectura
-tags: [bim, software-construccion, arquitectura]
 formato: concepto
 nivel: basico
-featured: false
+tags:
+  - bim
+  - software-construccion
+  - arquitectura
+image: /_uploads/que-es-bim-en-construccion.webp
 author: jean-paul
-reviewedBy: jean-paul
 aiAssisted: true
 faq:
-  - q: "¿Cuál es la diferencia entre BIM y CAD?"
-    a: "CAD (Computer-Aided Design) es dibujo asistido por computadora: líneas, polígonos y planos sin información detrás. BIM (Building Information Modeling) es un modelo paramétrico donde cada elemento tiene datos asociados (material, costo, espesor, fabricante). Si en CAD una pared es una línea, en BIM es un objeto que sabe que es una pared con esa estructura, ese aislamiento y esa función."
-  - q: "¿Qué software se usa para BIM?"
-    a: "Los más comunes son Autodesk Revit (estándar de facto en muchos países), Graphisoft ArchiCAD (popular en Europa y Latinoamérica), Bentley MicroStation/OpenBuildings, Allplan de Nemetschek y Tekla Structures para estructuras de acero. Para coordinación se usan Navisworks y Solibri; para modelado de instalaciones, Magicad o Linear."
-  - q: "¿Es obligatorio usar BIM?"
-    a: "En muchos países lo es para proyectos de obra pública. Reino Unido, Singapur, los países nórdicos, España y Chile entre otros, exigen BIM en proyectos públicos por encima de cierto monto. En el sector privado depende del cliente: las constructoras grandes y los desarrolladores serios suelen exigirlo, mientras que en obra pequeña sigue siendo opcional."
-  - q: "¿Para qué dimensiones de BIM (4D, 5D, 6D, 7D) sirven?"
-    a: "3D es el modelo geométrico. 4D agrega el tiempo: el modelo se asocia al cronograma y se puede simular la secuencia de obra. 5D suma costos: cambios en el modelo recalculan presupuesto. 6D incorpora sostenibilidad (energía, materiales). 7D es operación y mantenimiento del edificio una vez construido. En la práctica, los proyectos rara vez superan 5D."
-  - q: "¿Cuánto cuesta implementar BIM en una empresa pequeña?"
-    a: "La licencia anual de Revit ronda los 2.500-3.000 USD por usuario; ArchiCAD es similar. A eso hay que sumar formación (cursos de 40-80 horas por persona), una computadora capaz de mover modelos pesados (>16 GB RAM, GPU dedicada) y un protocolo BIM interno. Para una empresa de 5 personas, la inversión inicial suele estar entre 20.000 y 40.000 USD, recuperable en 1-2 años si hay flujo constante de proyectos."
+  - q: ¿Cuál es la diferencia entre BIM y CAD?
+    a: 'CAD (Computer-Aided Design) es dibujo asistido por computadora: líneas, polígonos y planos sin información detrás. BIM (Building Information Modeling) es un modelo paramétrico donde cada elemento tiene datos asociados (material, costo, espesor, fabricante). Si en CAD una pared es una línea, en BIM es un objeto que sabe que es una pared con esa estructura, ese aislamiento y esa función.'
+  - q: ¿Qué software se usa para BIM?
+    a: Los más comunes son Autodesk Revit (estándar de facto en muchos países), Graphisoft ArchiCAD (popular en Europa y Latinoamérica), Bentley MicroStation/OpenBuildings, Allplan de Nemetschek y Tekla Structures para estructuras de acero. Para coordinación se usan Navisworks y Solibri; para modelado de instalaciones, Magicad o Linear.
+  - q: ¿Es obligatorio usar BIM?
+    a: 'En muchos países lo es para proyectos de obra pública. Reino Unido, Singapur, los países nórdicos, España y Chile entre otros, exigen BIM en proyectos públicos por encima de cierto monto. En el sector privado depende del cliente: las constructoras grandes y los desarrolladores serios suelen exigirlo, mientras que en obra pequeña sigue siendo opcional.'
+  - q: ¿Para qué dimensiones de BIM (4D, 5D, 6D, 7D) sirven?
+    a: '3D es el modelo geométrico. 4D agrega el tiempo: el modelo se asocia al cronograma y se puede simular la secuencia de obra. 5D suma costos: cambios en el modelo recalculan presupuesto. 6D incorpora sostenibilidad (energía, materiales). 7D es operación y mantenimiento del edificio una vez construido. En la práctica, los proyectos rara vez superan 5D.'
+  - q: ¿Cuánto cuesta implementar BIM en una empresa pequeña?
+    a: La licencia anual de Revit ronda los 2.500-3.000 USD por usuario; ArchiCAD es similar. A eso hay que sumar formación (cursos de 40-80 horas por persona), una computadora capaz de mover modelos pesados (>16 GB RAM, GPU dedicada) y un protocolo BIM interno. Para una empresa de 5 personas, la inversión inicial suele estar entre 20.000 y 40.000 USD, recuperable en 1-2 años si hay flujo constante de proyectos.
 sources:
-  - title: "ISO 19650 — Organization and digitization of information about buildings"
-    author: "International Organization for Standardization"
-  - title: "BIM Handbook"
-    author: "Chuck Eastman, Paul Teicholz, Rafael Sacks, Ghang Lee"
-  - title: "Guía BIM para gestores públicos"
-    author: "PlanBIM Chile, Ministerio de Vivienda y Urbanismo"
+  - title: ISO 19650 — Organization and digitization of information about buildings
+    author: International Organization for Standardization
+  - title: BIM Handbook
+    author: Chuck Eastman, Paul Teicholz, Rafael Sacks, Ghang Lee
+  - title: Guía BIM para gestores públicos
+    author: PlanBIM Chile, Ministerio de Vivienda y Urbanismo
 related:
   - tipos-de-planos-arquitectonicos
   - que-es-un-plano-arquitectonico
   - tipos-de-estructuras-en-construccion
+reviewedBy: jean-paul
 ---
 
 **BIM** son las siglas de **Building Information Modeling** — Modelado
