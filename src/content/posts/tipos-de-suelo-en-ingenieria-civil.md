@@ -1,5 +1,5 @@
 ---
-title: 'Tipos de suelo en ingeniería civil: guía práctica'
+title: 'Tipos de suelo en construcción: clasificación, comportamiento y estudio geotécnico'
 published: 2026-05-01
 updatedAt: 2026-05-01
 draft: false
@@ -12,7 +12,7 @@ tags:
   - suelos
   - geotecnia
   - cimentacion
-image: /_uploads/tipos-de-suelo-en-ingenieria-civil.webp
+image: /images/posts/tipos-de-suelo-en-ingenieria-civil.webp
 author: jean-paul
 aiAssisted: false
 faq:

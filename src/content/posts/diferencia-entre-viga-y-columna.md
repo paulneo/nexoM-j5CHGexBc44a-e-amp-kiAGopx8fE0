@@ -12,7 +12,7 @@ tags:
   - viga
   - columna
   - estructuras
-image: /_uploads/diferencia-entre-viga-y-columna.webp
+image: /images/posts/diferencia-entre-viga-y-columna.webp
 author: jean-paul
 aiAssisted: false
 faq:

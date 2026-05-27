@@ -12,7 +12,7 @@ tags:
   - bim
   - software-construccion
   - arquitectura
-image: /_uploads/que-es-bim-en-construccion.webp
+image: /images/posts/que-es-bim-en-construccion.webp
 author: jean-paul
 aiAssisted: true
 faq:

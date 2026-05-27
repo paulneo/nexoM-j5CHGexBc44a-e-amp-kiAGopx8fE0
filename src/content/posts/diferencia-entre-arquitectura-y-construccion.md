@@ -12,7 +12,7 @@ tags:
   - arquitectura
   - construccion
   - profesiones
-image: /_uploads/iferencia-entre-arquitectura-y-construccion.webp
+image: /images/posts/diferencia-entre-arquitectura-y-construccion.webp
 author: jean-paul
 aiAssisted: true
 faq:
