@@ -1,12 +1,23 @@
 import {AUTO_MODE, DARK_MODE, DEFAULT_THEME, LIGHT_MODE} from "@constants/constants.ts";
 
 export function getDefaultHue(): number {
-  const fallback = '250'
+  const fallback = '170' // teal Nexo Mundial, no el azul 250 del template viejo
   const configCarrier = document.getElementById('config-carrier')
   return parseInt(configCarrier?.dataset.hue || fallback)
 }
 
+export function isHueFixed(): boolean {
+  const configCarrier = document.getElementById('config-carrier')
+  return configCarrier?.dataset.hueFixed === 'true'
+}
+
 export function getHue(): number {
+  // Si el sitio fija el hue por identidad de marca, ignorar localStorage
+  // y devolver siempre el del config. Esto evita que valores viejos
+  // (ej. 250 azul del template Fuwari) persistan en el browser.
+  if (isHueFixed()) {
+    return getDefaultHue()
+  }
   const stored = localStorage.getItem('hue')
   return stored ? parseInt(stored) : getDefaultHue()
 }
