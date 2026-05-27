@@ -12,7 +12,7 @@ tags:
   - cimentacion
   - zapata
   - hormigon-armado
-image: /_uploads/que-es-una-zapata-de-cimentacion.webp
+image: /images/posts/que-es-una-zapata-de-cimentacion.webp
 author: jean-paul
 aiAssisted: true
 faq:

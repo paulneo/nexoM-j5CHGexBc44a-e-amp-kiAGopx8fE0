@@ -12,7 +12,7 @@ tags:
   - hormigon
   - estructuras
   - materiales
-image: /_uploads/que-es-el-hormigon-armado.webp
+image: /images/posts/que-es-el-hormigon-armado.webp
 author: jean-paul
 aiAssisted: false
 faq:

@@ -12,7 +12,7 @@ tags:
   - planos
   - dibujo-tecnico
   - principiantes
-image: /_uploads/que-es-un-plano-arquitectonico.webp
+image: /images/posts/que-es-un-plano-arquitectonico.webp
 author: jean-paul
 aiAssisted: false
 faq:

@@ -12,7 +12,7 @@ tags:
   - encofrado
   - hormigon
   - construccion
-image: /_uploads/que-es-un-encofrado-y-tipos.webp
+image: /images/posts/que-es-un-encofrado-y-tipos.webp
 author: jean-paul
 aiAssisted: true
 faq:

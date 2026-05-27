@@ -12,7 +12,7 @@ tags:
   - mantenimiento
   - maquinaria-pesada
   - operacion
-image: /_uploads/mantenimiento-basico-de-maquinaria-pesada.webp
+image: /images/posts/mantenimiento-basico-de-maquinaria-pesada.webp
 author: jean-paul
 aiAssisted: true
 faq:

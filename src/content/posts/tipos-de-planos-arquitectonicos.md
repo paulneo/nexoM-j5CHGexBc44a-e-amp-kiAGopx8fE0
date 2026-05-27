@@ -1,5 +1,5 @@
 ---
-title: 'Tipos de planos arquitectónicos: guía visual'
+title: 'Tipos de planos arquitectónicos: para qué sirve cada uno'
 published: 2026-05-05
 updatedAt: 2026-05-05
 draft: false
@@ -12,7 +12,7 @@ tags:
   - planos
   - proyecto-arquitectonico
   - dibujo-tecnico
-image: /_uploads/tipos-de-planos-arquitectonicos.webp
+image: /images/posts/tipos-de-planos-arquitectonicos.webp
 author: jean-paul
 aiAssisted: false
 faq:

@@ -12,7 +12,7 @@ tags:
   - cimentacion
   - estructuras
   - obra
-image: /_uploads/tipos-de-cimentacion-en-construccion.webp
+image: /images/posts/tipos-de-cimentacion-en-construccion.webp
 author: jean-paul
 aiAssisted: false
 faq:

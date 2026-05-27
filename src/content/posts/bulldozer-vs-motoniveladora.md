@@ -13,7 +13,7 @@ tags:
   - motoniveladora
   - movimiento-tierras
   - maquinaria-pesada
-image: /_uploads/bulldozer-vs-motoniveladora.webp
+image: /images/posts/bulldozer-vs-motoniveladora.webp
 author: jean-paul
 aiAssisted: true
 faq:
