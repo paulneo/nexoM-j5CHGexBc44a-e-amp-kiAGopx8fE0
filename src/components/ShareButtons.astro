@@ -22,9 +22,11 @@ const encodedShare = encodeURIComponent(
 const xHashtags = tags.length
   ? `&hashtags=${tags.slice(0, 3).map((t) => t.replace(/-/g, '')).join(',')}`
   : ''
-// Facebook acepta un solo hashtag (con #) y un quote pre-cargado en el post
-const fbHashtag = tags.length ? `&hashtag=${encodeURIComponent('#' + tags[0].replace(/-/g, ''))}` : ''
-const fbQuote = description ? `&quote=${encodedDescription}` : ''
+// Facebook: usamos sharer.php solo con `u` para máxima compatibilidad.
+// El parámetro `quote` ya está deprecado (ignora) y agregarlo, junto
+// con `hashtag`, hace que sharer.php se cuelgue en "Publicando..." en
+// algunos casos. Mantenemos la URL mínima y la descripción + tags
+// viajan al portapapeles para que el editor pegue en el compose.
 const emailBody = description ? `${title}\n\n${description}\n\nLeer artículo: ${url}` : `${title}\n\n${url}`
 const encodedEmailBody = encodeURIComponent(emailBody)
 
@@ -49,11 +51,12 @@ const networks = [
   },
   {
     name: 'Facebook',
-    href: `https://www.facebook.com/sharer/sharer.php?u=${encodedUrl}${fbQuote}${fbHashtag}`,
+    href: `https://www.facebook.com/sharer/sharer.php?u=${encodedUrl}`,
     icon: 'fa6-brands:facebook-f',
     hover: 'hover:bg-[#1877F2] hover:text-white hover:border-[#1877F2]',
-    // Facebook deprecó quote en 2017 — copiamos texto al portapapeles
-    // como workaround para que el editor pueda pegar manualmente.
+    // sharer.php de FB se cuelga en 'Publicando...' cuando le pasamos
+    // quote/hashtag además de u. Dejamos solo u y copiamos el texto
+    // rico al portapapeles para que el editor lo pegue en el compose.
     copyOnClick: true,
   },
   {
