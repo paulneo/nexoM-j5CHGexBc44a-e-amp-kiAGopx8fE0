@@ -64,15 +64,3 @@ export const licenseConfig: LicenseConfig = {
   name: 'CC BY-NC-SA 4.0',
   url: 'https://creativecommons.org/licenses/by-nc-sa/4.0/',
 }
-
-/**
- * Facebook App ID — registrar la app en https://developers.facebook.com/apps/
- * (Create App → Consumer → poner 'nexomundial.com' como App Domain).
- *
- * Cuando el ID esté seteado, el botón de compartir en Facebook usa el SDK
- * oficial (FB.ui method:'share'), que es el método recomendado por Meta y
- * evita los hangs del legacy sharer.php.
- *
- * Si queda vacío, el botón cae al fallback (sharer.php + clipboard copy).
- */
-export const facebookAppId: string = ''

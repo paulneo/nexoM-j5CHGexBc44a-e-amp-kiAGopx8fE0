@@ -1,6 +1,5 @@
 ---
 import { Icon } from 'astro-icon/components'
-import { facebookAppId, siteConfig } from '../config'
 
 interface Props {
   title: string
@@ -14,26 +13,14 @@ const { title, url, description = '', tags = [], variant = 'inline' } = Astro.pr
 
 const encodedUrl = encodeURIComponent(url)
 const encodedTitle = encodeURIComponent(title)
-// WhatsApp/Telegram: título + descripción + URL en un solo bloque
 const encodedShare = encodeURIComponent(
   description ? `${title}\n\n${description}\n\n${url}` : `${title} ${url}`,
 )
-// X/Twitter: título + hasta 3 hashtags (X soporta varios, separados por coma, sin '#')
 const xHashtags = tags.length
   ? `&hashtags=${tags.slice(0, 3).map((t) => t.replace(/-/g, '')).join(',')}`
   : ''
-// Email: subject = título, body = título + descripción + URL
 const emailBody = description ? `${title}\n\n${description}\n\nLeer artículo: ${url}` : `${title}\n\n${url}`
 const encodedEmailBody = encodeURIComponent(emailBody)
-
-// Facebook: el método oficial recomendado por Meta es el JS SDK con
-// FB.ui({ method: 'share' }). Requiere un App ID. Si está configurado
-// en src/config.ts (facebookAppId), usamos el SDK. Si no, caemos al
-// legacy sharer.php — funciona pero a veces se cuelga en 'Publicando...'.
-const hasFbAppId = Boolean(facebookAppId)
-const fbHref = hasFbAppId
-  ? '#' // controlado por JS — el SDK abre el dialog oficial
-  : `https://www.facebook.com/sharer/sharer.php?u=${encodedUrl}`
 
 const networks = [
   {
@@ -56,13 +43,9 @@ const networks = [
   },
   {
     name: 'Facebook',
-    href: fbHref,
+    href: `https://www.facebook.com/sharer/sharer.php?u=${encodedUrl}`,
     icon: 'fa6-brands:facebook-f',
     hover: 'hover:bg-[#1877F2] hover:text-white hover:border-[#1877F2]',
-    // Marca este botón para que el script lo intercepte: si hay App ID
-    // disparamos FB.ui (oficial); si no, dejamos abrir sharer.php y
-    // copiamos texto al portapapeles como backup.
-    fbShare: true,
   },
   {
     name: 'Email',
@@ -71,8 +54,6 @@ const networks = [
     hover: 'hover:bg-[var(--primary)] hover:text-white hover:border-[var(--primary)]',
   },
 ]
-
-const sdkLocale = siteConfig.lang === 'es' ? 'es_LA' : `${siteConfig.lang}_US`
 ---
 
 <section class:list={["share-buttons", variant === 'compact' ? 'mt-8' : 'mt-12 pt-8 border-t border-black/[0.08] dark:border-white/[0.1]']}>
@@ -82,15 +63,29 @@ const sdkLocale = siteConfig.lang === 'es' ? 'es_LA' : `${siteConfig.lang}_US`
     </p>
   )}
   <div class="flex flex-wrap items-center gap-2.5">
+    {/*
+      Web Share API: en mobile + browsers modernos abre el menú nativo del SO
+      (WhatsApp, FB, IG, Telegram, AirDrop, etc.). Oculto hasta que el script
+      detecta navigator.share; si no está disponible, queda fuera del DOM visible.
+    */}
+    <button
+      type="button"
+      data-native-share
+      data-share-title={title}
+      data-share-text={description}
+      data-share-url={url}
+      aria-label="Compartir con el menú del sistema"
+      hidden
+      class="hidden items-center justify-center w-10 h-10 rounded-full bg-[var(--primary)] text-white hover:opacity-90 transition-all duration-200"
+    >
+      <Icon name="material-symbols:ios-share" class="w-4 h-4" />
+    </button>
     {networks.map((n) => (
       <a
         href={n.href}
         target="_blank"
         rel="noopener noreferrer"
         aria-label={`Compartir en ${n.name}`}
-        data-fb-share={n.fbShare ? 'true' : undefined}
-        data-share-url={n.fbShare ? url : undefined}
-        data-share-copy-text={n.fbShare && !hasFbAppId ? emailBody : undefined}
         class:list={["inline-flex items-center justify-center w-10 h-10 rounded-full border border-black/[0.1] dark:border-white/[0.12] text-black/65 dark:text-white/70 transition-all duration-200", n.hover]}
       >
         <Icon name={n.icon} class="w-4 h-4" />
@@ -110,34 +105,6 @@ const sdkLocale = siteConfig.lang === 'es' ? 'es_LA' : `${siteConfig.lang}_US`
     </span>
   </div>
 </section>
-
-{hasFbAppId && (
-  <>
-    <div id="fb-root"></div>
-    <script is:inline define:vars={{ appId: facebookAppId, locale: sdkLocale }}>
-      // Inicialización del FB SDK (asíncrona, no bloquea el render)
-      window.fbAsyncInit = function () {
-        // @ts-ignore
-        window.FB.init({
-          appId: appId,
-          xfbml: false,
-          version: 'v18.0',
-        })
-      }
-      ;(function (d, s, id) {
-        if (d.getElementById(id)) return
-        var fjs = d.getElementsByTagName(s)[0]
-        var js = d.createElement(s)
-        js.id = id
-        js.src = 'https://connect.facebook.net/' + locale + '/sdk.js'
-        js.async = true
-        js.defer = true
-        js.crossOrigin = 'anonymous'
-        fjs.parentNode.insertBefore(js, fjs)
-      })(document, 'script', 'facebook-jssdk')
-    </script>
-  </>
-)}
 
 <script>
   const copyToClipboard = async (text: string) => {
@@ -166,20 +133,28 @@ const sdkLocale = siteConfig.lang === 'es' ? 'es_LA' : `${siteConfig.lang}_US`
     }, 2400)
   }
 
-  // Espera a que el FB SDK se cargue (se inicializa con fbAsyncInit)
-  const waitForFb = (timeoutMs = 4000) =>
-    new Promise<typeof window.FB | null>((resolve) => {
-      const start = Date.now()
-      ;(function check() {
-        // @ts-ignore
-        if (window.FB) return resolve(window.FB)
-        if (Date.now() - start > timeoutMs) return resolve(null)
-        setTimeout(check, 100)
-      })()
+  const wire = () => {
+    // Botón nativo "Compartir" — sólo se revela si el browser soporta Web Share API
+    document.querySelectorAll<HTMLButtonElement>('[data-native-share]').forEach((btn) => {
+      if (btn.dataset.shareWired === '1') return
+      btn.dataset.shareWired = '1'
+      if (typeof navigator === 'undefined' || !navigator.share) return
+      btn.hidden = false
+      btn.classList.remove('hidden')
+      btn.classList.add('inline-flex')
+      btn.addEventListener('click', async () => {
+        const shareTitle = btn.getAttribute('data-share-title') ?? document.title
+        const shareText = btn.getAttribute('data-share-text') ?? ''
+        const shareUrl = btn.getAttribute('data-share-url') ?? window.location.href
+        try {
+          await navigator.share({ title: shareTitle, text: shareText, url: shareUrl })
+        } catch {
+          // Usuario canceló o el browser bloqueó — ignorar silenciosamente
+        }
+      })
     })
 
-  const wire = () => {
-    // Botón explícito de "copiar link"
+    // Botón "copiar link"
     document.querySelectorAll<HTMLButtonElement>('[data-share-copy]').forEach((btn) => {
       if (btn.dataset.shareWired === '1') return
       btn.dataset.shareWired = '1'
@@ -195,39 +170,6 @@ const sdkLocale = siteConfig.lang === 'es' ? 'es_LA' : `${siteConfig.lang}_US`
           linkIcon?.classList.remove('hidden')
           checkIcon?.classList.add('hidden')
         }, 1800)
-      })
-    })
-
-    // Botón de Facebook: si hay App ID configurado, usar FB.ui (oficial).
-    // Si no, dejar que el link abra sharer.php y copiar texto al portapapeles.
-    document.querySelectorAll<HTMLAnchorElement>('[data-fb-share]').forEach((link) => {
-      if (link.dataset.shareWired === '1') return
-      link.dataset.shareWired = '1'
-      const shareUrl = link.getAttribute('data-share-url') ?? window.location.href
-      const fallbackText = link.getAttribute('data-share-copy-text') ?? ''
-
-      link.addEventListener('click', async (e) => {
-        // Si el href es '#' significa que tenemos App ID y usamos el SDK
-        if (link.getAttribute('href') === '#') {
-          e.preventDefault()
-          const FB = await waitForFb()
-          if (FB) {
-            FB.ui({ method: 'share', href: shareUrl }, () => {})
-            return
-          }
-          // Si el SDK no cargó (red lenta, bloqueado), abrir sharer.php manualmente
-          window.open(
-            `https://www.facebook.com/sharer/sharer.php?u=${encodeURIComponent(shareUrl)}`,
-            '_blank',
-            'noopener,noreferrer',
-          )
-          return
-        }
-        // Sin App ID: dejar que el link normal funcione + copiar texto
-        if (fallbackText) {
-          await copyToClipboard(fallbackText)
-          flashFeedback(link.parentElement, '✓ Texto copiado al portapapeles (por si querés pegarlo)')
-        }
       })
     })
   }
