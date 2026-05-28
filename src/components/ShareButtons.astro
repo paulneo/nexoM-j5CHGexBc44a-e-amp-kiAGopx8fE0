@@ -51,14 +51,14 @@ const networks = [
   },
   {
     name: 'Facebook',
-    href: 'https://www.facebook.com/',
+    href: `https://www.facebook.com/sharer/sharer.php?u=${encodedUrl}`,
     icon: 'fa6-brands:facebook-f',
     hover: 'hover:bg-[#1877F2] hover:text-white hover:border-[#1877F2]',
-    // sharer.php de FB se cuelga en 'Publicando...' después del click
-    // de Compartir, mientras que pegar la URL en el compose box normal
-    // de la página sí publica bien. En vez de pelear contra el popup
-    // roto, abrimos facebook.com directamente y copiamos al portapapeles
-    // el texto rico para que el editor lo pegue en su propio compose.
+    // sharer.php es el estándar de share de FB. Abre un popup con
+    // preview ya cargado y campo para texto — lo que cualquier visitante
+    // espera de un botón de "Compartir en Facebook". Si la cuenta del
+    // editor tiene problemas con el popup, el clipboard copy queda
+    // como backup para pegar manualmente en la app/web de FB.
     copyOnClick: true,
   },
   {
@@ -158,7 +158,7 @@ const networks = [
         const text = link.getAttribute('data-share-copy-text') ?? ''
         if (!text) return
         await copyToClipboard(text)
-        flashFeedback(link.parentElement, '✓ Texto copiado — pegalo en el compose de Facebook (Ctrl+V)')
+        flashFeedback(link.parentElement, '✓ Texto copiado al portapapeles (por si querés pegarlo)')
       })
     })
   }
