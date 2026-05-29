@@ -1,10 +1,10 @@
 ---
-title: "Cómo se hace una losa de concreto paso a paso"
+title: Cómo se hace una losa de concreto paso a paso
 published: 2026-05-28
 updatedAt: 2026-05-28
 draft: true
 featured: false
-description: "10 pasos para ejecutar una losa de concreto armado: desde el replanteo hasta el desencofrado. Materiales, herramientas, tiempos y errores que arruinan la losa."
+description: '10 pasos para ejecutar una losa de concreto armado: desde el replanteo hasta el desencofrado. Materiales, herramientas, tiempos y errores que arruinan la losa.'
 category: construccion
 formato: tutorial
 nivel: intermedio
@@ -16,7 +16,6 @@ tags:
   - tutorial
 image: /images/posts/como-se-hace-una-losa-de-concreto-paso-a-paso.webp
 author: jean-paul
-reviewedBy: jean-paul
 aiAssisted: true
 faq:
   - q: ¿Cuánto tarda en fraguar una losa de concreto?
@@ -32,6 +31,7 @@ related:
   - que-es-un-encofrado-y-tipos
   - como-se-calcula-el-cubicaje-de-hormigon
   - cuanto-cemento-para-una-losa-de-concreto
+reviewedBy: jean-paul
 ---
 
 Una losa de concreto bien ejecutada dura décadas sin mantenimiento. Una mal ejecutada fisura, filtra agua y en el peor de los casos compromete la estructura. La diferencia entre las dos no está en el dinero invertido — está en seguir el proceso correcto en cada etapa.
