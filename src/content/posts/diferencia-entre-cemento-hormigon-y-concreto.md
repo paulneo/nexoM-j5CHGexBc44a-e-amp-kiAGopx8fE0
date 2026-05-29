@@ -1,10 +1,10 @@
 ---
-title: "Diferencia entre cemento, hormigón y concreto"
+title: Diferencia entre cemento, hormigón y concreto
 published: 2026-05-28
 updatedAt: 2026-05-28
 draft: true
 featured: false
-description: "Cemento no es lo mismo que hormigón, y hormigón no es distinto al concreto. Acá explicamos qué es cada cosa, por qué se llaman diferente y cómo no equivocarse al pedirlos."
+description: Cemento no es lo mismo que hormigón, y hormigón no es distinto al concreto. Acá explicamos qué es cada cosa, por qué se llaman diferente y cómo no equivocarse al pedirlos.
 category: construccion
 formato: comparativa
 nivel: basico
@@ -16,7 +16,6 @@ tags:
   - definiciones
 image: /images/posts/diferencia-entre-cemento-hormigon-y-concreto.webp
 author: jean-paul
-reviewedBy: jean-paul
 aiAssisted: true
 faq:
   - q: ¿Cuál es más resistente, el cemento o el concreto?
@@ -32,6 +31,7 @@ related:
   - que-es-la-resistencia-del-hormigon-fc
   - como-se-calcula-el-cubicaje-de-hormigon
   - cuanto-cemento-para-una-losa-de-concreto
+reviewedBy: jean-paul
 ---
 
 El error más común en una ferretería: pedís "cemento" cuando lo que necesitás es concreto premezclado. O al revés, pedís "hormigón" y no saben de qué hablás porque en ese país le dicen "concreto". Estos tres términos se confunden constantemente, y la diferencia importa tanto para hablar con proveedores como para entender qué material usás en cada aplicación.
