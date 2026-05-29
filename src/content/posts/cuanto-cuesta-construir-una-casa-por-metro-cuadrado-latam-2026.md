@@ -2,7 +2,7 @@
 title: Cuánto cuesta construir una casa por metro cuadrado en Latinoamérica (2026)
 published: 2026-05-28
 updatedAt: 2026-05-28
-draft: true
+draft: false
 featured: false
 description: Costos de construcción por m² en Perú, México, Argentina, Colombia, Chile y más. Rangos referenciales 2026, factores que mueven el precio y cómo presupuestar sin sorpresas.
 category: construccion
