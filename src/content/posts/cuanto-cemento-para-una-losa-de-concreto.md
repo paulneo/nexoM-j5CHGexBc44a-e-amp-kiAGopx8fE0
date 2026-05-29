@@ -1,10 +1,10 @@
 ---
-title: "Cuánto cemento necesito para una losa de concreto"
+title: Cuánto cemento necesito para una losa de concreto
 published: 2026-05-28
 updatedAt: 2026-05-28
 draft: true
 featured: false
-description: "Calculá las bolsas de cemento para tu losa paso a paso: volumen, dosificación, tabla de áreas y espesores comunes, y diferencia entre mezcla in-situ y premezclado."
+description: 'Calculá las bolsas de cemento para tu losa paso a paso: volumen, dosificación, tabla de áreas y espesores comunes, y diferencia entre mezcla in-situ y premezclado.'
 category: construccion
 formato: guia
 nivel: basico
@@ -14,9 +14,8 @@ tags:
   - hormigon
   - presupuesto
   - dosificacion
-image: /images/posts/cuanto-cemento-para-una-losa-de-concreto.webp
+image: /images/posts/cuanto-cemento-para-una-losa-de-concreto..webp
 author: jean-paul
-reviewedBy: jean-paul
 aiAssisted: true
 faq:
   - q: ¿Bolsa de 42.5 kg o de 50 kg? ¿Cambia el cálculo?
@@ -32,6 +31,7 @@ related:
   - diferencia-entre-cemento-hormigon-y-concreto
   - como-se-hace-una-losa-de-concreto-paso-a-paso
   - que-es-el-hormigon-armado
+reviewedBy: jean-paul
 ---
 
 La pregunta parece simple, pero tiene trampa: "¿cuánto cemento necesito?" depende del volumen de la losa, la dosificación elegida y si vas a mezclar en obra o pedir premezclado. Este post te da los números concretos para cada caso.
