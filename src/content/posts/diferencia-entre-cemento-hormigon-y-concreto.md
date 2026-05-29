@@ -2,7 +2,7 @@
 title: Diferencia entre cemento, hormigón y concreto
 published: 2026-05-28
 updatedAt: 2026-05-28
-draft: true
+draft: false
 featured: false
 description: Cemento no es lo mismo que hormigón, y hormigón no es distinto al concreto. Acá explicamos qué es cada cosa, por qué se llaman diferente y cómo no equivocarse al pedirlos.
 category: construccion
