@@ -1,10 +1,10 @@
 ---
-title: "Cuántos ladrillos van por metro cuadrado de pared"
+title: Cuántos ladrillos van por metro cuadrado de pared
 published: 2026-05-28
 updatedAt: 2026-05-28
-draft: true
+draft: false
 featured: false
-description: "Fórmula exacta y tabla por tipo de ladrillo para calcular cuántas unidades necesitás por m² de pared, con ejemplo completo de materiales para asentado."
+description: Fórmula exacta y tabla por tipo de ladrillo para calcular cuántas unidades necesitás por m² de pared, con ejemplo completo de materiales para asentado.
 category: construccion
 formato: guia
 nivel: basico
@@ -15,10 +15,9 @@ tags:
   - presupuesto
 image: /images/posts/cuantos-ladrillos-por-metro-cuadrado-de-pared.webp
 author: jean-paul
-reviewedBy: jean-paul
 aiAssisted: true
 faq:
-  - q: "¿Bloque de concreto o ladrillo: cuál rinde más por m²?"
+  - q: '¿Bloque de concreto o ladrillo: cuál rinde más por m²?'
     a: El bloque de concreto cubre más superficie por unidad (20×40 cm de cara) que cualquier ladrillo cerámico, así que se colocan muchas menos piezas por m². Pero "rendir más" depende del contexto — el bloque es más rápido de levantar pero más caro por unidad. Para muros relleno sin carga, el bloque ahorra tiempo; para muros con carga o en zonas sísmicas, el ladrillo macizo o el King Kong son más comunes.
   - q: ¿Qué hago si el ladrillo me llega con unidades partidas?
     a: Lo normal es que un 2-5% del pedido llegue con fisuras o roturas de transporte. Por eso el 5-10% de desperdicio ya cubre ese margen. Al recibir el material, separás los partidos antes de empezar — los que tienen fisura limpia por la mitad pueden usarse en esquinas o cortes, los que están pulverizados no.
@@ -31,6 +30,7 @@ related:
   - tipos-de-estructuras-en-construccion
   - cuanto-cuesta-construir-una-casa-por-metro-cuadrado-latam-2026
   - diferencia-entre-cemento-hormigon-y-concreto
+reviewedBy: jean-paul
 ---
 
 Antes de comprar ladrillos para una obra, necesitás un número concreto. No "más o menos" — un número que te permita cotizar, comparar proveedores y saber cuánto vas a gastar en mampostería. La fórmula es simple; lo que cambia es el tipo de ladrillo.
