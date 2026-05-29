@@ -2,7 +2,7 @@
 title: Cuánto cemento necesito para una losa de concreto
 published: 2026-05-28
 updatedAt: 2026-05-28
-draft: true
+draft: false
 featured: false
 description: 'Calculá las bolsas de cemento para tu losa paso a paso: volumen, dosificación, tabla de áreas y espesores comunes, y diferencia entre mezcla in-situ y premezclado.'
 category: construccion
