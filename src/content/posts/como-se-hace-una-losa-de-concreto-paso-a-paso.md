@@ -2,7 +2,7 @@
 title: Cómo se hace una losa de concreto paso a paso
 published: 2026-05-28
 updatedAt: 2026-05-28
-draft: true
+draft: false
 featured: false
 description: '10 pasos para ejecutar una losa de concreto armado: desde el replanteo hasta el desencofrado. Materiales, herramientas, tiempos y errores que arruinan la losa.'
 category: construccion
