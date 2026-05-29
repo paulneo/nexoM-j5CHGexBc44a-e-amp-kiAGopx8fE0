@@ -18,7 +18,7 @@ author: jean-paul
 reviewedBy: jean-paul
 aiAssisted: true
 faq:
-  - q: ¿Bloque de concreto o ladrillo: cuál rinde más por m²?
+  - q: "¿Bloque de concreto o ladrillo: cuál rinde más por m²?"
     a: El bloque de concreto cubre más superficie por unidad (20×40 cm de cara) que cualquier ladrillo cerámico, así que se colocan muchas menos piezas por m². Pero "rendir más" depende del contexto — el bloque es más rápido de levantar pero más caro por unidad. Para muros relleno sin carga, el bloque ahorra tiempo; para muros con carga o en zonas sísmicas, el ladrillo macizo o el King Kong son más comunes.
   - q: ¿Qué hago si el ladrillo me llega con unidades partidas?
     a: Lo normal es que un 2-5% del pedido llegue con fisuras o roturas de transporte. Por eso el 5-10% de desperdicio ya cubre ese margen. Al recibir el material, separás los partidos antes de empezar — los que tienen fisura limpia por la mitad pueden usarse en esquinas o cortes, los que están pulverizados no.
