@@ -1,10 +1,10 @@
 ---
-title: "Cuánto cuesta construir una casa por metro cuadrado en Latinoamérica (2026)"
+title: Cuánto cuesta construir una casa por metro cuadrado en Latinoamérica (2026)
 published: 2026-05-28
 updatedAt: 2026-05-28
 draft: true
 featured: false
-description: "Costos de construcción por m² en Perú, México, Argentina, Colombia, Chile y más. Rangos referenciales 2026, factores que mueven el precio y cómo presupuestar sin sorpresas."
+description: Costos de construcción por m² en Perú, México, Argentina, Colombia, Chile y más. Rangos referenciales 2026, factores que mueven el precio y cómo presupuestar sin sorpresas.
 category: construccion
 formato: guia
 nivel: basico
@@ -16,7 +16,6 @@ tags:
   - metro-cuadrado
 image: /images/posts/cuanto-cuesta-construir-una-casa-por-metro-cuadrado-latam-2026.webp
 author: jean-paul
-reviewedBy: jean-paul
 aiAssisted: true
 faq:
   - q: ¿Cuánto tiempo tarda en promedio construir una casa?
@@ -32,6 +31,7 @@ related:
   - que-es-el-hormigon-armado
   - diferencia-entre-arquitectura-y-construccion
   - cuantos-ladrillos-por-metro-cuadrado-de-pared
+reviewedBy: jean-paul
 ---
 
 Construir una casa en Latinoamérica cuesta entre **USD 250 y USD 1.200 por metro cuadrado**, según el país, el nivel de acabados y la zona. Ese rango tan amplio no es vaguedad — es la realidad de una región donde la mano de obra, los materiales y los permisos varían drásticamente entre capitales y zonas rurales, y entre construcción formal e informal.
