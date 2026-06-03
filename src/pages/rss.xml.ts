@@ -3,10 +3,11 @@ import {siteConfig} from '@/config';
 import { getCollection } from 'astro:content';
 import sanitizeHtml from 'sanitize-html';
 import MarkdownIt from 'markdown-it';
+import { isPostPublishable } from '@utils/content-utils';
 const parser = new MarkdownIt();
 
 export async function GET(context: any) {
-  const blog = await getCollection('posts');
+  const blog = await getCollection('posts', ({ data }) => isPostPublishable(data));
   return rss({
     title: siteConfig.title,
     description: siteConfig.subtitle || 'No description',

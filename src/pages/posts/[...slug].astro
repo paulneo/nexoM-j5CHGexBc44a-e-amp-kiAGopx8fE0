@@ -15,11 +15,10 @@ import PostTOC from "../../components/PostTOC.astro";
 import ReadingProgress from "../../components/ReadingProgress.astro";
 import RelatedPosts from "../../components/RelatedPosts.astro";
 import ShareButtons from "../../components/ShareButtons.astro";
+import { isPostPublishable } from "@utils/content-utils";
 
 export async function getStaticPaths() {
-    const blogEntries = await getCollection('posts', ({ data }) => {
-        return import.meta.env.PROD ? data.draft !== true : true;
-    });
+    const blogEntries = await getCollection('posts', ({ data }) => isPostPublishable(data));
     return blogEntries.map(entry => ({
         params: { slug: entry.slug }, props: { entry },
     }));

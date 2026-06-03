@@ -1,0 +1,52 @@
+name: Scheduled site rebuild
+
+# Dispara un rebuild de Vercel 2 veces al día para que los posts con
+# `published` futuro aparezcan automáticamente cuando llega su fecha.
+# El filtro real lo hace `isPostPublishable` en src/utils/content-utils.ts
+# durante el build.
+#
+# REQUIRES setup once:
+#   1. Vercel → Settings → Git → Deploy Hooks → "Create Hook"
+#      (name: "Scheduled rebuild", branch: "main") → copiar URL
+#   2. GitHub repo → Settings → Secrets and variables → Actions →
+#      New repository secret → name `VERCEL_DEPLOY_HOOK`, value: la URL
+
+on:
+  schedule:
+    # 11:00 UTC = 6:00 AM Lima/Bogotá/Quito
+    # 23:00 UTC = 6:00 PM Lima/Bogotá/Quito
+    # Dos rebuilds diarios cubren publicaciones programadas para mañana
+    # tanto en horario AM como PM. ~60 builds/mes — dentro del free tier
+    # de Vercel (100/mes).
+    - cron: '0 11,23 * * *'
+
+  # Permite trigger manual desde la pestaña Actions del repo
+  workflow_dispatch:
+
+jobs:
+  trigger-vercel-rebuild:
+    runs-on: ubuntu-latest
+    timeout-minutes: 5
+    steps:
+      - name: Verify deploy hook secret exists
+        run: |
+          if [ -z "${{ secrets.VERCEL_DEPLOY_HOOK }}" ]; then
+            echo "::error::VERCEL_DEPLOY_HOOK secret not configured."
+            echo "Set it at: Settings → Secrets and variables → Actions → New repository secret"
+            exit 1
+          fi
+
+      - name: Trigger Vercel deploy hook
+        run: |
+          response=$(curl -sS -X POST -w "\n%{http_code}" "${{ secrets.VERCEL_DEPLOY_HOOK }}")
+          status=$(echo "$response" | tail -n1)
+          body=$(echo "$response" | sed '$d')
+
+          echo "Vercel response (HTTP $status):"
+          echo "$body"
+
+          if [ "$status" != "200" ] && [ "$status" != "201" ]; then
+            echo "::error::Deploy hook failed with status $status"
+            exit 1
+          fi
+          echo "✓ Vercel deploy triggered successfully"

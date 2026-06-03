@@ -2,6 +2,7 @@
 import { getCollection } from 'astro:content';
 import PostCard from "./PostCard.astro";
 import { getPostUrlBySlug } from "../utils/url-utils";
+import { isPostPublishable } from "../utils/content-utils";
 
 interface Props {
     currentSlug: string;
@@ -13,9 +14,7 @@ interface Props {
 
 const { currentSlug, category, relatedSlugs = [], tags = [], limit = 3 } = Astro.props;
 
-const all = await getCollection('posts', ({ data }) => {
-    return import.meta.env.PROD ? data.draft !== true : true;
-});
+const all = await getCollection('posts', ({ data }) => isPostPublishable(data));
 
 // 1) Manualmente referenciados via frontmatter `related`
 const manual = all.filter(p => relatedSlugs.includes(p.slug) && p.slug !== currentSlug);

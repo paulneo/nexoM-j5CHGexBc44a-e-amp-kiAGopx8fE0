@@ -1,11 +1,47 @@
 import I18nKey from '@i18n/i18nKey'
 import { i18n } from '@i18n/translation'
 import { getCollection } from 'astro:content'
+import { existsSync } from 'node:fs'
+import { fileURLToPath } from 'node:url'
+
+// Resolved at module load time (build time). Points to <repo>/public/
+const PUBLIC_DIR = fileURLToPath(new URL('../../public', import.meta.url))
+
+/**
+ * Decide if a post should be visible publicly.
+ *
+ * En DEV (pnpm dev) muestra TODO para que el editor pueda previsualizar
+ * drafts, posts con fecha futura, y posts sin imagen cargada todavía.
+ *
+ * En PROD (pnpm build) aplica tres filtros que se combinan con AND:
+ *  1. draft debe ser false
+ *  2. published debe ser hoy o antes (los posts con fecha futura aparecen
+ *     automáticamente cuando un rebuild se ejecuta tras esa fecha; ver
+ *     .github/workflows/scheduled-rebuild.yml)
+ *  3. image debe estar definida Y el archivo debe existir en /public/
+ *     (excepto si es una URL externa tipo CDN, que se asume válida)
+ */
+export function isPostPublishable(data: any): boolean {
+  if (!import.meta.env.PROD) return true
+
+  if (data.draft === true) return false
+
+  if (data.published && new Date(data.published) > new Date()) return false
+
+  if (!data.image || typeof data.image !== 'string' || data.image.trim() === '') return false
+
+  // Solo verificar existencia para paths locales. URLs externas (https://, http://)
+  // se asumen válidas — no podemos verificarlas en build sin red.
+  if (data.image.startsWith('/')) {
+    const imagePath = PUBLIC_DIR + data.image
+    if (!existsSync(imagePath)) return false
+  }
+
+  return true
+}
 
 export async function getSortedPosts() {
-  const allBlogPosts = await getCollection('posts', ({ data }) => {
-    return import.meta.env.PROD ? data.draft !== true : true
-  })
+  const allBlogPosts = await getCollection('posts', ({ data }) => isPostPublishable(data))
   const sorted = allBlogPosts.sort((a, b) => {
     const dateA = new Date(a.data.published)
     const dateB = new Date(b.data.published)
@@ -30,9 +66,7 @@ export type Tag = {
 }
 
 export async function getTagList(): Promise<Tag[]> {
-  const allBlogPosts = await getCollection('posts', ({ data }) => {
-    return import.meta.env.PROD ? data.draft !== true : true
-  })
+  const allBlogPosts = await getCollection('posts', ({ data }) => isPostPublishable(data))
 
   const countMap: { [key: string]: number } = {}
   allBlogPosts.map(post => {
@@ -56,9 +90,7 @@ export type Category = {
 }
 
 export async function getCategoryList(): Promise<Category[]> {
-  const allBlogPosts = await getCollection('posts', ({ data }) => {
-    return import.meta.env.PROD ? data.draft !== true : true
-  })
+  const allBlogPosts = await getCollection('posts', ({ data }) => isPostPublishable(data))
   const count: { [key: string]: number } = {}
   allBlogPosts.map(post => {
     if (!post.data.category) {
