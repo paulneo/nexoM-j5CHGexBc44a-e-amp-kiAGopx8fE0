@@ -1,7 +1,7 @@
 ---
 title: "Firmitas, utilitas, venustas: la receta de Vitrubio para reconocer buena arquitectura"
-published: 2026-06-01
-updatedAt: 2026-06-01
+published: 2026-05-31
+updatedAt: 2026-05-31
 draft: true
 featured: false
 description: "Hace 2.000 años Vitrubio fijó las 3 condiciones de toda buena arquitectura: firmeza, utilidad y belleza. La fórmula sigue vigente — y explica por qué algunas obras nos emocionan y otras no."

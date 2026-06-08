@@ -1,7 +1,7 @@
 ---
 title: "Enmarcar o subrayar el paisaje: las 2 formas en que la arquitectura captura una vista"
-published: 2026-06-02
-updatedAt: 2026-06-02
+published: 2026-06-03
+updatedAt: 2026-06-03
 draft: true
 featured: false
 description: "Hay 2 formas opuestas en que la arquitectura se relaciona con un paisaje: lo enmarca con una ventana o lo subraya con una plataforma. Mismo paisaje, sensación radicalmente distinta."

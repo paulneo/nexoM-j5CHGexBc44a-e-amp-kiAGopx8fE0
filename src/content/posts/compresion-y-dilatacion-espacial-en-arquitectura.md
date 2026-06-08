@@ -1,7 +1,7 @@
 ---
 title: "Compresión y dilatación espacial: cómo se siente un espacio (y cómo lo diseñan los arquitectos)"
-published: 2026-06-01
-updatedAt: 2026-06-01
+published: 2026-06-02
+updatedAt: 2026-06-02
 draft: true
 featured: false
 description: "Pasar de un techo bajo a uno alto cambia por completo cómo se siente un espacio. Es el mecanismo más viejo y más efectivo de la arquitectura — te lo explicamos con ejemplos."

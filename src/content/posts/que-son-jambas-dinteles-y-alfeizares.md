@@ -1,7 +1,7 @@
 ---
 title: "Qué son jambas, dinteles y alféizares (y por qué tu casa los tiene)"
-published: 2026-05-31
-updatedAt: 2026-05-31
+published: 2026-05-30
+updatedAt: 2026-05-30
 draft: true
 featured: false
 description: "Tu casa tiene jambas, dintel y alféizar — el problema es que casi nadie sabe qué son. Te explicamos las 3 partes de una ventana y por qué los arquitectos modernos las eliminan."

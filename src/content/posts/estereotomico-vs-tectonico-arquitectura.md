@@ -1,7 +1,7 @@
 ---
 title: "Estereotómico vs tectónico: las 2 formas de construir cualquier edificio (cueva o cabaña)"
-published: 2026-06-02
-updatedAt: 2026-06-02
+published: 2026-06-04
+updatedAt: 2026-06-04
 draft: true
 featured: false
 description: "Toda la arquitectura del mundo se reduce a 2 raíces opuestas: estereotómica (cueva, masa, peso) o tectónica (cabaña, estructura, ligereza). Te explicamos cuál es cuál y por qué importa."
