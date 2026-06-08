@@ -1,10 +1,10 @@
 ---
-title: "Enmarcar o subrayar el paisaje: las 2 formas que la arquitectura usa"
+title: 'Enmarcar o subrayar el paisaje: las 2 formas que la arquitectura usa'
 published: 2026-06-03
 updatedAt: 2026-06-03
-draft: true
+draft: false
 featured: false
-description: "Hay 2 formas opuestas en que la arquitectura se relaciona con un paisaje: lo enmarca con una ventana o lo subraya con una plataforma. Mismo paisaje, sensación distinta."
+description: 'Hay 2 formas opuestas en que la arquitectura se relaciona con un paisaje: lo enmarca con una ventana o lo subraya con una plataforma. Mismo paisaje, sensación distinta.'
 category: arquitectura
 formato: concepto
 nivel: basico
@@ -16,32 +16,32 @@ tags:
   - mecanismos-arquitectonicos
 image: /images/posts/enmarcar-o-subrayar-el-paisaje-arquitectura.webp
 author: jean-paul
-reviewedBy: jean-paul
 aiAssisted: true
 faq:
-  - q: "¿Qué quiere decir 'enmarcar' un paisaje desde la arquitectura?"
-    a: "Enmarcar significa abrir una ventana o un hueco en un muro de tal forma que el paisaje exterior aparece encuadrado por la sombra del interior — como un cuadro colgado en la pared. El espectador ESTÁ ADENTRO, el paisaje queda AFUERA, claramente separado. El marco objetiva la vista: la convierte en algo definido, finito, observable a distancia. Es la operación clásica de cualquier ventana grande de un mirador o de un salón con vista."
-  - q: "¿Y 'subrayar' un paisaje?"
+  - q: ¿Qué quiere decir 'enmarcar' un paisaje desde la arquitectura?
+    a: 'Enmarcar significa abrir una ventana o un hueco en un muro de tal forma que el paisaje exterior aparece encuadrado por la sombra del interior — como un cuadro colgado en la pared. El espectador ESTÁ ADENTRO, el paisaje queda AFUERA, claramente separado. El marco objetiva la vista: la convierte en algo definido, finito, observable a distancia. Es la operación clásica de cualquier ventana grande de un mirador o de un salón con vista.'
+  - q: ¿Y 'subrayar' un paisaje?
     a: "Subrayar es lo opuesto: se construye un plano horizontal alto (una plataforma, una terraza, un mirador sin paredes) desde donde se contempla el paisaje sin que un marco lo enmarque. El espectador ESTÁ SOBRE la plataforma, el paisaje viene HACIA él. Campo Baeza describe esto como 'la alfombra voladora de Aladino' — sentís que el paisaje se acerca a vos en vez de quedarse afuera. Es lo que hacen Machu Picchu, las pirámides aztecas y la Acrópolis de Atenas."
-  - q: "¿Cuál es mejor: enmarcar o subrayar?"
-    a: "Ninguno es objetivamente mejor — son operaciones distintas con efectos distintos. Enmarcar funciona mejor cuando el paisaje es lejano y querés contemplación reflexiva (un cuadro al que volver). Subrayar funciona mejor cuando el paisaje es vasto y querés inmersión total (perderte en él). Una casa puede combinar ambos: ventanas que enmarcan vistas específicas + una terraza alta que subraye el paisaje general. No son excluyentes."
-  - q: "¿Esto solo aplica a edificios con vistas espectaculares?"
-    a: "No, aplica a cualquier edificio con un paisaje cercano interesante — y casi todos tienen alguno. Una casa en una calle con árboles tiene un paisaje urbano que puede enmarcar bien por una ventana cuidada. Una azotea en un barrio céntrico tiene un paisaje urbano que puede subrayarse con una terraza despejada. El error es construir SIN pensar en qué paisaje hay alrededor — esto pasa todo el tiempo en vivienda popular y termina en edificios que dan la espalda al contexto."
+  - q: '¿Cuál es mejor: enmarcar o subrayar?'
+    a: 'Ninguno es objetivamente mejor — son operaciones distintas con efectos distintos. Enmarcar funciona mejor cuando el paisaje es lejano y querés contemplación reflexiva (un cuadro al que volver). Subrayar funciona mejor cuando el paisaje es vasto y querés inmersión total (perderte en él). Una casa puede combinar ambos: ventanas que enmarcan vistas específicas + una terraza alta que subraye el paisaje general. No son excluyentes.'
+  - q: ¿Esto solo aplica a edificios con vistas espectaculares?
+    a: No, aplica a cualquier edificio con un paisaje cercano interesante — y casi todos tienen alguno. Una casa en una calle con árboles tiene un paisaje urbano que puede enmarcar bien por una ventana cuidada. Una azotea en un barrio céntrico tiene un paisaje urbano que puede subrayarse con una terraza despejada. El error es construir SIN pensar en qué paisaje hay alrededor — esto pasa todo el tiempo en vivienda popular y termina en edificios que dan la espalda al contexto.
 sources:
-  - title: "Varia Architectonica"
-    author: "Alberto Campo Baeza"
+  - title: Varia Architectonica
+    author: Alberto Campo Baeza
     year: 2016
-  - title: "Platforms and Plateaux: Ideas of a Danish Architect"
-    author: "Jørn Utzon"
+  - title: 'Platforms and Plateaux: Ideas of a Danish Architect'
+    author: Jørn Utzon
     year: 1962
-  - title: "Meditación del marco"
-    author: "José Ortega y Gasset"
+  - title: Meditación del marco
+    author: José Ortega y Gasset
     year: 1921
 related:
   - compresion-y-dilatacion-espacial-en-arquitectura
   - que-son-jambas-dinteles-y-alfeizares
   - que-es-una-fachada-en-arquitectura
   - firmitas-utilitas-venustas-vitrubio
+reviewedBy: jean-paul
 ---
 
 Si tu casa o tu edificio tiene una vista — de mar, de montaña, de
