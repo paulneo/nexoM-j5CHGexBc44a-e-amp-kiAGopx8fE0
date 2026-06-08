@@ -4,7 +4,7 @@ published: 2026-05-29
 updatedAt: 2026-05-29
 draft: true
 featured: false
-description: "Las columnas fueron verticales durante 5.000 años porque la gravedad baja en línea recta. El acero cambió todo. Cuándo conviene cada opción y qué advierte un Académico español al respecto."
+description: "Durante 5.000 años las columnas fueron verticales porque la gravedad baja en línea recta. El acero cambió todo. Cuándo conviene cada opción y qué advierte la teoría."
 category: arquitectura
 formato: concepto
 nivel: basico

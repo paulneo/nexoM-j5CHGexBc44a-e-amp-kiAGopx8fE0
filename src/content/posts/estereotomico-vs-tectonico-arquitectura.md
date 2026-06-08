@@ -4,7 +4,7 @@ published: 2026-06-04
 updatedAt: 2026-06-04
 draft: true
 featured: false
-description: "Toda la arquitectura del mundo se reduce a 2 raíces opuestas: estereotómica (cueva, masa, peso) o tectónica (cabaña, estructura, ligereza). Te explicamos cuál es cuál y por qué importa."
+description: "Toda la arquitectura del mundo se reduce a 2 raíces opuestas: estereotómica (cueva, masa) o tectónica (cabaña, estructura ligera). Cuál es cuál y por qué importa."
 category: arquitectura
 formato: concepto
 nivel: basico
