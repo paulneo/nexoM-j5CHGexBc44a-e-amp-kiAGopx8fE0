@@ -1,5 +1,5 @@
 ---
-title: "Estereotómico vs tectónico: las 2 formas de construir cualquier edificio (cueva o cabaña)"
+title: "Estereotómico vs tectónico: cueva o cabaña, las 2 formas de construir"
 published: 2026-06-04
 updatedAt: 2026-06-04
 draft: true

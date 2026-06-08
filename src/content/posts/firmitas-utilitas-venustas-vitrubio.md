@@ -1,5 +1,5 @@
 ---
-title: "Firmitas, utilitas, venustas: la receta de Vitrubio para reconocer buena arquitectura"
+title: "Firmitas, utilitas, venustas: la receta de Vitrubio para buena arquitectura"
 published: 2026-05-31
 updatedAt: 2026-05-31
 draft: true

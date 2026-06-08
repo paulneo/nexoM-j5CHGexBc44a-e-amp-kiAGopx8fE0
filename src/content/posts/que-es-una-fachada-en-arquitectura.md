@@ -1,5 +1,5 @@
 ---
-title: "Qué es una fachada en arquitectura (y por qué los modernos las dejaron de cuidar)"
+title: "Qué es una fachada en arquitectura (y por qué los modernos la abandonaron)"
 published: 2026-06-01
 updatedAt: 2026-06-01
 draft: true

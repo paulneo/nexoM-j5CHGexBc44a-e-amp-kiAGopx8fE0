@@ -1,5 +1,5 @@
 ---
-title: "Enmarcar o subrayar el paisaje: las 2 formas en que la arquitectura captura una vista"
+title: "Enmarcar o subrayar el paisaje: las 2 formas que la arquitectura usa"
 published: 2026-06-03
 updatedAt: 2026-06-03
 draft: true

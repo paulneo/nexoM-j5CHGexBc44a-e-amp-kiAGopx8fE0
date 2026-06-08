@@ -1,5 +1,5 @@
 ---
-title: "Compresión y dilatación espacial: cómo se siente un espacio (y cómo lo diseñan los arquitectos)"
+title: "Compresión y dilatación espacial: cómo se siente un espacio en arquitectura"
 published: 2026-06-02
 updatedAt: 2026-06-02
 draft: true
