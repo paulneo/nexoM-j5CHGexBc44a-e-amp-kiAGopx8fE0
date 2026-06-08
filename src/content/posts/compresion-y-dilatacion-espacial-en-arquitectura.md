@@ -14,7 +14,7 @@ tags:
   - doble-altura
   - le-corbusier
   - diseño-arquitectonico
-image: /images/posts/compresion-y-dilatacion-espacial-en-arquitectura.webp.webp
+image: /images/posts/compresion-y-dilatacion-espacial-en-arquitectura.webp
 author: jean-paul
 aiAssisted: true
 faq:

@@ -14,7 +14,7 @@ tags:
   - composicion-arquitectonica
   - palladio
   - diseño-de-casa
-image: /images/posts/ChatGPT Image Jun 8, 2026, 12_51_10 PM.webp
+image: /images/posts/que-es-una-fachada-en-arquitectura.webp
 author: jean-paul
 aiAssisted: true
 faq:
