@@ -1,10 +1,10 @@
 ---
-title: "Por qué las columnas son verticales (y por qué algunas no)"
+title: Por qué las columnas son verticales (y por qué algunas no)
 published: 2026-05-29
 updatedAt: 2026-05-29
-draft: true
+draft: false
 featured: false
-description: "Durante 5.000 años las columnas fueron verticales porque la gravedad baja en línea recta. El acero cambió todo. Cuándo conviene cada opción y qué advierte la teoría."
+description: Durante 5.000 años las columnas fueron verticales porque la gravedad baja en línea recta. El acero cambió todo. Cuándo conviene cada opción y qué advierte la teoría.
 category: arquitectura
 formato: concepto
 nivel: basico
@@ -16,32 +16,32 @@ tags:
   - hormigon-armado
 image: /images/posts/por-que-las-columnas-son-verticales.webp
 author: jean-paul
-reviewedBy: jean-paul
 aiAssisted: true
 faq:
   - q: ¿Las columnas inclinadas son menos seguras que las verticales?
-    a: "No necesariamente, pero requieren cálculos más complejos y mejor ejecución. Una columna inclinada bien calculada y construida con acero o hormigón armado puede ser tan segura como una vertical. El problema es que la tolerancia al error es menor: un fallo en ejecución (mal vibrado, armadura mal posicionada, dosificación pobre) afecta más a una estructura no-ortogonal porque aparecen esfuerzos secundarios de flexión que no existen en una columna pura a compresión."
-  - q: "¿Por qué casi todos los rascacielos famosos modernos tienen formas raras?"
-    a: "Por dos razones. Una técnica: el acero estructural y las uniones soldadas permiten formas que con piedra o ladrillo eran imposibles. Y una de marketing: edificios singulares atraen prensa, inversores y turistas. Pero la mayoría de los edificios convencionales que se construyen cada año en el mundo siguen siendo ortogonales porque la economía no perdona. Los singulares son la excepción visible, no la regla."
+    a: 'No necesariamente, pero requieren cálculos más complejos y mejor ejecución. Una columna inclinada bien calculada y construida con acero o hormigón armado puede ser tan segura como una vertical. El problema es que la tolerancia al error es menor: un fallo en ejecución (mal vibrado, armadura mal posicionada, dosificación pobre) afecta más a una estructura no-ortogonal porque aparecen esfuerzos secundarios de flexión que no existen en una columna pura a compresión.'
+  - q: ¿Por qué casi todos los rascacielos famosos modernos tienen formas raras?
+    a: 'Por dos razones. Una técnica: el acero estructural y las uniones soldadas permiten formas que con piedra o ladrillo eran imposibles. Y una de marketing: edificios singulares atraen prensa, inversores y turistas. Pero la mayoría de los edificios convencionales que se construyen cada año en el mundo siguen siendo ortogonales porque la economía no perdona. Los singulares son la excepción visible, no la regla.'
   - q: ¿Se puede hacer una casa con columnas inclinadas?
-    a: "Sí, pero rara vez tiene sentido. Las columnas inclinadas se justifican cuando hay grandes luces (más de 8-10 metros sin apoyos intermedios) o cuando se quiere comunicar algo expresivo en un edificio singular. En una casa unifamiliar de uno o dos pisos con paredes de mampostería, una columna inclinada sería un capricho caro sin beneficio funcional, y además complicaría futuras modificaciones."
+    a: Sí, pero rara vez tiene sentido. Las columnas inclinadas se justifican cuando hay grandes luces (más de 8-10 metros sin apoyos intermedios) o cuando se quiere comunicar algo expresivo en un edificio singular. En una casa unifamiliar de uno o dos pisos con paredes de mampostería, una columna inclinada sería un capricho caro sin beneficio funcional, y además complicaría futuras modificaciones.
   - q: ¿Qué es más caro, una columna vertical o una inclinada?
-    a: "Una columna inclinada del mismo material es entre 30% y 100% más cara que una vertical equivalente, según el ángulo y la luz a cubrir. La diferencia viene de cuatro frentes: cálculo estructural más complejo (más horas de ingeniero), encofrado a medida (no se puede usar formaletas estándar), más acero (para resistir los esfuerzos secundarios de flexión que aparecen con la inclinación) y mano de obra especializada. Si el cliente no entiende esto al inicio, suele aparecer como sobrecosto a mitad de obra."
+    a: 'Una columna inclinada del mismo material es entre 30% y 100% más cara que una vertical equivalente, según el ángulo y la luz a cubrir. La diferencia viene de cuatro frentes: cálculo estructural más complejo (más horas de ingeniero), encofrado a medida (no se puede usar formaletas estándar), más acero (para resistir los esfuerzos secundarios de flexión que aparecen con la inclinación) y mano de obra especializada. Si el cliente no entiende esto al inicio, suele aparecer como sobrecosto a mitad de obra.'
 sources:
-  - title: "Varia Architectonica"
-    author: "Alberto Campo Baeza"
+  - title: Varia Architectonica
+    author: Alberto Campo Baeza
     year: 2016
-  - title: "La rendición de Breda (Las Lanzas)"
-    author: "Diego Velázquez"
+  - title: La rendición de Breda (Las Lanzas)
+    author: Diego Velázquez
     year: 1635
-  - title: "La Batalla de San Romano"
-    author: "Paolo Uccello"
+  - title: La Batalla de San Romano
+    author: Paolo Uccello
     year: 1438
 related:
   - diferencia-entre-viga-y-columna
   - tipos-de-estructuras-en-construccion
   - que-es-el-hormigon-armado
   - diferencia-entre-arquitectura-y-construccion
+reviewedBy: jean-paul
 ---
 
 Estuve leyendo *Varia Architectonica* de Alberto Campo Baeza este fin de
