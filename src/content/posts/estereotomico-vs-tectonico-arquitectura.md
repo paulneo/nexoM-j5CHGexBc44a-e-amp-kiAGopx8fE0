@@ -1,10 +1,10 @@
 ---
-title: "Estereotómico vs tectónico: cueva o cabaña, las 2 formas de construir"
+title: 'Estereotómico vs tectónico: cueva o cabaña, las 2 formas de construir'
 published: 2026-06-04
 updatedAt: 2026-06-04
-draft: true
+draft: false
 featured: false
-description: "Toda la arquitectura del mundo se reduce a 2 raíces opuestas: estereotómica (cueva, masa) o tectónica (cabaña, estructura ligera). Cuál es cuál y por qué importa."
+description: 'Toda la arquitectura del mundo se reduce a 2 raíces opuestas: estereotómica (cueva, masa) o tectónica (cabaña, estructura ligera). Cuál es cuál y por qué importa.'
 category: arquitectura
 formato: concepto
 nivel: basico
@@ -16,32 +16,32 @@ tags:
   - sistemas-constructivos
 image: /images/posts/estereotomico-vs-tectonico-arquitectura.webp
 author: jean-paul
-reviewedBy: jean-paul
 aiAssisted: true
 faq:
-  - q: "¿Qué significa que una arquitectura sea estereotómica?"
-    a: "Estereotómica viene del griego stereos (sólido) y tomē (corte). Es arquitectura construida con materiales pesados (piedra, ladrillo, adobe, hormigón macizo) que transmiten su peso directamente al suelo a través de muros de carga, sin estructura intermedia. La metáfora histórica es la CUEVA — el edificio se ESCULPE en una masa, o se LEVANTA con masa. Ejemplos: pirámides egipcias, Panteón de Roma, catedrales románicas, casas coloniales latinoamericanas de adobe o ladrillo macizo."
-  - q: "¿Y tectónica?"
-    a: "Tectónica viene del griego tekton (constructor, carpintero). Es arquitectura construida con elementos ligeros (madera, acero, hormigón armado calado, perfiles metálicos) que se ensamblan formando una estructura de barras. La metáfora histórica es la CABAÑA — el edificio se ARMA con piezas conectadas. El peso se transmite al suelo por puntos (columnas, pilares) en vez de por superficies continuas. Ejemplos: templos griegos clásicos, casas japonesas tradicionales, edificios de Mies van der Rohe, estructuras modernas de acero."
-  - q: "¿La arquitectura latinoamericana es estereotómica o tectónica?"
-    a: "Tradicionalmente, abrumadoramente estereotómica. Las civilizaciones precolombinas (incas, mayas, aztecas) construyeron con piedra y adobe — masas pesadas que se asientan en la tierra. La arquitectura colonial heredada de España continuó la tradición estereotómica con muros gruesos de ladrillo, piedra y mampostería. La vivienda popular latinoamericana del siglo XX y XXI sigue siendo mayormente estereotómica — ladrillo, bloque, hormigón. La tectónica entró con el modernismo importado y se aplica más en edificios de oficinas, industriales y arquitectura de autor."
-  - q: "¿Puedo combinar estereotómico y tectónico en una sola casa?"
-    a: "Sí, y es lo más común en arquitectura contemporánea seria. Muchas casas combinan un basamento o nivel inferior estereotómico (muro grueso, ladrillo, hormigón visto) con una planta superior tectónica (estructura de pilares, vigas, planos livianos). Esto da fuerza visual abajo y liviandad arriba — el edificio 'crece' del suelo con peso y se libera arriba. Le Corbusier, Mies, y muchos arquitectos latinoamericanos contemporáneos como Solano Benítez en Paraguay usan esta combinación deliberadamente."
+  - q: ¿Qué significa que una arquitectura sea estereotómica?
+    a: 'Estereotómica viene del griego stereos (sólido) y tomē (corte). Es arquitectura construida con materiales pesados (piedra, ladrillo, adobe, hormigón macizo) que transmiten su peso directamente al suelo a través de muros de carga, sin estructura intermedia. La metáfora histórica es la CUEVA — el edificio se ESCULPE en una masa, o se LEVANTA con masa. Ejemplos: pirámides egipcias, Panteón de Roma, catedrales románicas, casas coloniales latinoamericanas de adobe o ladrillo macizo.'
+  - q: ¿Y tectónica?
+    a: 'Tectónica viene del griego tekton (constructor, carpintero). Es arquitectura construida con elementos ligeros (madera, acero, hormigón armado calado, perfiles metálicos) que se ensamblan formando una estructura de barras. La metáfora histórica es la CABAÑA — el edificio se ARMA con piezas conectadas. El peso se transmite al suelo por puntos (columnas, pilares) en vez de por superficies continuas. Ejemplos: templos griegos clásicos, casas japonesas tradicionales, edificios de Mies van der Rohe, estructuras modernas de acero.'
+  - q: ¿La arquitectura latinoamericana es estereotómica o tectónica?
+    a: Tradicionalmente, abrumadoramente estereotómica. Las civilizaciones precolombinas (incas, mayas, aztecas) construyeron con piedra y adobe — masas pesadas que se asientan en la tierra. La arquitectura colonial heredada de España continuó la tradición estereotómica con muros gruesos de ladrillo, piedra y mampostería. La vivienda popular latinoamericana del siglo XX y XXI sigue siendo mayormente estereotómica — ladrillo, bloque, hormigón. La tectónica entró con el modernismo importado y se aplica más en edificios de oficinas, industriales y arquitectura de autor.
+  - q: ¿Puedo combinar estereotómico y tectónico en una sola casa?
+    a: Sí, y es lo más común en arquitectura contemporánea seria. Muchas casas combinan un basamento o nivel inferior estereotómico (muro grueso, ladrillo, hormigón visto) con una planta superior tectónica (estructura de pilares, vigas, planos livianos). Esto da fuerza visual abajo y liviandad arriba — el edificio 'crece' del suelo con peso y se libera arriba. Le Corbusier, Mies, y muchos arquitectos latinoamericanos contemporáneos como Solano Benítez en Paraguay usan esta combinación deliberadamente.
 sources:
-  - title: "Varia Architectonica"
-    author: "Alberto Campo Baeza"
+  - title: Varia Architectonica
+    author: Alberto Campo Baeza
     year: 2016
-  - title: "Die vier Elemente der Baukunst (Los cuatro elementos de la arquitectura)"
-    author: "Gottfried Semper"
+  - title: Die vier Elemente der Baukunst (Los cuatro elementos de la arquitectura)
+    author: Gottfried Semper
     year: 1851
-  - title: "Studies in Tectonic Culture"
-    author: "Kenneth Frampton"
+  - title: Studies in Tectonic Culture
+    author: Kenneth Frampton
     year: 1995
 related:
   - enmarcar-o-subrayar-el-paisaje-arquitectura
   - compresion-y-dilatacion-espacial-en-arquitectura
   - por-que-las-columnas-son-verticales
   - que-son-jambas-dinteles-y-alfeizares
+reviewedBy: jean-paul
 ---
 
 Toda la arquitectura del mundo, desde una pirámide egipcia hasta una
