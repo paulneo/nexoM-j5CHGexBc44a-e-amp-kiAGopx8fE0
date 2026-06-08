@@ -1,10 +1,10 @@
 ---
-title: "Firmitas, utilitas, venustas: la receta de Vitrubio para buena arquitectura"
+title: 'Firmitas, utilitas, venustas: la receta de Vitrubio para buena arquitectura'
 published: 2026-05-31
 updatedAt: 2026-05-31
-draft: true
+draft: false
 featured: false
-description: "Hace 2.000 años Vitrubio fijó las 3 condiciones de toda buena arquitectura: firmeza, utilidad y belleza. La fórmula sigue vigente y explica por qué algunas obras emocionan."
+description: 'Hace 2.000 años Vitrubio fijó las 3 condiciones de toda buena arquitectura: firmeza, utilidad y belleza. La fórmula sigue vigente y explica por qué algunas obras emocionan.'
 category: arquitectura
 formato: concepto
 nivel: basico
@@ -16,29 +16,29 @@ tags:
   - historia-arquitectura
 image: /images/posts/firmitas-utilitas-venustas-vitrubio.webp
 author: jean-paul
-reviewedBy: jean-paul
 aiAssisted: true
 faq:
-  - q: "¿Quién fue Vitrubio y por qué importa todavía?"
+  - q: ¿Quién fue Vitrubio y por qué importa todavía?
     a: "Marco Vitrubio Polión fue un arquitecto e ingeniero romano del siglo I a.C., contemporáneo del emperador Augusto. Escribió 'De Architectura' (10 libros), el único tratado de arquitectura clásica que sobrevivió completo. En esa obra fija las tres condiciones de toda buena arquitectura: firmitas, utilitas y venustas. Sigue siendo referencia universal porque su triada describe condiciones estructurales del problema, no estilos de moda — un edificio del siglo I o del XXI necesita las tres."
-  - q: "¿Se puede tener firmeza y utilidad sin belleza?"
-    a: "Sí, y se construye todo el tiempo. La mayoría de los galpones industriales, depósitos, edificios de oficinas genéricos y viviendas sociales mal hechas son ejemplos de arquitectura con firmitas y utilitas pero sin venustas. Cumplen su función y se mantienen en pie, pero no aportan emoción ni dignifican a quien los habita. Esto no es trivial: estudios de psicología ambiental muestran que entornos arquitectónicamente pobres aumentan estrés, ansiedad y agresividad. La belleza no es decoración — es función."
-  - q: "¿La belleza arquitectónica es subjetiva?"
+  - q: ¿Se puede tener firmeza y utilidad sin belleza?
+    a: 'Sí, y se construye todo el tiempo. La mayoría de los galpones industriales, depósitos, edificios de oficinas genéricos y viviendas sociales mal hechas son ejemplos de arquitectura con firmitas y utilitas pero sin venustas. Cumplen su función y se mantienen en pie, pero no aportan emoción ni dignifican a quien los habita. Esto no es trivial: estudios de psicología ambiental muestran que entornos arquitectónicamente pobres aumentan estrés, ansiedad y agresividad. La belleza no es decoración — es función.'
+  - q: ¿La belleza arquitectónica es subjetiva?
     a: "En parte sí, en parte no. Hay elementos objetivos: proporción, ritmo, materialidad, relación con la luz, escala humana, integración con el contexto. Estos son medibles y enseñables, y son la base de la educación arquitectónica desde hace 2.500 años. Sobre esa base objetiva, cada persona tiene preferencias estéticas que son culturales o personales. Pero confundir 'preferencias' con 'no hay belleza objetiva' es como decir que no hay buena cocina porque a cada uno le gusta algo distinto."
-  - q: "¿Cómo distingo un arquitecto que busca venustas de uno que solo resuelve firmitas y utilitas?"
-    a: "Hacele preguntas durante el primer encuentro. Si te explica por qué eligió X o Y en términos solo funcionales o de costo, es un técnico. Si te habla de cómo entra la luz al amanecer, de qué siente alguien al cruzar el umbral, de cómo la fachada dialoga con la cuadra, está pensando venustas. Los buenos arquitectos pueden hacer ambas cosas a la vez. Los técnicos resuelven problemas sin aportar belleza. Los formalistas hacen cosas bonitas que no funcionan. Buscás el que integra los tres pilares."
+  - q: ¿Cómo distingo un arquitecto que busca venustas de uno que solo resuelve firmitas y utilitas?
+    a: Hacele preguntas durante el primer encuentro. Si te explica por qué eligió X o Y en términos solo funcionales o de costo, es un técnico. Si te habla de cómo entra la luz al amanecer, de qué siente alguien al cruzar el umbral, de cómo la fachada dialoga con la cuadra, está pensando venustas. Los buenos arquitectos pueden hacer ambas cosas a la vez. Los técnicos resuelven problemas sin aportar belleza. Los formalistas hacen cosas bonitas que no funcionan. Buscás el que integra los tres pilares.
 sources:
-  - title: "Varia Architectonica"
-    author: "Alberto Campo Baeza"
+  - title: Varia Architectonica
+    author: Alberto Campo Baeza
     year: 2016
-  - title: "De Architectura (Los Diez Libros de Arquitectura)"
-    author: "Marco Vitrubio Polión"
+  - title: De Architectura (Los Diez Libros de Arquitectura)
+    author: Marco Vitrubio Polión
     year: -25
 related:
   - por-que-las-columnas-son-verticales
   - que-son-jambas-dinteles-y-alfeizares
   - diferencia-entre-arquitectura-y-construccion
   - que-es-un-plano-arquitectonico
+reviewedBy: jean-paul
 ---
 
 Hay una fórmula con 2.000 años de antigüedad que sigue siendo la mejor
