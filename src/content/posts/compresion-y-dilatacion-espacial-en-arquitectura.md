@@ -1,10 +1,10 @@
 ---
-title: "Compresión y dilatación espacial: cómo se siente un espacio en arquitectura"
+title: 'Compresión y dilatación espacial: cómo se siente un espacio en arquitectura'
 published: 2026-06-02
 updatedAt: 2026-06-02
-draft: true
+draft: false
 featured: false
-description: "Pasar de un techo bajo a uno alto cambia por completo cómo se siente un espacio. Es el mecanismo más viejo y más efectivo de la arquitectura — te lo explicamos con ejemplos."
+description: Pasar de un techo bajo a uno alto cambia por completo cómo se siente un espacio. Es el mecanismo más viejo y más efectivo de la arquitectura — te lo explicamos con ejemplos.
 category: arquitectura
 formato: concepto
 nivel: basico
@@ -14,31 +14,31 @@ tags:
   - doble-altura
   - le-corbusier
   - diseño-arquitectonico
-image: /images/posts/compresion-y-dilatacion-espacial-en-arquitectura.webp
+image: /images/posts/compresion-y-dilatacion-espacial-en-arquitectura.webp.webp
 author: jean-paul
-reviewedBy: jean-paul
 aiAssisted: true
 faq:
-  - q: "¿Cuál es la altura mínima cómoda para un techo en una casa?"
-    a: "Las normativas latinoamericanas suelen fijar 2.30 m como altura libre mínima de habitación habitable (Perú NTE A.010, México RCDF). Le Corbusier usaba 2.26 m como mínimo aceptable en sus proyectos. Por debajo de eso el espacio empieza a sentirse oprimido para una persona de estatura promedio. Para zonas de paso (pasillos, hall de entrada, baños) se aceptan alturas menores — incluso 2.10 m — porque la compresión es momentánea y crea efecto al pasar a un ambiente más alto."
-  - q: "¿Qué es una doble altura y cuándo conviene usarla?"
-    a: "Doble altura es cuando un ambiente tiene techo de aproximadamente 5-7 metros (el doble del estándar de 2.40-3.00 m). Se usa para crear sensación de amplitud y prestigio en el ambiente principal — generalmente el living-comedor en vivienda. Conviene cuando hay espacio horizontal suficiente para acompañarla (un living chico con techo alto se ve como caja vertical, no como espacio amplio). El costo extra de construcción se justifica si la altura aporta luz natural cenital, ventilación cruzada o vista panorámica."
-  - q: "¿Se puede combinar compresión y dilatación en una casa pequeña?"
-    a: "Sí, y es uno de los recursos más efectivos para que una casa chica se sienta más grande. El recurso clásico: hacer un acceso comprimido (techo bajo, 2.10-2.20 m, espacio acotado) que abre a un ambiente principal con doble altura. La transición física potencia la sensación de amplitud del ambiente grande. Lo usan arquitectos como Tadao Ando, Luis Barragán y muchos arquitectos latinoamericanos contemporáneos en vivienda compacta."
-  - q: "¿Las casas coloniales latinoamericanas usaban este recurso?"
-    a: "Sí, de forma muy clara. El zaguán colonial — el pasillo de entrada — tenía techo bajo y abría al patio central con techo abierto al cielo. Era compresión máxima (zaguán cubierto, sombrío) seguida de dilatación máxima (patio con cielo libre, luz plena). Ese contraste es lo que hace que entrar a una casa colonial bien conservada en Lima, Cartagena, Cusco o Antigua sea una experiencia espacial fuerte, incluso siglos después de construida."
+  - q: ¿Cuál es la altura mínima cómoda para un techo en una casa?
+    a: Las normativas latinoamericanas suelen fijar 2.30 m como altura libre mínima de habitación habitable (Perú NTE A.010, México RCDF). Le Corbusier usaba 2.26 m como mínimo aceptable en sus proyectos. Por debajo de eso el espacio empieza a sentirse oprimido para una persona de estatura promedio. Para zonas de paso (pasillos, hall de entrada, baños) se aceptan alturas menores — incluso 2.10 m — porque la compresión es momentánea y crea efecto al pasar a un ambiente más alto.
+  - q: ¿Qué es una doble altura y cuándo conviene usarla?
+    a: Doble altura es cuando un ambiente tiene techo de aproximadamente 5-7 metros (el doble del estándar de 2.40-3.00 m). Se usa para crear sensación de amplitud y prestigio en el ambiente principal — generalmente el living-comedor en vivienda. Conviene cuando hay espacio horizontal suficiente para acompañarla (un living chico con techo alto se ve como caja vertical, no como espacio amplio). El costo extra de construcción se justifica si la altura aporta luz natural cenital, ventilación cruzada o vista panorámica.
+  - q: ¿Se puede combinar compresión y dilatación en una casa pequeña?
+    a: 'Sí, y es uno de los recursos más efectivos para que una casa chica se sienta más grande. El recurso clásico: hacer un acceso comprimido (techo bajo, 2.10-2.20 m, espacio acotado) que abre a un ambiente principal con doble altura. La transición física potencia la sensación de amplitud del ambiente grande. Lo usan arquitectos como Tadao Ando, Luis Barragán y muchos arquitectos latinoamericanos contemporáneos en vivienda compacta.'
+  - q: ¿Las casas coloniales latinoamericanas usaban este recurso?
+    a: Sí, de forma muy clara. El zaguán colonial — el pasillo de entrada — tenía techo bajo y abría al patio central con techo abierto al cielo. Era compresión máxima (zaguán cubierto, sombrío) seguida de dilatación máxima (patio con cielo libre, luz plena). Ese contraste es lo que hace que entrar a una casa colonial bien conservada en Lima, Cartagena, Cusco o Antigua sea una experiencia espacial fuerte, incluso siglos después de construida.
 sources:
-  - title: "Varia Architectonica"
-    author: "Alberto Campo Baeza"
+  - title: Varia Architectonica
+    author: Alberto Campo Baeza
     year: 2016
-  - title: "El Modulor"
-    author: "Le Corbusier"
+  - title: El Modulor
+    author: Le Corbusier
     year: 1948
 related:
   - que-es-una-fachada-en-arquitectura
   - firmitas-utilitas-venustas-vitrubio
   - que-son-jambas-dinteles-y-alfeizares
   - por-que-las-columnas-son-verticales
+reviewedBy: jean-paul
 ---
 
 Hay un mecanismo arquitectónico tan simple que parece tonto cuando lo
