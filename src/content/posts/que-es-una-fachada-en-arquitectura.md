@@ -1,10 +1,10 @@
 ---
-title: "Qué es una fachada en arquitectura (y por qué los modernos la abandonaron)"
+title: Qué es una fachada en arquitectura (y por qué los modernos la abandonaron)
 published: 2026-06-01
 updatedAt: 2026-06-01
-draft: true
+draft: false
 featured: false
-description: "La fachada es la cara de un edificio. Durante 2.500 años fue lo que más se cuidaba al proyectar. Hoy muchos arquitectos la abandonaron — y eso no es buena noticia."
+description: La fachada es la cara de un edificio. Durante 2.500 años fue lo que más se cuidaba al proyectar. Hoy muchos arquitectos la abandonaron — y eso no es buena noticia.
 category: arquitectura
 formato: concepto
 nivel: basico
@@ -14,34 +14,34 @@ tags:
   - composicion-arquitectonica
   - palladio
   - diseño-de-casa
-image: /images/posts/que-es-una-fachada-en-arquitectura.webp
+image: /images/posts/ChatGPT Image Jun 8, 2026, 12_51_10 PM.webp
 author: jean-paul
-reviewedBy: jean-paul
 aiAssisted: true
 faq:
-  - q: "¿Cuál es la diferencia entre fachada y muro?"
-    a: "El muro es el elemento constructivo — la pared misma — que cierra el edificio y soporta cargas si es estructural. La fachada es la CARA del muro hacia afuera, vista desde la calle o el espacio público. Una casa puede tener muros perimetrales sin pensar en la fachada (un galpón), o puede tener una fachada cuidadosamente compuesta donde la disposición de huecos, materiales y proporciones siguen un orden visual. Todo edificio tiene muros. No todos tienen fachada en el sentido arquitectónico."
-  - q: "¿Por qué se dice que la fachada es la cara de la casa?"
+  - q: ¿Cuál es la diferencia entre fachada y muro?
+    a: El muro es el elemento constructivo — la pared misma — que cierra el edificio y soporta cargas si es estructural. La fachada es la CARA del muro hacia afuera, vista desde la calle o el espacio público. Una casa puede tener muros perimetrales sin pensar en la fachada (un galpón), o puede tener una fachada cuidadosamente compuesta donde la disposición de huecos, materiales y proporciones siguen un orden visual. Todo edificio tiene muros. No todos tienen fachada en el sentido arquitectónico.
+  - q: ¿Por qué se dice que la fachada es la cara de la casa?
     a: "La palabra fachada viene del latín 'facies', que significa cara, rostro, semblante. La metáfora no es decorativa — describe una función real: la fachada es lo que el edificio muestra al mundo, lo que comunica al transeúnte antes de que entre. Como una cara humana, transmite información en segundos: si es austera, generosa, descuidada, formal, festiva. Por eso los tratadistas clásicos como Palladio o Vignola dedicaban más dibujos a fachadas que a plantas."
-  - q: "¿Qué hace que una fachada esté bien diseñada?"
-    a: "Cinco factores objetivos que enseñan en cualquier escuela de arquitectura. PROPORCIÓN entre macizos y vanos (sólido vs hueco). RITMO en la disposición de ventanas y puertas. ESCALA respecto al cuerpo humano y al edificio en su contexto. MATERIALIDAD honesta (no fingir piedra con plástico, etc.). RELACIÓN CON EL CONTEXTO urbano (calle, edificios vecinos, asoleamiento). Una fachada que cumple estos cinco se siente correcta sin necesidad de ornamento. Una que no los cumple es difícil de salvar con detalles."
-  - q: "¿Se puede mejorar la fachada de una casa ya construida?"
-    a: "Sí, pero con límites. Lo más viable es trabajar sobre la PIEL — pintura, revestimiento, ampliación o reordenamiento de ventanas, agregado de aleros o pérgolas. Lo más caro y restrictivo es cambiar la composición estructural (mover ventanas, cambiar alturas, modificar el ritmo). Si la fachada original tiene buena proporción y composición pero está deteriorada, una intervención bien hecha la recupera. Si la composición es mala desde el origen, las mejoras cosméticas no la salvan."
+  - q: ¿Qué hace que una fachada esté bien diseñada?
+    a: Cinco factores objetivos que enseñan en cualquier escuela de arquitectura. PROPORCIÓN entre macizos y vanos (sólido vs hueco). RITMO en la disposición de ventanas y puertas. ESCALA respecto al cuerpo humano y al edificio en su contexto. MATERIALIDAD honesta (no fingir piedra con plástico, etc.). RELACIÓN CON EL CONTEXTO urbano (calle, edificios vecinos, asoleamiento). Una fachada que cumple estos cinco se siente correcta sin necesidad de ornamento. Una que no los cumple es difícil de salvar con detalles.
+  - q: ¿Se puede mejorar la fachada de una casa ya construida?
+    a: Sí, pero con límites. Lo más viable es trabajar sobre la PIEL — pintura, revestimiento, ampliación o reordenamiento de ventanas, agregado de aleros o pérgolas. Lo más caro y restrictivo es cambiar la composición estructural (mover ventanas, cambiar alturas, modificar el ritmo). Si la fachada original tiene buena proporción y composición pero está deteriorada, una intervención bien hecha la recupera. Si la composición es mala desde el origen, las mejoras cosméticas no la salvan.
 sources:
-  - title: "Varia Architectonica"
-    author: "Alberto Campo Baeza"
+  - title: Varia Architectonica
+    author: Alberto Campo Baeza
     year: 2016
-  - title: "Regola delli cinque ordini d'architettura"
-    author: "Giacomo Barozzi da Vignola"
+  - title: Regola delli cinque ordini d'architettura
+    author: Giacomo Barozzi da Vignola
     year: 1562
-  - title: "I quattro libri dell'architettura"
-    author: "Andrea Palladio"
+  - title: I quattro libri dell'architettura
+    author: Andrea Palladio
     year: 1570
 related:
   - que-son-jambas-dinteles-y-alfeizares
   - firmitas-utilitas-venustas-vitrubio
   - por-que-las-columnas-son-verticales
   - tipos-de-planos-arquitectonicos
+reviewedBy: jean-paul
 ---
 
 **Facies**. En latín significa cara, rostro, semblante. De ahí viene
