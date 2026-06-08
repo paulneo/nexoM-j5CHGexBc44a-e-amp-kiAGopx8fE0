@@ -1,10 +1,10 @@
 ---
-title: "Qué son jambas, dinteles y alféizares (y por qué tu casa los tiene)"
+title: Qué son jambas, dinteles y alféizares (y por qué tu casa los tiene)
 published: 2026-05-30
 updatedAt: 2026-05-30
-draft: true
+draft: false
 featured: false
-description: "Tu casa tiene jambas, dintel y alféizar — el problema es que casi nadie sabe qué son. Te explicamos las 3 partes de una ventana y por qué los arquitectos modernos las eliminan."
+description: Tu casa tiene jambas, dintel y alféizar — el problema es que casi nadie sabe qué son. Te explicamos las 3 partes de una ventana y por qué los arquitectos modernos las eliminan.
 category: arquitectura
 formato: concepto
 nivel: basico
@@ -16,29 +16,29 @@ tags:
   - vocabulario-arquitectonico
 image: /images/posts/que-son-jambas-dinteles-y-alfeizares.webp
 author: jean-paul
-reviewedBy: jean-paul
 aiAssisted: true
 faq:
-  - q: "¿Cuál es la diferencia entre jamba y montante?"
-    a: "Aunque a veces se usan como sinónimos, hay una diferencia técnica. La JAMBA es la parte estructural del muro que enmarca el hueco — es parte de la pared misma, hecha de ladrillo, piedra u hormigón. El MONTANTE es un elemento de la carpintería (la ventana o puerta misma) que divide vidrios o paneles. En una ventana de varias hojas, los montantes son las piezas verticales del marco. Jambas = muro. Montantes = carpintería."
-  - q: "¿Y entre alféizar y umbral?"
-    a: "Es una distinción útil. UMBRAL es el alféizar de una PUERTA — la pieza horizontal de abajo, al nivel del suelo, que cruzás cuando entrás. ALFÉIZAR es la pieza de abajo de una VENTANA — donde apoya el marco, generalmente a la altura de la cintura o pecho. Misma idea (remate inferior del hueco), distinta función: uno se pisa, el otro no."
-  - q: "¿Por qué los muros gruesos enfrían mejor que los finos?"
-    a: "Por masa térmica. Un material denso como ladrillo, adobe, piedra u hormigón tarda muchas horas en calentarse y muchas horas en enfriarse. Si el muro absorbe calor durante el día, lo libera durante la noche cuando ya bajó la temperatura exterior — y al revés en invierno. Una pared fina de panel térmico (drywall, placa de yeso) sin masa NO hace esto, solo aísla el momento puntual. La masa térmica es la razón física por la que las casas coloniales latinoamericanas son frescas en verano sin aire acondicionado."
-  - q: "¿Se sigue usando este vocabulario en arquitectura moderna?"
-    a: "Sí, en arquitectura técnica y de obra. Los planos de detalle (en escala 1 a 5 o 1 a 10) marcan jambas, dintel y alféizar con su nombre. Los pliegos de especificación técnica también. Donde se perdió la palabra es en el lenguaje cotidiano y en revistas de diseño contemporáneo. Maestros de obras y constructores de toda Latinoamérica los siguen nombrando así en obra."
+  - q: ¿Cuál es la diferencia entre jamba y montante?
+    a: Aunque a veces se usan como sinónimos, hay una diferencia técnica. La JAMBA es la parte estructural del muro que enmarca el hueco — es parte de la pared misma, hecha de ladrillo, piedra u hormigón. El MONTANTE es un elemento de la carpintería (la ventana o puerta misma) que divide vidrios o paneles. En una ventana de varias hojas, los montantes son las piezas verticales del marco. Jambas = muro. Montantes = carpintería.
+  - q: ¿Y entre alféizar y umbral?
+    a: 'Es una distinción útil. UMBRAL es el alféizar de una PUERTA — la pieza horizontal de abajo, al nivel del suelo, que cruzás cuando entrás. ALFÉIZAR es la pieza de abajo de una VENTANA — donde apoya el marco, generalmente a la altura de la cintura o pecho. Misma idea (remate inferior del hueco), distinta función: uno se pisa, el otro no.'
+  - q: ¿Por qué los muros gruesos enfrían mejor que los finos?
+    a: Por masa térmica. Un material denso como ladrillo, adobe, piedra u hormigón tarda muchas horas en calentarse y muchas horas en enfriarse. Si el muro absorbe calor durante el día, lo libera durante la noche cuando ya bajó la temperatura exterior — y al revés en invierno. Una pared fina de panel térmico (drywall, placa de yeso) sin masa NO hace esto, solo aísla el momento puntual. La masa térmica es la razón física por la que las casas coloniales latinoamericanas son frescas en verano sin aire acondicionado.
+  - q: ¿Se sigue usando este vocabulario en arquitectura moderna?
+    a: Sí, en arquitectura técnica y de obra. Los planos de detalle (en escala 1 a 5 o 1 a 10) marcan jambas, dintel y alféizar con su nombre. Los pliegos de especificación técnica también. Donde se perdió la palabra es en el lenguaje cotidiano y en revistas de diseño contemporáneo. Maestros de obras y constructores de toda Latinoamérica los siguen nombrando así en obra.
 sources:
-  - title: "Varia Architectonica"
-    author: "Alberto Campo Baeza"
+  - title: Varia Architectonica
+    author: Alberto Campo Baeza
     year: 2016
-  - title: "Frases de Luis Barragán sobre arquitectura"
-    author: "Luis Barragán"
+  - title: Frases de Luis Barragán sobre arquitectura
+    author: Luis Barragán
     year: 1980
 related:
   - por-que-las-columnas-son-verticales
   - diferencia-entre-arquitectura-y-construccion
   - glosario-tecnico-construccion-30-terminos
   - cuantos-ladrillos-por-metro-cuadrado-de-pared
+reviewedBy: jean-paul
 ---
 
 Hay tres palabras que arquitectos y maestros de obras usan todo el tiempo,
