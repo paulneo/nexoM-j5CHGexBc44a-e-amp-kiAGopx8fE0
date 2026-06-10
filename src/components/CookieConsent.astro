@@ -55,6 +55,17 @@
             ad_user_data: state,
             ad_personalization: state,
         });
+        // Si se acaba de otorgar consent, forzar un page_view explícito
+        // para que GA4 reciba la visita actual sin esperar a que el usuario
+        // navegue a otra página. Sin esto, el pageview inicial se mandó
+        // con consent=denied y no aparece en Real-time.
+        if (granted) {
+            window.gtag('event', 'page_view', {
+                page_location: window.location.href,
+                page_title: document.title,
+                page_path: window.location.pathname,
+            });
+        }
     };
 
     const saved = localStorage.getItem(STORAGE_KEY);
