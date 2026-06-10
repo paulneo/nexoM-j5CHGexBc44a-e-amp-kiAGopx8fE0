@@ -13,9 +13,9 @@
 >
     <div class="max-w-[var(--page-width)] mx-auto bg-white dark:bg-[#161616] border border-black/[0.08] dark:border-white/[0.1] rounded-xl shadow-xl p-5 md:p-6 flex flex-col md:flex-row md:items-center gap-4">
         <div class="flex-1 text-sm text-black/75 dark:text-white/75 leading-relaxed">
-            Usamos cookies propias y de terceros (incluyendo Google Analytics y Google
-            AdSense) para analizar el uso del sitio y mostrar anuncios relevantes.
-            Podés aceptar o rechazar las cookies no esenciales. Más detalles en nuestra
+            Usamos cookies de publicidad (Google AdSense) para personalizar los anuncios que ves.
+            El análisis básico del sitio se hace de forma agregada y anónima. Podés aceptar o
+            rechazar las cookies de publicidad. Más detalles en nuestra
             <a href="/privacidad/" class="text-[var(--primary)] underline underline-offset-2 hover:no-underline">política de privacidad</a>.
         </div>
         <div class="flex flex-wrap gap-2 shrink-0">
@@ -48,24 +48,15 @@
             window.dataLayer = window.dataLayer || [];
             window.gtag = function () { window.dataLayer.push(arguments); };
         }
-        const state = granted ? 'granted' : 'denied';
+        // El banner solo controla cookies de PUBLICIDAD.
+        // analytics_storage se mantiene 'granted' desde BaseHead (modelo
+        // Latam: tracking anónimo agregado por default, no toggleable).
+        const adState = granted ? 'granted' : 'denied';
         window.gtag('consent', 'update', {
-            ad_storage: state,
-            analytics_storage: state,
-            ad_user_data: state,
-            ad_personalization: state,
+            ad_storage: adState,
+            ad_user_data: adState,
+            ad_personalization: adState,
         });
-        // Si se acaba de otorgar consent, forzar un page_view explícito
-        // para que GA4 reciba la visita actual sin esperar a que el usuario
-        // navegue a otra página. Sin esto, el pageview inicial se mandó
-        // con consent=denied y no aparece en Real-time.
-        if (granted) {
-            window.gtag('event', 'page_view', {
-                page_location: window.location.href,
-                page_title: document.title,
-                page_path: window.location.pathname,
-            });
-        }
     };
 
     const saved = localStorage.getItem(STORAGE_KEY);

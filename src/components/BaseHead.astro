@@ -139,9 +139,13 @@ const siteLocale = localeMap[siteConfig.lang] ?? siteConfig.lang.replace('-', '_
       window.dataLayer = window.dataLayer || [];
       function gtag(){dataLayer.push(arguments);}
       window.gtag = gtag;
+      // Latam consent model: analytics arranca en 'granted' (todos los
+      // visitantes se trackean desde el primer instante en GA4). Solo
+      // las cookies de PUBLICIDAD (AdSense) arrancan en 'denied' y
+      // requieren consent explícito del usuario via el banner.
       gtag('consent', 'default', {
         ad_storage: 'denied',
-        analytics_storage: 'denied',
+        analytics_storage: 'granted',
         ad_user_data: 'denied',
         ad_personalization: 'denied',
         wait_for_update: 500,
