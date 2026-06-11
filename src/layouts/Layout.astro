@@ -106,8 +106,8 @@ const siteLang = siteConfig.lang.replace('_', '-')
 			noindex={noindex}
 		/>
 
-		<!-- Favicons (set moderno: SVG escalable + PNG fallback + ICO legacy + PWA) -->
-		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+		<!-- Favicons: PNG primary (Google + browsers modernos) + ICO legacy + Apple touch -->
+		<!-- SVG removido: pesaba 1.5 MB, causaba problemas con crawlers. -->
 		<link rel="icon" type="image/png" sizes="96x96" href="/favicon-96x96.png" />
 		<link rel="icon" type="image/x-icon" href="/favicon.ico" />
 		<link rel="apple-touch-icon" href="/apple-touch-icon.png" />
