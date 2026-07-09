@@ -2,6 +2,11 @@
   "$schema": "https://openapi.vercel.sh/vercel.json",
   "redirects": [
     {
+      "source": "/",
+      "destination": "https://www.mundoingenieria.org/",
+      "permanent": true
+    },
+    {
       "source": "/:path*",
       "destination": "https://www.mundoingenieria.org/:path*",
       "permanent": true
